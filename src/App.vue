@@ -6,7 +6,14 @@
 <script>
 
 export default {
-  name: 'App',
+  name: 'ARKA BMS',
+  mounted() {
+
+    this.$store.dispatch("CheckAuth")
+
+
+
+  },
 }
 </script>
 

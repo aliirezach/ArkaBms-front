@@ -1,3195 +1,553 @@
 <template>
-<div class="d-flex flex-column flex-column-fluid">
-            <!--begin::Toolbar-->
-            <div id="kt_app_toolbar" class="app-toolbar py-3 py-lg-6">
-              <!--begin::Toolbar container-->
-              <div id="kt_app_toolbar_container" class="app-container container-xxl d-flex flex-stack">
-                <!--begin::Page title-->
-                <div class="page-title d-flex flex-column justify-content-center flex-wrap me-3">
-                  <!--begin::Title-->
-                  <h1 class="page-heading d-flex text-dark fw-bold fs-3 flex-column justify-content-center my-0">هدر
-                    تیره</h1>
-                  <!--end::Title-->
-                  <!--begin::Breadcrumb-->
-                  <ul class="breadcrumb breadcrumb-separatorless fw-semibold fs-7 my-0 pt-1">
-                    <!--begin::آیتم-->
-                    <li class="breadcrumb-item text-muted">
-                      <a href="../../demo1/dist/index.html" class="text-muted text-hover-primary">خانه</a>
-                    </li>
-                    <!--end::آیتم-->
-                    <!--begin::آیتم-->
-                    <li class="breadcrumb-item">
-                      <span class="bullet bg-gray-400 w-5px h-2px"></span>
-                    </li>
-                    <!--end::آیتم-->
-                    <!--begin::آیتم-->
-                    <li class="breadcrumb-item text-muted">قالب بندی تنظیمات</li>
-                    <!--end::آیتم-->
-                  </ul>
-                  <!--end::Breadcrumb-->
-                </div>
-                <!--end::Page title-->
-                <!--begin::Actions-->
-                <div class="d-flex align-items-center gap-2 gap-lg-3">
-                  <!--begin::فیلتر menu-->
-                  <div class="m-0">
-                    <!--begin::Menu toggle-->
-                    <a href="#" class="btn btn-sm btn-flex bg-body btn-color-gray-700 btn-active-color-primary fw-bold"
-                       data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">
-                      <!--begin::Svg Icon | path: icons/duotune/general/gen031.svg-->
-                      <span class="svg-icon svg-icon-6 svg-icon-muted me-1">
-												<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-													<path
-                              d="M19.0759 3H4.72777C3.95892 3 3.47768 3.83148 3.86067 4.49814L8.56967 12.6949C9.17923 13.7559 9.5 14.9582 9.5 16.1819V19.5072C9.5 20.2189 10.2223 20.7028 10.8805 20.432L13.8805 19.1977C14.2553 19.0435 14.5 18.6783 14.5 18.273V13.8372C14.5 12.8089 14.8171 11.8056 15.408 10.964L19.8943 4.57465C20.3596 3.912 19.8856 3 19.0759 3Z"
-                              fill="currentColor"/>
-												</svg>
-											</span>
-                      <!--end::Svg Icon-->فیلتر</a>
-                    <!--end::Menu toggle-->
-                    <!--begin::Menu 1-->
-                    <div class="menu menu-sub menu-sub-dropdown w-250px w-md-300px" data-kt-menu="true"
-                         id="kt_menu_637dc890ebeba">
-                      <!--begin::Header-->
-                      <div class="px-7 py-5">
-                        <div class="fs-5 text-dark fw-bold">فیلتر تنظیمات</div>
-                      </div>
-                      <!--end::Header-->
-                      <!--begin::Menu separator-->
-                      <div class="separator border-gray-200"></div>
-                      <!--end::Menu separator-->
-                      <!--begin::Form-->
-                      <div class="px-7 py-5">
-                        <!--begin::Input group-->
-                        <div class="mb-10">
-                          <!--begin::Tags-->
-                          <label class="form-label fw-semibold">وضعیت:</label>
-                          <!--end::Tags-->
-                          <!--begin::Input-->
-                          <div>
-                            <select class="form-select form-select-solid" data-kt-select2="true"
-                                    data-placeholder="انتخاب گزینه" data-dropdown-parent="#kt_menu_637dc890ebeba"
-                                    data-allow-clear="true">
-                              <option></option>
-                              <option value="1">تایید شده</option>
-                              <option value="2">در انتظار</option>
-                              <option value="2">در حال پردازش</option>
-                              <option value="2">رد شد</option>
-                            </select>
-                          </div>
-                          <!--end::Input-->
-                        </div>
-                        <!--end::Input group-->
-                        <!--begin::Input group-->
-                        <div class="mb-10">
-                          <!--begin::Tags-->
-                          <label class="form-label fw-semibold">نوع عضویت:</label>
-                          <!--end::Tags-->
-                          <!--begin::تنظیمات-->
-                          <div class="d-flex">
-                            <!--begin::تنظیمات-->
-                            <label class="form-check form-check-sm form-check-custom form-check-solid me-5">
-                              <input class="form-check-input" type="checkbox" value="1"/>
-                              <span class="form-check-label">نویسنده</span>
-                            </label>
-                            <!--end::تنظیمات-->
-                            <!--begin::تنظیمات-->
-                            <label class="form-check form-check-sm form-check-custom form-check-solid">
-                              <input class="form-check-input" type="checkbox" value="2" checked="checked"/>
-                              <span class="form-check-label">مشتری</span>
-                            </label>
-                            <!--end::تنظیمات-->
-                          </div>
-                          <!--end::تنظیمات-->
-                        </div>
-                        <!--end::Input group-->
-                        <!--begin::Input group-->
-                        <div class="mb-10">
-                          <!--begin::Tags-->
-                          <label class="form-label fw-semibold">اعلان ها:</label>
-                          <!--end::Tags-->
-                          <!--begin::Switch-->
-                          <div class="form-check form-switch form-switch-sm form-check-custom form-check-solid">
-                            <input class="form-check-input" type="checkbox" value="" name="notifications"
-                                   checked="checked"/>
-                            <label class="form-check-label">فعال</label>
-                          </div>
-                          <!--end::Switch-->
-                        </div>
-                        <!--end::Input group-->
-                        <!--begin::Actions-->
-                        <div class="d-flex justify-content-end">
-                          <button type="reset" class="btn btn-sm btn-light btn-active-light-primary me-2"
-                                  data-kt-menu-dismiss="true">ریست
-                          </button>
-                          <button type="submit" class="btn btn-sm btn-primary" data-kt-menu-dismiss="true">تایید
-                          </button>
-                        </div>
-                        <!--end::Actions-->
-                      </div>
-                      <!--end::Form-->
-                    </div>
-                    <!--end::Menu 1-->
-                  </div>
-                  <!--end::فیلتر menu-->
-                  <!--begin::Secondary button-->
-                  <!--end::Secondary button-->
-                  <!--begin::اصلی button-->
-                  <a href="#" class="btn btn-sm fw-bold btn-primary" data-bs-toggle="modal"
-                     data-bs-target="#kt_modal_create_app">ساختن</a>
-                  <!--end::اصلی button-->
-                </div>
-                <!--end::Actions-->
+  <div class="d-flex flex-column flex-column-fluid">
+    <!--begin::Toolbar-->
+    <div id="kt_app_toolbar" class="app-toolbar py-3 py-lg-6">
+      <!--begin::Toolbar container-->
+      <div id="kt_app_toolbar_container" class="app-container container-xxl d-flex flex-stack">
+        <!--begin::Page title-->
+        <div class="page-title d-flex flex-column justify-content-center flex-wrap me-3">
+          <!--begin::Title-->
+          <h1 class="page-heading d-flex text-dark fw-bold fs-3 flex-column justify-content-center my-0">داشبورد</h1>
+          <!--end::Title-->
+          <!--begin::Breadcrumb-->
+
+          <!--end::Breadcrumb-->
+        </div>
+        <!--end::Page title-->
+
+      </div>
+      <!--end::Toolbar container-->
+    </div>
+
+
+    <div id="kt_app_content_container" class="app-container container-xxl">
+
+
+      <div class="row g-5 g-xl-10">
+        <!--begin::Col-->
+        <div class="col-xl-4 mb-xl-10" v-for="device in GetDeviceList" v-bind:key="device.id">
+          <!--begin::لیست ها Widget 19-->
+          <div class="card card-flush h-xl-100">
+            <!--begin::Heading-->
+
+            <div
+                class="card-header rounded bgi-no-repeat bgi-size-cover bgi-position-y-top bgi-position-x-center align-items-start h-250px"
+                style="background-image:url('/assets/media/svg/shapes/top-green.png')" data-theme="light" >
+              <!--begin::Title-->
+              <router-link :to="{name: 'DeviceDetail' , params:{id: device.id , name :device.name }}" >
+
+              <h3 class="card-title align-items-start flex-column text-white pt-15">
+                <span class="fw-bold fs-2x mb-3">{{ device.name }}</span>
+
+              </h3>
+              </router-link>
+              <!--end::Title-->
+              <!--begin::Toolbar-->
+              <div class="card-toolbar pt-5">
+                <!--begin::Menu-->
+                <button
+                    class="btn btn-sm btn-icon btn-active-color-primary btn-color-white bg-white bg-opacity-25 bg-hover-opacity-100 bg-hover-white bg-active-opacity-25 w-20px h-20px"
+                    data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end" data-kt-menu-overflow="true">
+                  <!--begin::Svg Icon | path: icons/duotune/general/gen052.svg-->
+                  <span class="svg-icon svg-icon-4">
+																<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+																	<rect x="10" y="10" width="4" height="4" rx="2" fill="currentColor"></rect>
+																	<rect x="17" y="10" width="4" height="4" rx="2" fill="currentColor"></rect>
+																	<rect x="3" y="10" width="4" height="4" rx="2" fill="currentColor"></rect>
+																</svg>
+															</span>
+                  <!--end::Svg Icon-->
+                </button>
+
+
               </div>
-              <!--end::Toolbar container-->
+              <!--end::Toolbar-->
             </div>
-            <!--end::Toolbar-->
-            <!--begin::Content-->
-            <div id="kt_app_content" class="app-content flex-column-fluid">
-              <!--begin::Content container-->
-              <div id="kt_app_content_container" class="app-container container-xxl">
+            <!--end::Heading-->
+            <!--begin::Body-->
+            <div class="card-body mt-n20">
+              <!--begin::Stats-->
+              <div class="mt-n20 position-relative">
                 <!--begin::Row-->
-                <div class="row g-5 g-xl-10 mb-5 mb-xl-10">
+                <div class="row g-3 g-lg-6">
                   <!--begin::Col-->
-                  <div class="col-md-6 col-lg-6 col-xl-6 col-xxl-3 mb-md-5 mb-xl-10">
-                    <!--begin::کارت widget 20-->
-                    <div class="card card-flush bgi-no-repeat bgi-size-contain bgi-position-x-end h-md-50 mb-5 mb-xl-10"
-                         style="background-color: #F1416C;background-image:url('assets/media/patterns/vector-1.png')">
-                      <!--begin::Header-->
-                      <div class="card-header pt-5">
-                        <!--begin::Title-->
-                        <div class="card-title d-flex flex-column">
-                          <!--begin::مقدار-->
-                          <span class="fs-2hx fw-bold text-white me-2 lh-1 ls-n2">69</span>
-                          <!--end::مقدار-->
-                          <!--begin::Subtitle-->
-                          <span class="text-white opacity-75 pt-1 fw-semibold fs-6">فعال پروژه ها</span>
-                          <!--end::Subtitle-->
-                        </div>
-                        <!--end::Title-->
-                      </div>
-                      <!--end::Header-->
-                      <!--begin::کارت body-->
-                      <div class="card-body d-flex align-items-end pt-0">
-                        <!--begin::پردازش-->
-                        <div class="d-flex align-items-center flex-column mt-3 w-100">
-                          <div
-                              class="d-flex justify-content-between fw-bold fs-6 text-white opacity-75 w-100 mt-auto mb-2">
-                            <span>43 در انتظار</span>
-                            <span>72%</span>
-                          </div>
-                          <div class="h-8px mx-3 w-100 bg-white bg-opacity-50 rounded">
-                            <div class="bg-white rounded h-8px" role="progressbar" style="width: 72%;"
-                                 aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                          </div>
-                        </div>
-                        <!--end::پردازش-->
-                      </div>
-                      <!--end::کارت body-->
-                    </div>
-                    <!--end::کارت widget 20-->
-                    <!--begin::کارت widget 7-->
-                    <div class="card card-flush h-md-50 mb-5 mb-xl-10">
-                      <!--begin::Header-->
-                      <div class="card-header pt-5">
-                        <!--begin::Title-->
-                        <div class="card-title d-flex flex-column">
-                          <!--begin::مقدار-->
-                          <span class="fs-2hx fw-bold text-dark me-2 lh-1 ls-n2">357</span>
-                          <!--end::مقدار-->
-                          <!--begin::Subtitle-->
-                          <span class="text-gray-400 pt-1 fw-semibold fs-6">حرفه ای</span>
-                          <!--end::Subtitle-->
-                        </div>
-                        <!--end::Title-->
-                      </div>
-                      <!--end::Header-->
-                      <!--begin::کارت body-->
-                      <div class="card-body d-flex flex-column justify-content-end pe-0">
-                        <!--begin::Title-->
-                        <span class="fs-6 fw-bolder text-gray-800 d-block mb-2">قهرمانان امروز</span>
-                        <!--end::Title-->
-                        <!--begin::کاربران group-->
-                        <div class="symbol-group symbol-hover flex-nowrap">
-                          <div class="symbol symbol-35px symbol-circle" data-bs-toggle="tooltip" title="آرش کمری">
-                            <span class="symbol-label bg-warning text-inverse-warning fw-bold">A</span>
-                          </div>
-                          <div class="symbol symbol-35px symbol-circle" data-bs-toggle="tooltip" title="میکائیل احمدی">
-                            <img alt="Pic" src="assets/media/avatars/300-11.jpg"/>
-                          </div>
-                          <div class="symbol symbol-35px symbol-circle" data-bs-toggle="tooltip" title="سوسن موسوی">
-                            <span class="symbol-label bg-primary text-inverse-primary fw-bold">S</span>
-                          </div>
-                          <div class="symbol symbol-35px symbol-circle" data-bs-toggle="tooltip" title="میلاد مرادی">
-                            <img alt="Pic" src="assets/media/avatars/300-2.jpg"/>
-                          </div>
-                          <div class="symbol symbol-35px symbol-circle" data-bs-toggle="tooltip" title="حسینی">
-                            <span class="symbol-label bg-danger text-inverse-danger fw-bold">P</span>
-                          </div>
-                          <div class="symbol symbol-35px symbol-circle" data-bs-toggle="tooltip" title="بهروز ازادی">
-                            <img alt="Pic" src="assets/media/avatars/300-12.jpg"/>
-                          </div>
-                          <a href="#" class="symbol symbol-35px symbol-circle" data-bs-toggle="modal"
-                             data-bs-target="#kt_modal_view_users">
-                            <span class="symbol-label bg-dark text-gray-300 fs-8 fw-bold">+42</span>
-                          </a>
-                        </div>
-                        <!--end::کاربران group-->
-                      </div>
-                      <!--end::کارت body-->
-                    </div>
-                    <!--end::کارت widget 7-->
-                  </div>
-                  <!--end::Col-->
-                  <!--begin::Col-->
-                  <div class="col-md-6 col-lg-6 col-xl-6 col-xxl-3 mb-md-5 mb-xl-10">
-                    <!--begin::کارت widget 17-->
-                    <div class="card card-flush h-md-50 mb-5 mb-xl-10">
-                      <!--begin::Header-->
-                      <div class="card-header pt-5">
-                        <!--begin::Title-->
-                        <div class="card-title d-flex flex-column">
-                          <!--begin::Info-->
-                          <div class="d-flex align-items-center">
-                            <!--begin::واحد پول-->
-                            <span class="fs-4 fw-semibold text-gray-400 me-1 align-self-start">$</span>
-                            <!--end::واحد پول-->
-                            <!--begin::مقدار-->
-                            <span class="fs-2hx fw-bold text-dark me-2 lh-1 ls-n2">69,700</span>
-                            <!--end::مقدار-->
-                            <!--begin::Badge-->
-                            <span class="badge badge-light-success fs-base">
-															<!--begin::Svg Icon | path: icons/duotune/arrows/arr066.svg-->
-															<span class="svg-icon svg-icon-5 svg-icon-success ms-n1">
-																<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                     xmlns="http://www.w3.org/2000/svg">
-																	<rect opacity="0.5" x="13" y="6" width="13" height="2" rx="1"
-                                        transform="rotate(90 13 6)" fill="currentColor"/>
-																	<path
-                                      d="M12.5657 8.56569L16.75 12.75C17.1642 13.1642 17.8358 13.1642 18.25 12.75C18.6642 12.3358 18.6642 11.6642 18.25 11.25L12.7071 5.70711C12.3166 5.31658 11.6834 5.31658 11.2929 5.70711L5.75 11.25C5.33579 11.6642 5.33579 12.3358 5.75 12.75C6.16421 13.1642 6.83579 13.1642 7.25 12.75L11.4343 8.56569C11.7467 8.25327 12.2533 8.25327 12.5657 8.56569Z"
-                                      fill="currentColor"/>
-																</svg>
-															</span>
-                              <!--end::Svg Icon-->2.2%</span>
-                            <!--end::Badge-->
-                          </div>
-                          <!--end::Info-->
-                          <!--begin::Subtitle-->
-                          <span class="text-gray-400 pt-1 fw-semibold fs-6">درآمد پروژه ها در فروردین</span>
-                          <!--end::Subtitle-->
-                        </div>
-                        <!--end::Title-->
-                      </div>
-                      <!--end::Header-->
-                      <!--begin::کارت body-->
-                      <div class="card-body pt-2 pb-4 d-flex flex-wrap align-items-center">
-                        <!--begin::Chart-->
-                        <div class="d-flex flex-center me-5 pt-2">
-                          <div id="kt_card_widget_17_chart" style="min-width: 70px; min-height: 70px" data-kt-size="70"
-                               data-kt-line="11"></div>
-                        </div>
-                        <!--end::Chart-->
-                        <!--begin::برچسبs-->
-                        <div class="d-flex flex-column content-justify-center flex-row-fluid">
-                          <!--begin::Tags-->
-                          <div class="d-flex fw-semibold align-items-center">
-                            <!--begin::Bullet-->
-                            <div class="bullet w-8px h-3px rounded-2 bg-success me-3"></div>
-                            <!--end::Bullet-->
-                            <!--begin::Tags-->
-                            <div class="text-gray-500 flex-grow-1 me-4">سیستم لیف</div>
-                            <!--end::Tags-->
-                            <!--begin::Stats-->
-                            <div class="fw-bolder text-gray-700 text-xxl-end">$7,660</div>
-                            <!--end::Stats-->
-                          </div>
-                          <!--end::Tags-->
-                          <!--begin::Tags-->
-                          <div class="d-flex fw-semibold align-items-center my-3">
-                            <!--begin::Bullet-->
-                            <div class="bullet w-8px h-3px rounded-2 bg-primary me-3"></div>
-                            <!--end::Bullet-->
-                            <!--begin::Tags-->
-                            <div class="text-gray-500 flex-grow-1 me-4">اپلیکیشن</div>
-                            <!--end::Tags-->
-                            <!--begin::Stats-->
-                            <div class="fw-bolder text-gray-700 text-xxl-end">$2,820</div>
-                            <!--end::Stats-->
-                          </div>
-                          <!--end::Tags-->
-                          <!--begin::Tags-->
-                          <div class="d-flex fw-semibold align-items-center">
-                            <!--begin::Bullet-->
-                            <div class="bullet w-8px h-3px rounded-2 me-3" style="background-color: #E4E6EF"></div>
-                            <!--end::Bullet-->
-                            <!--begin::Tags-->
-                            <div class="text-gray-500 flex-grow-1 me-4">سایر</div>
-                            <!--end::Tags-->
-                            <!--begin::Stats-->
-                            <div class="fw-bolder text-gray-700 text-xxl-end">$45,257</div>
-                            <!--end::Stats-->
-                          </div>
-                          <!--end::Tags-->
-                        </div>
-                        <!--end::برچسبs-->
-                      </div>
-                      <!--end::کارت body-->
-                    </div>
-                    <!--end::کارت widget 17-->
-                    <!--begin::لیست widget 26-->
-                    <div class="card card-flush h-lg-50">
-                      <!--begin::Header-->
-                      <div class="card-header pt-5">
-                        <!--begin::Title-->
-                        <h3 class="card-title text-gray-800 fw-bold">لینک های خارجی</h3>
-                        <!--end::Title-->
-                        <!--begin::Toolbar-->
-                        <div class="card-toolbar">
-                          <!--begin::Menu-->
-                          <button class="btn btn-icon btn-color-gray-400 btn-active-color-primary justify-content-end"
-                                  data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end"
-                                  data-kt-menu-overflow="true">
-                            <!--begin::Svg Icon | path: icons/duotune/general/gen023.svg-->
-                            <span class="svg-icon svg-icon-1 svg-icon-gray-300 me-n1">
-																<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                     xmlns="http://www.w3.org/2000/svg">
-																	<rect opacity="0.3" x="2" y="2" width="20" height="20" rx="4" fill="currentColor"/>
-																	<rect x="11" y="11" width="2.6" height="2.6" rx="1.3" fill="currentColor"/>
-																	<rect x="15" y="11" width="2.6" height="2.6" rx="1.3" fill="currentColor"/>
-																	<rect x="7" y="11" width="2.6" height="2.6" rx="1.3" fill="currentColor"/>
-																</svg>
-															</span>
-                            <!--end::Svg Icon-->
-                          </button>
-                          <!--begin::Menu 2-->
-                          <div
-                              class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-800 menu-state-bg-light-primary fw-semibold w-200px"
-                              data-kt-menu="true">
-                            <!--begin::Menu item-->
-                            <div class="menu-item px-3">
-                              <div class="menu-content fs-6 text-dark fw-bold px-3 py-4">عملیات سریع</div>
-                            </div>
-                            <!--end::Menu item-->
-                            <!--begin::Menu separator-->
-                            <div class="separator mb-3 opacity-75"></div>
-                            <!--end::Menu separator-->
-                            <!--begin::Menu item-->
-                            <div class="menu-item px-3">
-                              <a href="#" class="menu-link px-3">تیکت جدید</a>
-                            </div>
-                            <!--end::Menu item-->
-                            <!--begin::Menu item-->
-                            <div class="menu-item px-3">
-                              <a href="#" class="menu-link px-3">جدید مشتری</a>
-                            </div>
-                            <!--end::Menu item-->
-                            <!--begin::Menu item-->
-                            <div class="menu-item px-3" data-kt-menu-trigger="hover"
-                                 data-kt-menu-placement="left-start">
-                              <!--begin::Menu item-->
-                              <a href="#" class="menu-link px-3">
-                                <span class="menu-title">گروه جدید</span>
-                                <span class="menu-arrow"></span>
-                              </a>
-                              <!--end::Menu item-->
-                              <!--begin::Menu sub-->
-                              <div class="menu-sub menu-sub-dropdown w-175px py-4">
-                                <!--begin::Menu item-->
-                                <div class="menu-item px-3">
-                                  <a href="#" class="menu-link px-3">گروه مدیر</a>
-                                </div>
-                                <!--end::Menu item-->
-                                <!--begin::Menu item-->
-                                <div class="menu-item px-3">
-                                  <a href="#" class="menu-link px-3">گروه کارکنان</a>
-                                </div>
-                                <!--end::Menu item-->
-                                <!--begin::Menu item-->
-                                <div class="menu-item px-3">
-                                  <a href="#" class="menu-link px-3">گروه عضوها</a>
-                                </div>
-                                <!--end::Menu item-->
-                              </div>
-                              <!--end::Menu sub-->
-                            </div>
-                            <!--end::Menu item-->
-                            <!--begin::Menu item-->
-                            <div class="menu-item px-3">
-                              <a href="#" class="menu-link px-3">مخاطبین جدید</a>
-                            </div>
-                            <!--end::Menu item-->
-                            <!--begin::Menu separator-->
-                            <div class="separator mt-3 opacity-75"></div>
-                            <!--end::Menu separator-->
-                            <!--begin::Menu item-->
-                            <div class="menu-item px-3">
-                              <div class="menu-content px-3 py-3">
-                                <a class="btn btn-primary btn-sm px-4" href="#">Generate گزارشات</a>
-                              </div>
-                            </div>
-                            <!--end::Menu item-->
-                          </div>
-                          <!--end::Menu 2-->
-                          <!--end::Menu-->
-                        </div>
-                        <!--end::Toolbar-->
-                      </div>
-                      <!--end::Header-->
-                      <!--begin::Body-->
-                      <div class="card-body pt-5">
-                        <!--begin::آیتم-->
-                        <div class="d-flex flex-stack">
-                          <!--begin::Section-->
-                          <a href="#" class="text-primary fw-semibold fs-6 me-2">میانگین رتبه بندی مشتری</a>
-                          <!--end::Section-->
-                          <!--begin::Actions-->
-                          <button type="button"
-                                  class="btn btn-icon btn-sm h-auto btn-color-gray-400 btn-active-color-primary justify-content-end">
-                            <!--begin::Svg Icon | path: icons/duotune/arrows/arr095.svg-->
-                            <span class="svg-icon svg-icon-2">
-																<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                     xmlns="http://www.w3.org/2000/svg">
-																	<path opacity="0.3"
-                                        d="M4.7 17.3V7.7C4.7 6.59543 5.59543 5.7 6.7 5.7H9.8C10.2694 5.7 10.65 5.31944 10.65 4.85C10.65 4.38056 10.2694 4 9.8 4H5C3.89543 4 3 4.89543 3 6V19C3 20.1046 3.89543 21 5 21H18C19.1046 21 20 20.1046 20 19V14.2C20 13.7306 19.6194 13.35 19.15 13.35C18.6806 13.35 18.3 13.7306 18.3 14.2V17.3C18.3 18.4046 17.4046 19.3 16.3 19.3H6.7C5.59543 19.3 4.7 18.4046 4.7 17.3Z"
-                                        fill="currentColor"/>
-																	<rect x="21.9497" y="3.46448" width="13" height="2" rx="1"
-                                        transform="rotate(135 21.9497 3.46448)" fill="currentColor"/>
-																	<path
-                                      d="M19.8284 4.97161L19.8284 9.93937C19.8284 10.5252 20.3033 11 20.8891 11C21.4749 11 21.9497 10.5252 21.9497 9.93937L21.9497 3.05029C21.9497 2.498 21.502 2.05028 20.9497 2.05028L14.0607 2.05027C13.4749 2.05027 13 2.52514 13 3.11094C13 3.69673 13.4749 4.17161 14.0607 4.17161L19.0284 4.17161C19.4702 4.17161 19.8284 4.52978 19.8284 4.97161Z"
-                                      fill="currentColor"/>
-																</svg>
-															</span>
-                            <!--end::Svg Icon-->
-                          </button>
-                          <!--end::Actions-->
-                        </div>
-                        <!--end::آیتم-->
-                        <!--begin::Separator-->
-                        <div class="separator separator-dashed my-3"></div>
-                        <!--end::Separator-->
-                        <!--begin::آیتم-->
-                        <div class="d-flex flex-stack">
-                          <!--begin::Section-->
-                          <a href="#" class="text-primary fw-semibold fs-6 me-2">اینستاگرام فالوورها</a>
-                          <!--end::Section-->
-                          <!--begin::Actions-->
-                          <button type="button"
-                                  class="btn btn-icon btn-sm h-auto btn-color-gray-400 btn-active-color-primary justify-content-end">
-                            <!--begin::Svg Icon | path: icons/duotune/arrows/arr095.svg-->
-                            <span class="svg-icon svg-icon-2">
-																<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                     xmlns="http://www.w3.org/2000/svg">
-																	<path opacity="0.3"
-                                        d="M4.7 17.3V7.7C4.7 6.59543 5.59543 5.7 6.7 5.7H9.8C10.2694 5.7 10.65 5.31944 10.65 4.85C10.65 4.38056 10.2694 4 9.8 4H5C3.89543 4 3 4.89543 3 6V19C3 20.1046 3.89543 21 5 21H18C19.1046 21 20 20.1046 20 19V14.2C20 13.7306 19.6194 13.35 19.15 13.35C18.6806 13.35 18.3 13.7306 18.3 14.2V17.3C18.3 18.4046 17.4046 19.3 16.3 19.3H6.7C5.59543 19.3 4.7 18.4046 4.7 17.3Z"
-                                        fill="currentColor"/>
-																	<rect x="21.9497" y="3.46448" width="13" height="2" rx="1"
-                                        transform="rotate(135 21.9497 3.46448)" fill="currentColor"/>
-																	<path
-                                      d="M19.8284 4.97161L19.8284 9.93937C19.8284 10.5252 20.3033 11 20.8891 11C21.4749 11 21.9497 10.5252 21.9497 9.93937L21.9497 3.05029C21.9497 2.498 21.502 2.05028 20.9497 2.05028L14.0607 2.05027C13.4749 2.05027 13 2.52514 13 3.11094C13 3.69673 13.4749 4.17161 14.0607 4.17161L19.0284 4.17161C19.4702 4.17161 19.8284 4.52978 19.8284 4.97161Z"
-                                      fill="currentColor"/>
-																</svg>
-															</span>
-                            <!--end::Svg Icon-->
-                          </button>
-                          <!--end::Actions-->
-                        </div>
-                        <!--end::آیتم-->
-                        <!--begin::Separator-->
-                        <div class="separator separator-dashed my-3"></div>
-                        <!--end::Separator-->
-                        <!--begin::آیتم-->
-                        <div class="d-flex flex-stack">
-                          <!--begin::Section-->
-                          <a href="#" class="text-primary fw-semibold fs-6 me-2">تبلیغات گوگل</a>
-                          <!--end::Section-->
-                          <!--begin::Actions-->
-                          <button type="button"
-                                  class="btn btn-icon btn-sm h-auto btn-color-gray-400 btn-active-color-primary justify-content-end">
-                            <!--begin::Svg Icon | path: icons/duotune/arrows/arr095.svg-->
-                            <span class="svg-icon svg-icon-2">
-																<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                     xmlns="http://www.w3.org/2000/svg">
-																	<path opacity="0.3"
-                                        d="M4.7 17.3V7.7C4.7 6.59543 5.59543 5.7 6.7 5.7H9.8C10.2694 5.7 10.65 5.31944 10.65 4.85C10.65 4.38056 10.2694 4 9.8 4H5C3.89543 4 3 4.89543 3 6V19C3 20.1046 3.89543 21 5 21H18C19.1046 21 20 20.1046 20 19V14.2C20 13.7306 19.6194 13.35 19.15 13.35C18.6806 13.35 18.3 13.7306 18.3 14.2V17.3C18.3 18.4046 17.4046 19.3 16.3 19.3H6.7C5.59543 19.3 4.7 18.4046 4.7 17.3Z"
-                                        fill="currentColor"/>
-																	<rect x="21.9497" y="3.46448" width="13" height="2" rx="1"
-                                        transform="rotate(135 21.9497 3.46448)" fill="currentColor"/>
-																	<path
-                                      d="M19.8284 4.97161L19.8284 9.93937C19.8284 10.5252 20.3033 11 20.8891 11C21.4749 11 21.9497 10.5252 21.9497 9.93937L21.9497 3.05029C21.9497 2.498 21.502 2.05028 20.9497 2.05028L14.0607 2.05027C13.4749 2.05027 13 2.52514 13 3.11094C13 3.69673 13.4749 4.17161 14.0607 4.17161L19.0284 4.17161C19.4702 4.17161 19.8284 4.52978 19.8284 4.97161Z"
-                                      fill="currentColor"/>
-																</svg>
-															</span>
-                            <!--end::Svg Icon-->
-                          </button>
-                          <!--end::Actions-->
-                        </div>
-                        <!--end::آیتم-->
-                      </div>
-                      <!--end::Body-->
-                    </div>
-                    <!--end::LIst widget 26-->
-                  </div>
-                  <!--end::Col-->
-                  <!--begin::Col-->
-                  <div class="col-xxl-6">
-                    <!--begin::Engage widget 10-->
-                    <div class="card card-flush h-md-100">
-                      <!--begin::Body-->
-                      <div
-                          class="card-body d-flex flex-column justify-content-between mt-9 bgi-no-repeat bgi-size-cover bgi-position-x-center pb-0"
-                          style="background-position: 100% 50%; background-image:url('assets/media/stock/900x600/42.png')">
-                        <!--begin::Wrapper-->
-                        <div class="mb-10">
-                          <!--begin::Title-->
-                          <div class="fs-2hx fw-bold text-gray-800 text-center mb-13">
-														<span class="me-2">محیط جدید ما را با
-														<br/>
-														<span class="position-relative d-inline-block text-danger">
-															<a href="../../demo1/dist/pages/user-profile/overview.html"
-                                 class="text-danger opacity-75-hover">طرح حرفه ای</a>
-                              <!--begin::Separator-->
-															<span
-                                  class="position-absolute opacity-15 bottom-0 start-0 border-4 border-danger border-bottom w-100"></span>
-                              <!--end::Separator-->
-														</span></span>رایگان
-                          </div>
-                          <!--end::Title-->
-                          <!--begin::Actions-->
-                          <div class="text-center">
-                            <a href='#' class="btn btn-sm btn-dark fw-bold" data-bs-toggle="modal"
-                               data-bs-target="#kt_modal_upgrade_plan">ارتقا دهید</a>
-                          </div>
-                          <!--begin::Actions-->
-                        </div>
-                        <!--begin::Wrapper-->
-                        <!--begin::Illustration-->
-                        <img class="mx-auto h-150px h-lg-200px theme-light-show"
-                             src="assets/media/illustrations/misc/upgrade.svg" alt=""/>
-                        <img class="mx-auto h-150px h-lg-200px theme-dark-show"
-                             src="assets/media/illustrations/misc/upgrade-dark.svg" alt=""/>
-                        <!--end::Illustration-->
-                      </div>
-                      <!--end::Body-->
-                    </div>
-                    <!--end::Engage widget 10-->
-                  </div>
-                  <!--end::Col-->
-                </div>
-                <!--end::Row-->
-                <!--begin::Row-->
-                <div class="row gx-5 gx-xl-10">
-                  <!--begin::Col-->
-                  <div class="col-xxl-6 mb-5 mb-xl-10">
-                    <!--begin::Chart widget 8-->
-                    <div class="card card-flush h-xl-100">
-                      <!--begin::Header-->
-                      <div class="card-header pt-5">
-                        <!--begin::Title-->
-                        <h3 class="card-title align-items-start flex-column">
-                          <span class="card-label fw-bold text-dark">عملکرد بررسی اجمالی</span>
-                          <span class="text-gray-400 mt-1 fw-semibold fs-6">کاربران از تمامی کانال ها</span>
-                        </h3>
-                        <!--end::Title-->
-                        <!--begin::Toolbar-->
-                        <div class="card-toolbar">
-                          <ul class="nav" id="kt_chart_widget_8_tabs">
-                            <li class="nav-item">
-                              <a class="nav-link btn btn-sm btn-color-muted btn-active btn-active-light fw-bold px-4 me-1"
-                                 data-bs-toggle="tab" id="kt_chart_widget_8_week_toggle"
-                                 href="#kt_chart_widget_8_week_tab">ماه</a>
-                            </li>
-                            <li class="nav-item">
-                              <a class="nav-link btn btn-sm btn-color-muted btn-active btn-active-light fw-bold px-4 me-1 active"
-                                 data-bs-toggle="tab" id="kt_chart_widget_8_month_toggle"
-                                 href="#kt_chart_widget_8_month_tab">هفته</a>
-                            </li>
-                          </ul>
-                        </div>
-                        <!--end::Toolbar-->
-                      </div>
-                      <!--end::Header-->
-                      <!--begin::Body-->
-                      <div class="card-body pt-6">
-                        <!--begin::Tab content-->
-                        <div class="tab-content">
-                          <!--begin::Tab pane-->
-                          <div class="tab-pane fade" id="kt_chart_widget_8_week_tab" role="tabpanel">
-                            <!--begin::امار-->
-                            <div class="mb-5">
-                              <!--begin::امار-->
-                              <div class="d-flex align-items-center mb-2">
-                                <span class="fs-1 fw-semibold text-gray-400 me-1 mt-n1">$</span>
-                                <span class="fs-3x fw-bold text-gray-800 me-2 lh-1 ls-n2">18,89</span>
-                                <span class="badge badge-light-success fs-base">
-																	<!--begin::Svg Icon | path: icons/duotune/arrows/arr066.svg-->
-																	<span class="svg-icon svg-icon-5 svg-icon-success ms-n1">
-																		<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                         xmlns="http://www.w3.org/2000/svg">
-																			<rect opacity="0.5" x="13" y="6" width="13" height="2" rx="1"
-                                            transform="rotate(90 13 6)" fill="currentColor"/>
-																			<path
-                                          d="M12.5657 8.56569L16.75 12.75C17.1642 13.1642 17.8358 13.1642 18.25 12.75C18.6642 12.3358 18.6642 11.6642 18.25 11.25L12.7071 5.70711C12.3166 5.31658 11.6834 5.31658 11.2929 5.70711L5.75 11.25C5.33579 11.6642 5.33579 12.3358 5.75 12.75C6.16421 13.1642 6.83579 13.1642 7.25 12.75L11.4343 8.56569C11.7467 8.25327 12.2533 8.25327 12.5657 8.56569Z"
-                                          fill="currentColor"/>
-																		</svg>
-																	</span>
-                                  <!--end::Svg Icon-->4,8%</span>
-                              </div>
-                              <!--end::امار-->
-                              <!--begin::توضیحات-->
-                              <span class="fs-6 fw-semibold text-gray-400">میانگین هزینه در هر تعامل</span>
-                              <!--end::توضیحات-->
-                            </div>
-                            <!--end::امار-->
-                            <!--begin::Chart-->
-                            <div id="kt_chart_widget_8_week_chart" class="ms-n5 min-h-auto" style="height: 275px"></div>
-                            <!--end::Chart-->
-                            <!--begin::آیتمs-->
-                            <div class="d-flex flex-wrap pt-5">
-                              <!--begin::آیتم-->
-                              <div class="d-flex flex-column me-7 me-lg-16 pt-sm-3 pt-6">
-                                <!--begin::آیتم-->
-                                <div class="d-flex align-items-center mb-3 mb-sm-6">
-                                  <!--begin::Bullet-->
-                                  <span class="bullet bullet-dot bg-primary me-2 h-10px w-10px"></span>
-                                  <!--end::Bullet-->
-                                  <!--begin::Tags-->
-                                  <span class="fw-bold text-gray-600 fs-6">شبکه اجتماعی کمپین ها</span>
-                                  <!--end::Tags-->
-                                </div>
-                                <!--ed::آیتم-->
-                                <!--begin::آیتم-->
-                                <div class="d-flex align-items-center">
-                                  <!--begin::Bullet-->
-                                  <span class="bullet bullet-dot bg-danger me-2 h-10px w-10px"></span>
-                                  <!--end::Bullet-->
-                                  <!--begin::Tags-->
-                                  <span class="fw-bold text-&lt;gray-600 fs-6">تبلیغات گوگل</span>
-                                  <!--end::Tags-->
-                                </div>
-                                <!--ed::آیتم-->
-                              </div>
-                              <!--ed::آیتم-->
-                              <!--begin::آیتم-->
-                              <div class="d-flex flex-column me-7 me-lg-16 pt-sm-3 pt-6">
-                                <!--begin::آیتم-->
-                                <div class="d-flex align-items-center mb-3 mb-sm-6">
-                                  <!--begin::Bullet-->
-                                  <span class="bullet bullet-dot bg-success me-2 h-10px w-10px"></span>
-                                  <!--end::Bullet-->
-                                  <!--begin::Tags-->
-                                  <span class="fw-bold text-gray-600 fs-6">خبرنامه ایمیل</span>
-                                  <!--end::Tags-->
-                                </div>
-                                <!--ed::آیتم-->
-                                <!--begin::آیتم-->
-                                <div class="d-flex align-items-center">
-                                  <!--begin::Bullet-->
-                                  <span class="bullet bullet-dot bg-warning me-2 h-10px w-10px"></span>
-                                  <!--end::Bullet-->
-                                  <!--begin::Tags-->
-                                  <span class="fw-bold text-gray-600 fs-6">دوره ها</span>
-                                  <!--end::Tags-->
-                                </div>
-                                <!--ed::آیتم-->
-                              </div>
-                              <!--ed::آیتم-->
-                              <!--begin::آیتم-->
-                              <div class="d-flex flex-column pt-sm-3 pt-6">
-                                <!--begin::آیتم-->
-                                <div class="d-flex align-items-center mb-3 mb-sm-6">
-                                  <!--begin::Bullet-->
-                                  <span class="bullet bullet-dot bg-info me-2 h-10px w-10px"></span>
-                                  <!--end::Bullet-->
-                                  <!--begin::Tags-->
-                                  <span class="fw-bold text-gray-600 fs-6">کمپین تلویزیونی</span>
-                                  <!--end::Tags-->
-                                </div>
-                                <!--ed::آیتم-->
-                                <!--begin::آیتم-->
-                                <div class="d-flex align-items-center">
-                                  <!--begin::Bullet-->
-                                  <span class="bullet bullet-dot bg-success me-2 h-10px w-10px"></span>
-                                  <!--end::Bullet-->
-                                  <!--begin::Tags-->
-                                  <span class="fw-bold text-gray-600 fs-6">رادیو</span>
-                                  <!--end::Tags-->
-                                </div>
-                                <!--ed::آیتم-->
-                              </div>
-                              <!--ed::آیتم-->
-                            </div>
-                            <!--ed::آیتمs-->
-                          </div>
-                          <!--end::Tab pane-->
-                          <!--begin::Tab pane-->
-                          <div class="tab-pane fade active show" id="kt_chart_widget_8_month_tab" role="tabpanel">
-                            <!--begin::امار-->
-                            <div class="mb-5">
-                              <!--begin::امار-->
-                              <div class="d-flex align-items-center mb-2">
-                                <span class="fs-1 fw-semibold text-gray-400 me-1 mt-n1">$</span>
-                                <span class="fs-3x fw-bold text-gray-800 me-2 lh-1 ls-n2">8,55</span>
-                                <span class="badge badge-light-success fs-base">
-																	<!--begin::Svg Icon | path: icons/duotune/arrows/arr066.svg-->
-																	<span class="svg-icon svg-icon-5 svg-icon-success ms-n1">
-																		<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                         xmlns="http://www.w3.org/2000/svg">
-																			<rect opacity="0.5" x="13" y="6" width="13" height="2" rx="1"
-                                            transform="rotate(90 13 6)" fill="currentColor"/>
-																			<path
-                                          d="M12.5657 8.56569L16.75 12.75C17.1642 13.1642 17.8358 13.1642 18.25 12.75C18.6642 12.3358 18.6642 11.6642 18.25 11.25L12.7071 5.70711C12.3166 5.31658 11.6834 5.31658 11.2929 5.70711L5.75 11.25C5.33579 11.6642 5.33579 12.3358 5.75 12.75C6.16421 13.1642 6.83579 13.1642 7.25 12.75L11.4343 8.56569C11.7467 8.25327 12.2533 8.25327 12.5657 8.56569Z"
-                                          fill="currentColor"/>
-																		</svg>
-																	</span>
-                                  <!--end::Svg Icon-->2.2%</span>
-                              </div>
-                              <!--end::امار-->
-                              <!--begin::توضیحات-->
-                              <span class="fs-6 fw-semibold text-gray-400">میانگین هزینه در هر تعامل</span>
-                              <!--end::توضیحات-->
-                            </div>
-                            <!--end::امار-->
-                            <!--begin::Chart-->
-                            <div id="kt_chart_widget_8_month_chart" class="ms-n5 min-h-auto"
-                                 style="height: 275px"></div>
-                            <!--end::Chart-->
-                            <!--begin::آیتمs-->
-                            <div class="d-flex flex-wrap pt-5">
-                              <!--begin::آیتم-->
-                              <div class="d-flex flex-column me-7 me-lg-16 pt-sm-3 pt-6">
-                                <!--begin::آیتم-->
-                                <div class="d-flex align-items-center mb-3 mb-sm-6">
-                                  <!--begin::Bullet-->
-                                  <span class="bullet bullet-dot bg-primary me-2 h-10px w-10px"></span>
-                                  <!--end::Bullet-->
-                                  <!--begin::Tags-->
-                                  <span class="fw-bold text-gray-600 fs-6">شبکه اجتماعی کمپین ها</span>
-                                  <!--end::Tags-->
-                                </div>
-                                <!--ed::آیتم-->
-                                <!--begin::آیتم-->
-                                <div class="d-flex align-items-center">
-                                  <!--begin::Bullet-->
-                                  <span class="bullet bullet-dot bg-danger me-2 h-10px w-10px"></span>
-                                  <!--end::Bullet-->
-                                  <!--begin::Tags-->
-                                  <span class="fw-bold text-gray-600 fs-6">تبلیغات گوگل</span>
-                                  <!--end::Tags-->
-                                </div>
-                                <!--ed::آیتم-->
-                              </div>
-                              <!--ed::آیتم-->
-                              <!--begin::آیتم-->
-                              <div class="d-flex flex-column me-7 me-lg-16 pt-sm-3 pt-6">
-                                <!--begin::آیتم-->
-                                <div class="d-flex align-items-center mb-3 mb-sm-6">
-                                  <!--begin::Bullet-->
-                                  <span class="bullet bullet-dot bg-success me-2 h-10px w-10px"></span>
-                                  <!--end::Bullet-->
-                                  <!--begin::Tags-->
-                                  <span class="fw-bold text-gray-600 fs-6">خبرنامه ایمیل</span>
-                                  <!--end::Tags-->
-                                </div>
-                                <!--ed::آیتم-->
-                                <!--begin::آیتم-->
-                                <div class="d-flex align-items-center">
-                                  <!--begin::Bullet-->
-                                  <span class="bullet bullet-dot bg-warning me-2 h-10px w-10px"></span>
-                                  <!--end::Bullet-->
-                                  <!--begin::Tags-->
-                                  <span class="fw-bold text-gray-600 fs-6">دوره ها</span>
-                                  <!--end::Tags-->
-                                </div>
-                                <!--ed::آیتم-->
-                              </div>
-                              <!--ed::آیتم-->
-                              <!--begin::آیتم-->
-                              <div class="d-flex flex-column pt-sm-3 pt-6">
-                                <!--begin::آیتم-->
-                                <div class="d-flex align-items-center mb-3 mb-sm-6">
-                                  <!--begin::Bullet-->
-                                  <span class="bullet bullet-dot bg-info me-2 h-10px w-10px"></span>
-                                  <!--end::Bullet-->
-                                  <!--begin::Tags-->
-                                  <span class="fw-bold text-gray-600 fs-6">کمپین تلویزیونی</span>
-                                  <!--end::Tags-->
-                                </div>
-                                <!--ed::آیتم-->
-                                <!--begin::آیتم-->
-                                <div class="d-flex align-items-center">
-                                  <!--begin::Bullet-->
-                                  <span class="bullet bullet-dot bg-success me-2 h-10px w-10px"></span>
-                                  <!--end::Bullet-->
-                                  <!--begin::Tags-->
-                                  <span class="fw-bold text-gray-600 fs-6">رادیو</span>
-                                  <!--end::Tags-->
-                                </div>
-                                <!--ed::آیتم-->
-                              </div>
-                              <!--ed::آیتم-->
-                            </div>
-                            <!--ed::آیتمs-->
-                          </div>
-                          <!--end::Tab pane-->
-                        </div>
-                        <!--end::Tab content-->
-                      </div>
-                      <!--end::Body-->
-                    </div>
-                    <!--end::Chart widget 8-->
-                  </div>
-                  <!--end::Col-->
-                  <!--begin::Col-->
-                  <div class="col-xl-6 mb-5 mb-xl-10">
-                    <!--begin::جداول widget 16-->
-                    <div class="card card-flush h-xl-100">
-                      <!--begin::Header-->
-                      <div class="card-header pt-5">
-                        <!--begin::Title-->
-                        <h3 class="card-title align-items-start flex-column">
-                          <span class="card-label fw-bold text-gray-800">نویسندگان دستاوردها</span>
-                          <span class="text-gray-400 mt-1 fw-semibold fs-6">نرخ میانگین 69.34</span>
-                        </h3>
-                        <!--end::Title-->
-                        <!--begin::Toolbar-->
-                        <div class="card-toolbar">
-                          <!--begin::Menu-->
-                          <button class="btn btn-icon btn-color-gray-400 btn-active-color-primary justify-content-end"
-                                  data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end"
-                                  data-kt-menu-overflow="true">
-                            <!--begin::Svg Icon | path: icons/duotune/general/gen023.svg-->
-                            <span class="svg-icon svg-icon-1 svg-icon-gray-300 me-n1">
-																<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                     xmlns="http://www.w3.org/2000/svg">
-																	<rect opacity="0.3" x="2" y="2" width="20" height="20" rx="4" fill="currentColor"/>
-																	<rect x="11" y="11" width="2.6" height="2.6" rx="1.3" fill="currentColor"/>
-																	<rect x="15" y="11" width="2.6" height="2.6" rx="1.3" fill="currentColor"/>
-																	<rect x="7" y="11" width="2.6" height="2.6" rx="1.3" fill="currentColor"/>
-																</svg>
-															</span>
-                            <!--end::Svg Icon-->
-                          </button>
-                          <!--begin::Menu 2-->
-                          <div
-                              class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-800 menu-state-bg-light-primary fw-semibold w-200px"
-                              data-kt-menu="true">
-                            <!--begin::Menu item-->
-                            <div class="menu-item px-3">
-                              <div class="menu-content fs-6 text-dark fw-bold px-3 py-4">عملیات سریع</div>
-                            </div>
-                            <!--end::Menu item-->
-                            <!--begin::Menu separator-->
-                            <div class="separator mb-3 opacity-75"></div>
-                            <!--end::Menu separator-->
-                            <!--begin::Menu item-->
-                            <div class="menu-item px-3">
-                              <a href="#" class="menu-link px-3">تیکت جدید</a>
-                            </div>
-                            <!--end::Menu item-->
-                            <!--begin::Menu item-->
-                            <div class="menu-item px-3">
-                              <a href="#" class="menu-link px-3">جدید مشتری</a>
-                            </div>
-                            <!--end::Menu item-->
-                            <!--begin::Menu item-->
-                            <div class="menu-item px-3" data-kt-menu-trigger="hover"
-                                 data-kt-menu-placement="left-start">
-                              <!--begin::Menu item-->
-                              <a href="#" class="menu-link px-3">
-                                <span class="menu-title">گروه جدید</span>
-                                <span class="menu-arrow"></span>
-                              </a>
-                              <!--end::Menu item-->
-                              <!--begin::Menu sub-->
-                              <div class="menu-sub menu-sub-dropdown w-175px py-4">
-                                <!--begin::Menu item-->
-                                <div class="menu-item px-3">
-                                  <a href="#" class="menu-link px-3">گروه مدیر</a>
-                                </div>
-                                <!--end::Menu item-->
-                                <!--begin::Menu item-->
-                                <div class="menu-item px-3">
-                                  <a href="#" class="menu-link px-3">گروه کارکنان</a>
-                                </div>
-                                <!--end::Menu item-->
-                                <!--begin::Menu item-->
-                                <div class="menu-item px-3">
-                                  <a href="#" class="menu-link px-3">گروه عضوها</a>
-                                </div>
-                                <!--end::Menu item-->
-                              </div>
-                              <!--end::Menu sub-->
-                            </div>
-                            <!--end::Menu item-->
-                            <!--begin::Menu item-->
-                            <div class="menu-item px-3">
-                              <a href="#" class="menu-link px-3">مخاطبین جدید</a>
-                            </div>
-                            <!--end::Menu item-->
-                            <!--begin::Menu separator-->
-                            <div class="separator mt-3 opacity-75"></div>
-                            <!--end::Menu separator-->
-                            <!--begin::Menu item-->
-                            <div class="menu-item px-3">
-                              <div class="menu-content px-3 py-3">
-                                <a class="btn btn-primary btn-sm px-4" href="#">Generate گزارشات</a>
-                              </div>
-                            </div>
-                            <!--end::Menu item-->
-                          </div>
-                          <!--end::Menu 2-->
-                          <!--end::Menu-->
-                        </div>
-                        <!--end::Toolbar-->
-                      </div>
-                      <!--end::Header-->
-                      <!--begin::Body-->
-                      <div class="card-body pt-6">
-                        <!--begin::Nav-->
-                        <ul class="nav nav-pills nav-pills-custom mb-3">
-                          <!--begin::آیتم-->
-                          <li class="nav-item mb-3 me-3 me-lg-6">
-                            <!--begin::Link-->
-                            <a class="nav-link btn btn-outline btn-flex btn-color-muted btn-active-color-primary flex-column overflow-hidden w-80px h-85px pt-5 pb-2 active"
-                               id="kt_stats_widget_16_tab_link_1" data-bs-toggle="pill"
-                               href="#kt_stats_widget_16_tab_1">
-                              <!--begin::Icon-->
-                              <div class="nav-icon mb-3">
-                                <i class="fonticon-drive fs-1 p-0"></i>
-                              </div>
-                              <!--end::Icon-->
-                              <!--begin::Title-->
-                              <span class="nav-text text-gray-800 fw-bold fs-6 lh-1">ساس</span>
-                              <!--end::Title-->
-                              <!--begin::Bullet-->
-                              <span class="bullet-custom position-absolute bottom-0 w-100 h-4px bg-primary"></span>
-                              <!--end::Bullet-->
-                            </a>
-                            <!--end::Link-->
-                          </li>
-                          <!--end::آیتم-->
-                          <!--begin::آیتم-->
-                          <li class="nav-item mb-3 me-3 me-lg-6">
-                            <!--begin::Link-->
-                            <a class="nav-link btn btn-outline btn-flex btn-color-muted btn-active-color-primary flex-column overflow-hidden w-80px h-85px pt-5 pb-2"
-                               id="kt_stats_widget_16_tab_link_2" data-bs-toggle="pill"
-                               href="#kt_stats_widget_16_tab_2">
-                              <!--begin::Icon-->
-                              <div class="nav-icon mb-3">
-                                <i class="fonticon-bank fs-1 p-0"></i>
-                              </div>
-                              <!--end::Icon-->
-                              <!--begin::Title-->
-                              <span class="nav-text text-gray-800 fw-bold fs-6 lh-1">کریپتو</span>
-                              <!--end::Title-->
-                              <!--begin::Bullet-->
-                              <span class="bullet-custom position-absolute bottom-0 w-100 h-4px bg-primary"></span>
-                              <!--end::Bullet-->
-                            </a>
-                            <!--end::Link-->
-                          </li>
-                          <!--end::آیتم-->
-                          <!--begin::آیتم-->
-                          <li class="nav-item mb-3 me-3 me-lg-6">
-                            <!--begin::Link-->
-                            <a class="nav-link btn btn-outline btn-flex btn-color-muted btn-active-color-primary flex-column overflow-hidden w-80px h-85px pt-5 pb-2"
-                               id="kt_stats_widget_16_tab_link_3" data-bs-toggle="pill"
-                               href="#kt_stats_widget_16_tab_3">
-                              <!--begin::Icon-->
-                              <div class="nav-icon mb-3">
-                                <i class="fonticon-like-1 fs-1 p-0"></i>
-                              </div>
-                              <!--end::Icon-->
-                              <!--begin::Title-->
-                              <span class="nav-text text-gray-800 fw-bold fs-6 lh-1">شبکه اجتماعی</span>
-                              <!--end::Title-->
-                              <!--begin::Bullet-->
-                              <span class="bullet-custom position-absolute bottom-0 w-100 h-4px bg-primary"></span>
-                              <!--end::Bullet-->
-                            </a>
-                            <!--end::Link-->
-                          </li>
-                          <!--end::آیتم-->
-                          <!--begin::آیتم-->
-                          <li class="nav-item mb-3 me-3 me-lg-6">
-                            <!--begin::Link-->
-                            <a class="nav-link btn btn-outline btn-flex btn-color-muted btn-active-color-primary flex-column overflow-hidden w-80px h-85px pt-5 pb-2"
-                               id="kt_stats_widget_16_tab_link_4" data-bs-toggle="pill"
-                               href="#kt_stats_widget_16_tab_4">
-                              <!--begin::Icon-->
-                              <div class="nav-icon mb-3">
-                                <i class="fonticon-remote-control fs-1 p-0"></i>
-                              </div>
-                              <!--end::Icon-->
-                              <!--begin::Title-->
-                              <span class="nav-text text-gray-800 fw-bold fs-6 lh-1">موبایل</span>
-                              <!--end::Title-->
-                              <!--begin::Bullet-->
-                              <span class="bullet-custom position-absolute bottom-0 w-100 h-4px bg-primary"></span>
-                              <!--end::Bullet-->
-                            </a>
-                            <!--end::Link-->
-                          </li>
-                          <!--end::آیتم-->
-                          <!--begin::آیتم-->
-                          <li class="nav-item mb-3 me-3 me-lg-6">
-                            <!--begin::Link-->
-                            <a class="nav-link btn btn-outline btn-flex btn-color-muted btn-active-color-primary flex-column overflow-hidden w-80px h-85px pt-5 pb-2"
-                               id="kt_stats_widget_16_tab_link_5" data-bs-toggle="pill"
-                               href="#kt_stats_widget_16_tab_5">
-                              <!--begin::Icon-->
-                              <div class="nav-icon mb-3">
-                                <i class="fonticon-telegram fs-1 p-0"></i>
-                              </div>
-                              <!--end::Icon-->
-                              <!--begin::Title-->
-                              <span class="nav-text text-gray-800 fw-bold fs-6 lh-1">سایر</span>
-                              <!--end::Title-->
-                              <!--begin::Bullet-->
-                              <span class="bullet-custom position-absolute bottom-0 w-100 h-4px bg-primary"></span>
-                              <!--end::Bullet-->
-                            </a>
-                            <!--end::Link-->
-                          </li>
-                          <!--end::آیتم-->
-                        </ul>
-                        <!--end::Nav-->
-                        <!--begin::Tab Content-->
-                        <div class="tab-content">
-                          <!--begin::Tap pane-->
-                          <div class="tab-pane fade show active" id="kt_stats_widget_16_tab_1">
-                            <!--begin::Table container-->
-                            <div class="table-responsive">
-                              <!--begin::Table-->
-                              <table class="table table-row-dashed align-middle gs-0 gy-3 my-0">
-                                <!--begin::Table head-->
-                                <thead>
-                                <tr class="fs-7 fw-bold text-gray-400 border-bottom-0">
-                                  <th class="p-0 pb-3 min-w-150px text-start">نویسنده</th>
-                                  <th class="p-0 pb-3 min-w-100px text-end pe-13">نرخ</th>
-                                  <th class="p-0 pb-3 w-125px text-end pe-7">چارت</th>
-                                  <th class="p-0 pb-3 w-50px text-end">نمایش</th>
-                                </tr>
-                                </thead>
-                                <!--end::Table head-->
-                                <!--begin::Table body-->
-                                <tbody>
-                                <tr>
-                                  <td>
-                                    <div class="d-flex align-items-center">
-                                      <div class="symbol symbol-50px me-3">
-                                        <img src="assets/media/avatars/300-3.jpg" class="" alt=""/>
-                                      </div>
-                                      <div class="d-flex justify-content-start flex-column">
-                                        <a href="../../demo1/dist/pages/user-profile/overview.html"
-                                           class="text-gray-800 fw-bold text-hover-primary mb-1 fs-6">گای هاوکینز</a>
-                                        <span class="text-gray-400 fw-semibold d-block fs-7">هلند</span>
-                                      </div>
-                                    </div>
-                                  </td>
-                                  <td class="text-end pe-13">
-                                    <span class="text-gray-600 fw-bold fs-6">78.34%</span>
-                                  </td>
-                                  <td class="text-end pe-0">
-                                    <div id="kt_table_widget_16_chart_1_1" class="h-50px mt-n8 pe-7"
-                                         data-kt-chart-color="success"></div>
-                                  </td>
-                                  <td class="text-end">
-                                    <a href="#"
-                                       class="btn btn-sm btn-icon btn-bg-light btn-active-color-primary w-30px h-30px">
-                                      <!--begin::Svg Icon | path: icons/duotune/arrows/arr001.svg-->
-                                      <span class="svg-icon svg-icon-5 svg-icon-gray-700">
-																						<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                                 xmlns="http://www.w3.org/2000/svg">
-																							<path d="M14.4 11H3C2.4 11 2 11.4 2 12C2 12.6 2.4 13 3 13H14.4V11Z"
-                                                    fill="currentColor"/>
-																							<path opacity="0.3"
-                                                    d="M14.4 20V4L21.7 11.3C22.1 11.7 22.1 12.3 21.7 12.7L14.4 20Z"
-                                                    fill="currentColor"/>
-																						</svg>
-																					</span>
-                                      <!--end::Svg Icon-->
-                                    </a>
-                                  </td>
-                                </tr>
-                                <tr>
-                                  <td>
-                                    <div class="d-flex align-items-center">
-                                      <div class="symbol symbol-50px me-3">
-                                        <img src="assets/media/avatars/300-2.jpg" class="" alt=""/>
-                                      </div>
-                                      <div class="d-flex justify-content-start flex-column">
-                                        <a href="../../demo1/dist/pages/user-profile/overview.html"
-                                           class="text-gray-800 fw-bold text-hover-primary mb-1 fs-6">هنری</a>
-                                        <span class="text-gray-400 fw-semibold d-block fs-7">فرانسه</span>
-                                      </div>
-                                    </div>
-                                  </td>
-                                  <td class="text-end pe-13">
-                                    <span class="text-gray-600 fw-bold fs-6">63.83%</span>
-                                  </td>
-                                  <td class="text-end pe-0">
-                                    <div id="kt_table_widget_16_chart_1_2" class="h-50px mt-n8 pe-7"
-                                         data-kt-chart-color="danger"></div>
-                                  </td>
-                                  <td class="text-end">
-                                    <a href="#"
-                                       class="btn btn-sm btn-icon btn-bg-light btn-active-color-primary w-30px h-30px">
-                                      <!--begin::Svg Icon | path: icons/duotune/arrows/arr001.svg-->
-                                      <span class="svg-icon svg-icon-5 svg-icon-gray-700">
-																						<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                                 xmlns="http://www.w3.org/2000/svg">
-																							<path d="M14.4 11H3C2.4 11 2 11.4 2 12C2 12.6 2.4 13 3 13H14.4V11Z"
-                                                    fill="currentColor"/>
-																							<path opacity="0.3"
-                                                    d="M14.4 20V4L21.7 11.3C22.1 11.7 22.1 12.3 21.7 12.7L14.4 20Z"
-                                                    fill="currentColor"/>
-																						</svg>
-																					</span>
-                                      <!--end::Svg Icon-->
-                                    </a>
-                                  </td>
-                                </tr>
-                                <tr>
-                                  <td>
-                                    <div class="d-flex align-items-center">
-                                      <div class="symbol symbol-50px me-3">
-                                        <img src="assets/media/avatars/300-9.jpg" class="" alt=""/>
-                                      </div>
-                                      <div class="d-flex justify-content-start flex-column">
-                                        <a href="../../demo1/dist/pages/user-profile/overview.html"
-                                           class="text-gray-800 fw-bold text-hover-primary mb-1 fs-6">جواد یساری</a>
-                                        <span class="text-gray-400 fw-semibold d-block fs-7">لهستان</span>
-                                      </div>
-                                    </div>
-                                  </td>
-                                  <td class="text-end pe-13">
-                                    <span class="text-gray-600 fw-bold fs-6">92.56%</span>
-                                  </td>
-                                  <td class="text-end pe-0">
-                                    <div id="kt_table_widget_16_chart_1_3" class="h-50px mt-n8 pe-7"
-                                         data-kt-chart-color="success"></div>
-                                  </td>
-                                  <td class="text-end">
-                                    <a href="#"
-                                       class="btn btn-sm btn-icon btn-bg-light btn-active-color-primary w-30px h-30px">
-                                      <!--begin::Svg Icon | path: icons/duotune/arrows/arr001.svg-->
-                                      <span class="svg-icon svg-icon-5 svg-icon-gray-700">
-																						<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                                 xmlns="http://www.w3.org/2000/svg">
-																							<path d="M14.4 11H3C2.4 11 2 11.4 2 12C2 12.6 2.4 13 3 13H14.4V11Z"
-                                                    fill="currentColor"/>
-																							<path opacity="0.3"
-                                                    d="M14.4 20V4L21.7 11.3C22.1 11.7 22.1 12.3 21.7 12.7L14.4 20Z"
-                                                    fill="currentColor"/>
-																						</svg>
-																					</span>
-                                      <!--end::Svg Icon-->
-                                    </a>
-                                  </td>
-                                </tr>
-                                <tr>
-                                  <td>
-                                    <div class="d-flex align-items-center">
-                                      <div class="symbol symbol-50px me-3">
-                                        <img src="assets/media/avatars/300-7.jpg" class="" alt=""/>
-                                      </div>
-                                      <div class="d-flex justify-content-start flex-column">
-                                        <a href="../../demo1/dist/pages/user-profile/overview.html"
-                                           class="text-gray-800 fw-bold text-hover-primary mb-1 fs-6">کامران</a>
-                                        <span class="text-gray-400 fw-semibold d-block fs-7">مکزیک</span>
-                                      </div>
-                                    </div>
-                                  </td>
-                                  <td class="text-end pe-13">
-                                    <span class="text-gray-600 fw-bold fs-6">63.08%</span>
-                                  </td>
-                                  <td class="text-end pe-0">
-                                    <div id="kt_table_widget_16_chart_1_4" class="h-50px mt-n8 pe-7"
-                                         data-kt-chart-color="success"></div>
-                                  </td>
-                                  <td class="text-end">
-                                    <a href="#"
-                                       class="btn btn-sm btn-icon btn-bg-light btn-active-color-primary w-30px h-30px">
-                                      <!--begin::Svg Icon | path: icons/duotune/arrows/arr001.svg-->
-                                      <span class="svg-icon svg-icon-5 svg-icon-gray-700">
-																						<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                                 xmlns="http://www.w3.org/2000/svg">
-																							<path d="M14.4 11H3C2.4 11 2 11.4 2 12C2 12.6 2.4 13 3 13H14.4V11Z"
-                                                    fill="currentColor"/>
-																							<path opacity="0.3"
-                                                    d="M14.4 20V4L21.7 11.3C22.1 11.7 22.1 12.3 21.7 12.7L14.4 20Z"
-                                                    fill="currentColor"/>
-																						</svg>
-																					</span>
-                                      <!--end::Svg Icon-->
-                                    </a>
-                                  </td>
-                                </tr>
-                                </tbody>
-                                <!--end::Table body-->
-                              </table>
-                              <!--end::Table-->
-                            </div>
-                            <!--end::Table container-->
-                          </div>
-                          <!--end::Tap pane-->
-                          <!--begin::Tap pane-->
-                          <div class="tab-pane fade" id="kt_stats_widget_16_tab_2">
-                            <!--begin::Table container-->
-                            <div class="table-responsive">
-                              <!--begin::Table-->
-                              <table class="table table-row-dashed align-middle gs-0 gy-3 my-0">
-                                <!--begin::Table head-->
-                                <thead>
-                                <tr class="fs-7 fw-bold text-gray-400 border-bottom-0">
-                                  <th class="p-0 pb-3 min-w-150px text-start">نویسنده</th>
-                                  <th class="p-0 pb-3 min-w-100px text-end pe-13">نرخ</th>
-                                  <th class="p-0 pb-3 w-125px text-end pe-7">چارت</th>
-                                  <th class="p-0 pb-3 w-50px text-end">نمایش</th>
-                                </tr>
-                                </thead>
-                                <!--end::Table head-->
-                                <!--begin::Table body-->
-                                <tbody>
-                                <tr>
-                                  <td>
-                                    <div class="d-flex align-items-center">
-                                      <div class="symbol symbol-50px me-3">
-                                        <img src="assets/media/avatars/300-25.jpg" class="" alt=""/>
-                                      </div>
-                                      <div class="d-flex justify-content-start flex-column">
-                                        <a href="../../demo1/dist/pages/user-profile/overview.html"
-                                           class="text-gray-800 fw-bold text-hover-primary mb-1 fs-6">بروکلین سیمونز</a>
-                                        <span class="text-gray-400 fw-semibold d-block fs-7">لهستان</span>
-                                      </div>
-                                    </div>
-                                  </td>
-                                  <td class="text-end pe-13">
-                                    <span class="text-gray-600 fw-bold fs-6">85.23%</span>
-                                  </td>
-                                  <td class="text-end pe-0">
-                                    <div id="kt_table_widget_16_chart_2_1" class="h-50px mt-n8 pe-7"
-                                         data-kt-chart-color="success"></div>
-                                  </td>
-                                  <td class="text-end">
-                                    <a href="#"
-                                       class="btn btn-sm btn-icon btn-bg-light btn-active-color-primary w-30px h-30px">
-                                      <!--begin::Svg Icon | path: icons/duotune/arrows/arr001.svg-->
-                                      <span class="svg-icon svg-icon-5 svg-icon-gray-700">
-																						<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                                 xmlns="http://www.w3.org/2000/svg">
-																							<path d="M14.4 11H3C2.4 11 2 11.4 2 12C2 12.6 2.4 13 3 13H14.4V11Z"
-                                                    fill="currentColor"/>
-																							<path opacity="0.3"
-                                                    d="M14.4 20V4L21.7 11.3C22.1 11.7 22.1 12.3 21.7 12.7L14.4 20Z"
-                                                    fill="currentColor"/>
-																						</svg>
-																					</span>
-                                      <!--end::Svg Icon-->
-                                    </a>
-                                  </td>
-                                </tr>
-                                <tr>
-                                  <td>
-                                    <div class="d-flex align-items-center">
-                                      <div class="symbol symbol-50px me-3">
-                                        <img src="assets/media/avatars/300-24.jpg" class="" alt=""/>
-                                      </div>
-                                      <div class="d-flex justify-content-start flex-column">
-                                        <a href="../../demo1/dist/pages/user-profile/overview.html"
-                                           class="text-gray-800 fw-bold text-hover-primary mb-1 fs-6">استر هوارد</a>
-                                        <span class="text-gray-400 fw-semibold d-block fs-7">مکزیک</span>
-                                      </div>
-                                    </div>
-                                  </td>
-                                  <td class="text-end pe-13">
-                                    <span class="text-gray-600 fw-bold fs-6">74.83%</span>
-                                  </td>
-                                  <td class="text-end pe-0">
-                                    <div id="kt_table_widget_16_chart_2_2" class="h-50px mt-n8 pe-7"
-                                         data-kt-chart-color="danger"></div>
-                                  </td>
-                                  <td class="text-end">
-                                    <a href="#"
-                                       class="btn btn-sm btn-icon btn-bg-light btn-active-color-primary w-30px h-30px">
-                                      <!--begin::Svg Icon | path: icons/duotune/arrows/arr001.svg-->
-                                      <span class="svg-icon svg-icon-5 svg-icon-gray-700">
-																						<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                                 xmlns="http://www.w3.org/2000/svg">
-																							<path d="M14.4 11H3C2.4 11 2 11.4 2 12C2 12.6 2.4 13 3 13H14.4V11Z"
-                                                    fill="currentColor"/>
-																							<path opacity="0.3"
-                                                    d="M14.4 20V4L21.7 11.3C22.1 11.7 22.1 12.3 21.7 12.7L14.4 20Z"
-                                                    fill="currentColor"/>
-																						</svg>
-																					</span>
-                                      <!--end::Svg Icon-->
-                                    </a>
-                                  </td>
-                                </tr>
-                                <tr>
-                                  <td>
-                                    <div class="d-flex align-items-center">
-                                      <div class="symbol symbol-50px me-3">
-                                        <img src="assets/media/avatars/300-20.jpg" class="" alt=""/>
-                                      </div>
-                                      <div class="d-flex justify-content-start flex-column">
-                                        <a href="../../demo1/dist/pages/user-profile/overview.html"
-                                           class="text-gray-800 fw-bold text-hover-primary mb-1 fs-6">آنت بلک</a>
-                                        <span class="text-gray-400 fw-semibold d-block fs-7">هلند</span>
-                                      </div>
-                                    </div>
-                                  </td>
-                                  <td class="text-end pe-13">
-                                    <span class="text-gray-600 fw-bold fs-6">90.06%</span>
-                                  </td>
-                                  <td class="text-end pe-0">
-                                    <div id="kt_table_widget_16_chart_2_3" class="h-50px mt-n8 pe-7"
-                                         data-kt-chart-color="success"></div>
-                                  </td>
-                                  <td class="text-end">
-                                    <a href="#"
-                                       class="btn btn-sm btn-icon btn-bg-light btn-active-color-primary w-30px h-30px">
-                                      <!--begin::Svg Icon | path: icons/duotune/arrows/arr001.svg-->
-                                      <span class="svg-icon svg-icon-5 svg-icon-gray-700">
-																						<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                                 xmlns="http://www.w3.org/2000/svg">
-																							<path d="M14.4 11H3C2.4 11 2 11.4 2 12C2 12.6 2.4 13 3 13H14.4V11Z"
-                                                    fill="currentColor"/>
-																							<path opacity="0.3"
-                                                    d="M14.4 20V4L21.7 11.3C22.1 11.7 22.1 12.3 21.7 12.7L14.4 20Z"
-                                                    fill="currentColor"/>
-																						</svg>
-																					</span>
-                                      <!--end::Svg Icon-->
-                                    </a>
-                                  </td>
-                                </tr>
-                                <tr>
-                                  <td>
-                                    <div class="d-flex align-items-center">
-                                      <div class="symbol symbol-50px me-3">
-                                        <img src="assets/media/avatars/300-17.jpg" class="" alt=""/>
-                                      </div>
-                                      <div class="d-flex justify-content-start flex-column">
-                                        <a href="../../demo1/dist/pages/user-profile/overview.html"
-                                           class="text-gray-800 fw-bold text-hover-primary mb-1 fs-6">اسفندوین مک
-                                          کینی</a>
-                                        <span class="text-gray-400 fw-semibold d-block fs-7">فرانسه</span>
-                                      </div>
-                                    </div>
-                                  </td>
-                                  <td class="text-end pe-13">
-                                    <span class="text-gray-600 fw-bold fs-6">54.08%</span>
-                                  </td>
-                                  <td class="text-end pe-0">
-                                    <div id="kt_table_widget_16_chart_2_4" class="h-50px mt-n8 pe-7"
-                                         data-kt-chart-color="success"></div>
-                                  </td>
-                                  <td class="text-end">
-                                    <a href="#"
-                                       class="btn btn-sm btn-icon btn-bg-light btn-active-color-primary w-30px h-30px">
-                                      <!--begin::Svg Icon | path: icons/duotune/arrows/arr001.svg-->
-                                      <span class="svg-icon svg-icon-5 svg-icon-gray-700">
-																						<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                                 xmlns="http://www.w3.org/2000/svg">
-																							<path d="M14.4 11H3C2.4 11 2 11.4 2 12C2 12.6 2.4 13 3 13H14.4V11Z"
-                                                    fill="currentColor"/>
-																							<path opacity="0.3"
-                                                    d="M14.4 20V4L21.7 11.3C22.1 11.7 22.1 12.3 21.7 12.7L14.4 20Z"
-                                                    fill="currentColor"/>
-																						</svg>
-																					</span>
-                                      <!--end::Svg Icon-->
-                                    </a>
-                                  </td>
-                                </tr>
-                                </tbody>
-                                <!--end::Table body-->
-                              </table>
-                              <!--end::Table-->
-                            </div>
-                            <!--end::Table container-->
-                          </div>
-                          <!--end::Tap pane-->
-                          <!--begin::Tap pane-->
-                          <div class="tab-pane fade" id="kt_stats_widget_16_tab_3">
-                            <!--begin::Table container-->
-                            <div class="table-responsive">
-                              <!--begin::Table-->
-                              <table class="table table-row-dashed align-middle gs-0 gy-3 my-0">
-                                <!--begin::Table head-->
-                                <thead>
-                                <tr class="fs-7 fw-bold text-gray-400 border-bottom-0">
-                                  <th class="p-0 pb-3 min-w-150px text-start">نویسنده</th>
-                                  <th class="p-0 pb-3 min-w-100px text-end pe-13">نرخ</th>
-                                  <th class="p-0 pb-3 w-125px text-end pe-7">چارت</th>
-                                  <th class="p-0 pb-3 w-50px text-end">نمایش</th>
-                                </tr>
-                                </thead>
-                                <!--end::Table head-->
-                                <!--begin::Table body-->
-                                <tbody>
-                                <tr>
-                                  <td>
-                                    <div class="d-flex align-items-center">
-                                      <div class="symbol symbol-50px me-3">
-                                        <img src="assets/media/avatars/300-11.jpg" class="" alt=""/>
-                                      </div>
-                                      <div class="d-flex justify-content-start flex-column">
-                                        <a href="../../demo1/dist/pages/user-profile/overview.html"
-                                           class="text-gray-800 fw-bold text-hover-primary mb-1 fs-6">جواد یساری</a>
-                                        <span class="text-gray-400 fw-semibold d-block fs-7">آمریکا</span>
-                                      </div>
-                                    </div>
-                                  </td>
-                                  <td class="text-end pe-13">
-                                    <span class="text-gray-600 fw-bold fs-6">52.34%</span>
-                                  </td>
-                                  <td class="text-end pe-0">
-                                    <div id="kt_table_widget_16_chart_3_1" class="h-50px mt-n8 pe-7"
-                                         data-kt-chart-color="success"></div>
-                                  </td>
-                                  <td class="text-end">
-                                    <a href="#"
-                                       class="btn btn-sm btn-icon btn-bg-light btn-active-color-primary w-30px h-30px">
-                                      <!--begin::Svg Icon | path: icons/duotune/arrows/arr001.svg-->
-                                      <span class="svg-icon svg-icon-5 svg-icon-gray-700">
-																						<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                                 xmlns="http://www.w3.org/2000/svg">
-																							<path d="M14.4 11H3C2.4 11 2 11.4 2 12C2 12.6 2.4 13 3 13H14.4V11Z"
-                                                    fill="currentColor"/>
-																							<path opacity="0.3"
-                                                    d="M14.4 20V4L21.7 11.3C22.1 11.7 22.1 12.3 21.7 12.7L14.4 20Z"
-                                                    fill="currentColor"/>
-																						</svg>
-																					</span>
-                                      <!--end::Svg Icon-->
-                                    </a>
-                                  </td>
-                                </tr>
-                                <tr>
-                                  <td>
-                                    <div class="d-flex align-items-center">
-                                      <div class="symbol symbol-50px me-3">
-                                        <img src="assets/media/avatars/300-23.jpg" class="" alt=""/>
-                                      </div>
-                                      <div class="d-flex justify-content-start flex-column">
-                                        <a href="../../demo1/dist/pages/user-profile/overview.html"
-                                           class="text-gray-800 fw-bold text-hover-primary mb-1 fs-6">رونالد ریچارز</a>
-                                        <span class="text-gray-400 fw-semibold d-block fs-7">اسپانیا</span>
-                                      </div>
-                                    </div>
-                                  </td>
-                                  <td class="text-end pe-13">
-                                    <span class="text-gray-600 fw-bold fs-6">77.65%</span>
-                                  </td>
-                                  <td class="text-end pe-0">
-                                    <div id="kt_table_widget_16_chart_3_2" class="h-50px mt-n8 pe-7"
-                                         data-kt-chart-color="danger"></div>
-                                  </td>
-                                  <td class="text-end">
-                                    <a href="#"
-                                       class="btn btn-sm btn-icon btn-bg-light btn-active-color-primary w-30px h-30px">
-                                      <!--begin::Svg Icon | path: icons/duotune/arrows/arr001.svg-->
-                                      <span class="svg-icon svg-icon-5 svg-icon-gray-700">
-																						<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                                 xmlns="http://www.w3.org/2000/svg">
-																							<path d="M14.4 11H3C2.4 11 2 11.4 2 12C2 12.6 2.4 13 3 13H14.4V11Z"
-                                                    fill="currentColor"/>
-																							<path opacity="0.3"
-                                                    d="M14.4 20V4L21.7 11.3C22.1 11.7 22.1 12.3 21.7 12.7L14.4 20Z"
-                                                    fill="currentColor"/>
-																						</svg>
-																					</span>
-                                      <!--end::Svg Icon-->
-                                    </a>
-                                  </td>
-                                </tr>
-                                <tr>
-                                  <td>
-                                    <div class="d-flex align-items-center">
-                                      <div class="symbol symbol-50px me-3">
-                                        <img src="assets/media/avatars/300-4.jpg" class="" alt=""/>
-                                      </div>
-                                      <div class="d-flex justify-content-start flex-column">
-                                        <a href="../../demo1/dist/pages/user-profile/overview.html"
-                                           class="text-gray-800 fw-bold text-hover-primary mb-1 fs-6">الکس سانچز</a>
-                                        <span class="text-gray-400 fw-semibold d-block fs-7">چین</span>
-                                      </div>
-                                    </div>
-                                  </td>
-                                  <td class="text-end pe-13">
-                                    <span class="text-gray-600 fw-bold fs-6">82.47%</span>
-                                  </td>
-                                  <td class="text-end pe-0">
-                                    <div id="kt_table_widget_16_chart_3_3" class="h-50px mt-n8 pe-7"
-                                         data-kt-chart-color="success"></div>
-                                  </td>
-                                  <td class="text-end">
-                                    <a href="#"
-                                       class="btn btn-sm btn-icon btn-bg-light btn-active-color-primary w-30px h-30px">
-                                      <!--begin::Svg Icon | path: icons/duotune/arrows/arr001.svg-->
-                                      <span class="svg-icon svg-icon-5 svg-icon-gray-700">
-																						<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                                 xmlns="http://www.w3.org/2000/svg">
-																							<path d="M14.4 11H3C2.4 11 2 11.4 2 12C2 12.6 2.4 13 3 13H14.4V11Z"
-                                                    fill="currentColor"/>
-																							<path opacity="0.3"
-                                                    d="M14.4 20V4L21.7 11.3C22.1 11.7 22.1 12.3 21.7 12.7L14.4 20Z"
-                                                    fill="currentColor"/>
-																						</svg>
-																					</span>
-                                      <!--end::Svg Icon-->
-                                    </a>
-                                  </td>
-                                </tr>
-                                <tr>
-                                  <td>
-                                    <div class="d-flex align-items-center">
-                                      <div class="symbol symbol-50px me-3">
-                                        <img src="assets/media/avatars/300-1.jpg" class="" alt=""/>
-                                      </div>
-                                      <div class="d-flex justify-content-start flex-column">
-                                        <a href="../../demo1/dist/pages/user-profile/overview.html"
-                                           class="text-gray-800 fw-bold text-hover-primary mb-1 fs-6">کامران مرادی</a>
-                                        <span class="text-gray-400 fw-semibold d-block fs-7">مکزیک</span>
-                                      </div>
-                                    </div>
-                                  </td>
-                                  <td class="text-end pe-13">
-                                    <span class="text-gray-600 fw-bold fs-6">67.84%</span>
-                                  </td>
-                                  <td class="text-end pe-0">
-                                    <div id="kt_table_widget_16_chart_3_4" class="h-50px mt-n8 pe-7"
-                                         data-kt-chart-color="success"></div>
-                                  </td>
-                                  <td class="text-end">
-                                    <a href="#"
-                                       class="btn btn-sm btn-icon btn-bg-light btn-active-color-primary w-30px h-30px">
-                                      <!--begin::Svg Icon | path: icons/duotune/arrows/arr001.svg-->
-                                      <span class="svg-icon svg-icon-5 svg-icon-gray-700">
-																						<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                                 xmlns="http://www.w3.org/2000/svg">
-																							<path d="M14.4 11H3C2.4 11 2 11.4 2 12C2 12.6 2.4 13 3 13H14.4V11Z"
-                                                    fill="currentColor"/>
-																							<path opacity="0.3"
-                                                    d="M14.4 20V4L21.7 11.3C22.1 11.7 22.1 12.3 21.7 12.7L14.4 20Z"
-                                                    fill="currentColor"/>
-																						</svg>
-																					</span>
-                                      <!--end::Svg Icon-->
-                                    </a>
-                                  </td>
-                                </tr>
-                                </tbody>
-                                <!--end::Table body-->
-                              </table>
-                              <!--end::Table-->
-                            </div>
-                            <!--end::Table container-->
-                          </div>
-                          <!--end::Tap pane-->
-                          <!--begin::Tap pane-->
-                          <div class="tab-pane fade" id="kt_stats_widget_16_tab_4">
-                            <!--begin::Table container-->
-                            <div class="table-responsive">
-                              <!--begin::Table-->
-                              <table class="table table-row-dashed align-middle gs-0 gy-3 my-0">
-                                <!--begin::Table head-->
-                                <thead>
-                                <tr class="fs-7 fw-bold text-gray-400 border-bottom-0">
-                                  <th class="p-0 pb-3 min-w-150px text-start">نویسنده</th>
-                                  <th class="p-0 pb-3 min-w-100px text-end pe-13">نرخ</th>
-                                  <th class="p-0 pb-3 w-125px text-end pe-7">چارت</th>
-                                  <th class="p-0 pb-3 w-50px text-end">نمایش</th>
-                                </tr>
-                                </thead>
-                                <!--end::Table head-->
-                                <!--begin::Table body-->
-                                <tbody>
-                                <tr>
-                                  <td>
-                                    <div class="d-flex align-items-center">
-                                      <div class="symbol symbol-50px me-3">
-                                        <img src="assets/media/avatars/300-12.jpg" class="" alt=""/>
-                                      </div>
-                                      <div class="d-flex justify-content-start flex-column">
-                                        <a href="../../demo1/dist/pages/user-profile/overview.html"
-                                           class="text-gray-800 fw-bold text-hover-primary mb-1 fs-6">عارف لرستانی</a>
-                                        <span class="text-gray-400 fw-semibold d-block fs-7">لندن</span>
-                                      </div>
-                                    </div>
-                                  </td>
-                                  <td class="text-end pe-13">
-                                    <span class="text-gray-600 fw-bold fs-6">53.44%</span>
-                                  </td>
-                                  <td class="text-end pe-0">
-                                    <div id="kt_table_widget_16_chart_4_1" class="h-50px mt-n8 pe-7"
-                                         data-kt-chart-color="success"></div>
-                                  </td>
-                                  <td class="text-end">
-                                    <a href="#"
-                                       class="btn btn-sm btn-icon btn-bg-light btn-active-color-primary w-30px h-30px">
-                                      <!--begin::Svg Icon | path: icons/duotune/arrows/arr001.svg-->
-                                      <span class="svg-icon svg-icon-5 svg-icon-gray-700">
-																						<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                                 xmlns="http://www.w3.org/2000/svg">
-																							<path d="M14.4 11H3C2.4 11 2 11.4 2 12C2 12.6 2.4 13 3 13H14.4V11Z"
-                                                    fill="currentColor"/>
-																							<path opacity="0.3"
-                                                    d="M14.4 20V4L21.7 11.3C22.1 11.7 22.1 12.3 21.7 12.7L14.4 20Z"
-                                                    fill="currentColor"/>
-																						</svg>
-																					</span>
-                                      <!--end::Svg Icon-->
-                                    </a>
-                                  </td>
-                                </tr>
-                                <tr>
-                                  <td>
-                                    <div class="d-flex align-items-center">
-                                      <div class="symbol symbol-50px me-3">
-                                        <img src="assets/media/avatars/300-21.jpg" class="" alt=""/>
-                                      </div>
-                                      <div class="d-flex justify-content-start flex-column">
-                                        <a href="../../demo1/dist/pages/user-profile/overview.html"
-                                           class="text-gray-800 fw-bold text-hover-primary mb-1 fs-6">اسفندوین مک
-                                          کینیr</a>
-                                        <span class="text-gray-400 fw-semibold d-block fs-7">فرانسه</span>
-                                      </div>
-                                    </div>
-                                  </td>
-                                  <td class="text-end pe-13">
-                                    <span class="text-gray-600 fw-bold fs-6">74.64%</span>
-                                  </td>
-                                  <td class="text-end pe-0">
-                                    <div id="kt_table_widget_16_chart_4_2" class="h-50px mt-n8 pe-7"
-                                         data-kt-chart-color="danger"></div>
-                                  </td>
-                                  <td class="text-end">
-                                    <a href="#"
-                                       class="btn btn-sm btn-icon btn-bg-light btn-active-color-primary w-30px h-30px">
-                                      <!--begin::Svg Icon | path: icons/duotune/arrows/arr001.svg-->
-                                      <span class="svg-icon svg-icon-5 svg-icon-gray-700">
-																						<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                                 xmlns="http://www.w3.org/2000/svg">
-																							<path d="M14.4 11H3C2.4 11 2 11.4 2 12C2 12.6 2.4 13 3 13H14.4V11Z"
-                                                    fill="currentColor"/>
-																							<path opacity="0.3"
-                                                    d="M14.4 20V4L21.7 11.3C22.1 11.7 22.1 12.3 21.7 12.7L14.4 20Z"
-                                                    fill="currentColor"/>
-																						</svg>
-																					</span>
-                                      <!--end::Svg Icon-->
-                                    </a>
-                                  </td>
-                                </tr>
-                                <tr>
-                                  <td>
-                                    <div class="d-flex align-items-center">
-                                      <div class="symbol symbol-50px me-3">
-                                        <img src="assets/media/avatars/300-30.jpg" class="" alt=""/>
-                                      </div>
-                                      <div class="d-flex justify-content-start flex-column">
-                                        <a href="../../demo1/dist/pages/user-profile/overview.html"
-                                           class="text-gray-800 fw-bold text-hover-primary mb-1 fs-6">جواد یساری</a>
-                                        <span class="text-gray-400 fw-semibold d-block fs-7">کره</span>
-                                      </div>
-                                    </div>
-                                  </td>
-                                  <td class="text-end pe-13">
-                                    <span class="text-gray-600 fw-bold fs-6">88.56%</span>
-                                  </td>
-                                  <td class="text-end pe-0">
-                                    <div id="kt_table_widget_16_chart_4_3" class="h-50px mt-n8 pe-7"
-                                         data-kt-chart-color="success"></div>
-                                  </td>
-                                  <td class="text-end">
-                                    <a href="#"
-                                       class="btn btn-sm btn-icon btn-bg-light btn-active-color-primary w-30px h-30px">
-                                      <!--begin::Svg Icon | path: icons/duotune/arrows/arr001.svg-->
-                                      <span class="svg-icon svg-icon-5 svg-icon-gray-700">
-																						<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                                 xmlns="http://www.w3.org/2000/svg">
-																							<path d="M14.4 11H3C2.4 11 2 11.4 2 12C2 12.6 2.4 13 3 13H14.4V11Z"
-                                                    fill="currentColor"/>
-																							<path opacity="0.3"
-                                                    d="M14.4 20V4L21.7 11.3C22.1 11.7 22.1 12.3 21.7 12.7L14.4 20Z"
-                                                    fill="currentColor"/>
-																						</svg>
-																					</span>
-                                      <!--end::Svg Icon-->
-                                    </a>
-                                  </td>
-                                </tr>
-                                <tr>
-                                  <td>
-                                    <div class="d-flex align-items-center">
-                                      <div class="symbol symbol-50px me-3">
-                                        <img src="assets/media/avatars/300-14.jpg" class="" alt=""/>
-                                      </div>
-                                      <div class="d-flex justify-content-start flex-column">
-                                        <a href="../../demo1/dist/pages/user-profile/overview.html"
-                                           class="text-gray-800 fw-bold text-hover-primary mb-1 fs-6">استر هوارد</a>
-                                        <span class="text-gray-400 fw-semibold d-block fs-7">ایسلند</span>
-                                      </div>
-                                    </div>
-                                  </td>
-                                  <td class="text-end pe-13">
-                                    <span class="text-gray-600 fw-bold fs-6">63.16%</span>
-                                  </td>
-                                  <td class="text-end pe-0">
-                                    <div id="kt_table_widget_16_chart_4_4" class="h-50px mt-n8 pe-7"
-                                         data-kt-chart-color="success"></div>
-                                  </td>
-                                  <td class="text-end">
-                                    <a href="#"
-                                       class="btn btn-sm btn-icon btn-bg-light btn-active-color-primary w-30px h-30px">
-                                      <!--begin::Svg Icon | path: icons/duotune/arrows/arr001.svg-->
-                                      <span class="svg-icon svg-icon-5 svg-icon-gray-700">
-																						<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                                 xmlns="http://www.w3.org/2000/svg">
-																							<path d="M14.4 11H3C2.4 11 2 11.4 2 12C2 12.6 2.4 13 3 13H14.4V11Z"
-                                                    fill="currentColor"/>
-																							<path opacity="0.3"
-                                                    d="M14.4 20V4L21.7 11.3C22.1 11.7 22.1 12.3 21.7 12.7L14.4 20Z"
-                                                    fill="currentColor"/>
-																						</svg>
-																					</span>
-                                      <!--end::Svg Icon-->
-                                    </a>
-                                  </td>
-                                </tr>
-                                </tbody>
-                                <!--end::Table body-->
-                              </table>
-                              <!--end::Table-->
-                            </div>
-                            <!--end::Table container-->
-                          </div>
-                          <!--end::Tap pane-->
-                          <!--begin::Tap pane-->
-                          <div class="tab-pane fade" id="kt_stats_widget_16_tab_5">
-                            <!--begin::Table container-->
-                            <div class="table-responsive">
-                              <!--begin::Table-->
-                              <table class="table table-row-dashed align-middle gs-0 gy-3 my-0">
-                                <!--begin::Table head-->
-                                <thead>
-                                <tr class="fs-7 fw-bold text-gray-400 border-bottom-0">
-                                  <th class="p-0 pb-3 min-w-150px text-start">نویسنده</th>
-                                  <th class="p-0 pb-3 min-w-100px text-end pe-13">نرخ</th>
-                                  <th class="p-0 pb-3 w-125px text-end pe-7">چارت</th>
-                                  <th class="p-0 pb-3 w-50px text-end">نمایش</th>
-                                </tr>
-                                </thead>
-                                <!--end::Table head-->
-                                <!--begin::Table body-->
-                                <tbody>
-                                <tr>
-                                  <td>
-                                    <div class="d-flex align-items-center">
-                                      <div class="symbol symbol-50px me-3">
-                                        <img src="assets/media/avatars/300-6.jpg" class="" alt=""/>
-                                      </div>
-                                      <div class="d-flex justify-content-start flex-column">
-                                        <a href="../../demo1/dist/pages/user-profile/overview.html"
-                                           class="text-gray-800 fw-bold text-hover-primary mb-1 fs-6">هنری</a>
-                                        <span class="text-gray-400 fw-semibold d-block fs-7">هلند</span>
-                                      </div>
-                                    </div>
-                                  </td>
-                                  <td class="text-end pe-13">
-                                    <span class="text-gray-600 fw-bold fs-6">68.54%</span>
-                                  </td>
-                                  <td class="text-end pe-0">
-                                    <div id="kt_table_widget_16_chart_5_1" class="h-50px mt-n8 pe-7"
-                                         data-kt-chart-color="success"></div>
-                                  </td>
-                                  <td class="text-end">
-                                    <a href="#"
-                                       class="btn btn-sm btn-icon btn-bg-light btn-active-color-primary w-30px h-30px">
-                                      <!--begin::Svg Icon | path: icons/duotune/arrows/arr001.svg-->
-                                      <span class="svg-icon svg-icon-5 svg-icon-gray-700">
-																						<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                                 xmlns="http://www.w3.org/2000/svg">
-																							<path d="M14.4 11H3C2.4 11 2 11.4 2 12C2 12.6 2.4 13 3 13H14.4V11Z"
-                                                    fill="currentColor"/>
-																							<path opacity="0.3"
-                                                    d="M14.4 20V4L21.7 11.3C22.1 11.7 22.1 12.3 21.7 12.7L14.4 20Z"
-                                                    fill="currentColor"/>
-																						</svg>
-																					</span>
-                                      <!--end::Svg Icon-->
-                                    </a>
-                                  </td>
-                                </tr>
-                                <tr>
-                                  <td>
-                                    <div class="d-flex align-items-center">
-                                      <div class="symbol symbol-50px me-3">
-                                        <img src="assets/media/avatars/300-10.jpg" class="" alt=""/>
-                                      </div>
-                                      <div class="d-flex justify-content-start flex-column">
-                                        <a href="../../demo1/dist/pages/user-profile/overview.html"
-                                           class="text-gray-800 fw-bold text-hover-primary mb-1 fs-6">استر هوارد</a>
-                                        <span class="text-gray-400 fw-semibold d-block fs-7">ایتالیا</span>
-                                      </div>
-                                    </div>
-                                  </td>
-                                  <td class="text-end pe-13">
-                                    <span class="text-gray-600 fw-bold fs-6">55.83%</span>
-                                  </td>
-                                  <td class="text-end pe-0">
-                                    <div id="kt_table_widget_16_chart_5_2" class="h-50px mt-n8 pe-7"
-                                         data-kt-chart-color="danger"></div>
-                                  </td>
-                                  <td class="text-end">
-                                    <a href="#"
-                                       class="btn btn-sm btn-icon btn-bg-light btn-active-color-primary w-30px h-30px">
-                                      <!--begin::Svg Icon | path: icons/duotune/arrows/arr001.svg-->
-                                      <span class="svg-icon svg-icon-5 svg-icon-gray-700">
-																						<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                                 xmlns="http://www.w3.org/2000/svg">
-																							<path d="M14.4 11H3C2.4 11 2 11.4 2 12C2 12.6 2.4 13 3 13H14.4V11Z"
-                                                    fill="currentColor"/>
-																							<path opacity="0.3"
-                                                    d="M14.4 20V4L21.7 11.3C22.1 11.7 22.1 12.3 21.7 12.7L14.4 20Z"
-                                                    fill="currentColor"/>
-																						</svg>
-																					</span>
-                                      <!--end::Svg Icon-->
-                                    </a>
-                                  </td>
-                                </tr>
-                                <tr>
-                                  <td>
-                                    <div class="d-flex align-items-center">
-                                      <div class="symbol symbol-50px me-3">
-                                        <img src="assets/media/avatars/300-9.jpg" class="" alt=""/>
-                                      </div>
-                                      <div class="d-flex justify-content-start flex-column">
-                                        <a href="../../demo1/dist/pages/user-profile/overview.html"
-                                           class="text-gray-800 fw-bold text-hover-primary mb-1 fs-6">جواد یساری</a>
-                                        <span class="text-gray-400 fw-semibold d-block fs-7">لهستان</span>
-                                      </div>
-                                    </div>
-                                  </td>
-                                  <td class="text-end pe-13">
-                                    <span class="text-gray-600 fw-bold fs-6">93.46%</span>
-                                  </td>
-                                  <td class="text-end pe-0">
-                                    <div id="kt_table_widget_16_chart_5_3" class="h-50px mt-n8 pe-7"
-                                         data-kt-chart-color="success"></div>
-                                  </td>
-                                  <td class="text-end">
-                                    <a href="#"
-                                       class="btn btn-sm btn-icon btn-bg-light btn-active-color-primary w-30px h-30px">
-                                      <!--begin::Svg Icon | path: icons/duotune/arrows/arr001.svg-->
-                                      <span class="svg-icon svg-icon-5 svg-icon-gray-700">
-																						<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                                 xmlns="http://www.w3.org/2000/svg">
-																							<path d="M14.4 11H3C2.4 11 2 11.4 2 12C2 12.6 2.4 13 3 13H14.4V11Z"
-                                                    fill="currentColor"/>
-																							<path opacity="0.3"
-                                                    d="M14.4 20V4L21.7 11.3C22.1 11.7 22.1 12.3 21.7 12.7L14.4 20Z"
-                                                    fill="currentColor"/>
-																						</svg>
-																					</span>
-                                      <!--end::Svg Icon-->
-                                    </a>
-                                  </td>
-                                </tr>
-                                <tr>
-                                  <td>
-                                    <div class="d-flex align-items-center">
-                                      <div class="symbol symbol-50px me-3">
-                                        <img src="assets/media/avatars/300-3.jpg" class="" alt=""/>
-                                      </div>
-                                      <div class="d-flex justify-content-start flex-column">
-                                        <a href="../../demo1/dist/pages/user-profile/overview.html"
-                                           class="text-gray-800 fw-bold text-hover-primary mb-1 fs-6">رالف ادواردز</a>
-                                        <span class="text-gray-400 fw-semibold d-block fs-7">مکزیک</span>
-                                      </div>
-                                    </div>
-                                  </td>
-                                  <td class="text-end pe-13">
-                                    <span class="text-gray-600 fw-bold fs-6">64.48%</span>
-                                  </td>
-                                  <td class="text-end pe-0">
-                                    <div id="kt_table_widget_16_chart_5_4" class="h-50px mt-n8 pe-7"
-                                         data-kt-chart-color="success"></div>
-                                  </td>
-                                  <td class="text-end">
-                                    <a href="#"
-                                       class="btn btn-sm btn-icon btn-bg-light btn-active-color-primary w-30px h-30px">
-                                      <!--begin::Svg Icon | path: icons/duotune/arrows/arr001.svg-->
-                                      <span class="svg-icon svg-icon-5 svg-icon-gray-700">
-																						<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                                 xmlns="http://www.w3.org/2000/svg">
-																							<path d="M14.4 11H3C2.4 11 2 11.4 2 12C2 12.6 2.4 13 3 13H14.4V11Z"
-                                                    fill="currentColor"/>
-																							<path opacity="0.3"
-                                                    d="M14.4 20V4L21.7 11.3C22.1 11.7 22.1 12.3 21.7 12.7L14.4 20Z"
-                                                    fill="currentColor"/>
-																						</svg>
-																					</span>
-                                      <!--end::Svg Icon-->
-                                    </a>
-                                  </td>
-                                </tr>
-                                </tbody>
-                                <!--end::Table body-->
-                              </table>
-                              <!--end::Table-->
-                            </div>
-                            <!--end::Table container-->
-                          </div>
-                          <!--end::Tap pane-->
-                          <!--end::Table container-->
-                        </div>
-                        <!--end::Tab Content-->
-                      </div>
-                      <!--end: کارت Body-->
-                    </div>
-                    <!--end::جداول widget 16-->
-                  </div>
-                  <!--end::Col-->
-                </div>
-                <!--end::Row-->
-                <!--begin::Row-->
-                <div class="row g-5 g-xl-10 mb-5 mb-xl-10">
-                  <!--begin::Col-->
-                  <div class="col-xxl-6">
-                    <!--begin::کارت widget 18-->
-                    <div class="card card-flush h-xl-100">
-                      <!--begin::Body-->
-                      <div class="card-body py-9">
-                        <!--begin::Row-->
-                        <div class="row gx-9 h-100">
-                          <!--begin::Col-->
-                          <div class="col-sm-6 mb-10 mb-sm-0">
-                            <!--begin::Image-->
-                            <div
-                                class="bgi-no-repeat bgi-position-center bgi-size-cover card-rounded min-h-400px min-h-sm-100 h-100"
-                                style="background-size: 100% 100%;background-image:url('assets/media/stock/600x600/img-65.jpg')"></div>
-                            <!--end::Image-->
-                          </div>
-                          <!--end::Col-->
-                          <!--begin::Col-->
-                          <div class="col-sm-6">
-                            <!--begin::Wrapper-->
-                            <div class="d-flex flex-column h-100">
-                              <!--begin::Header-->
-                              <div class="mb-7">
-                                <!--begin::Headin-->
-                                <div class="d-flex flex-stack mb-6">
-                                  <!--begin::Title-->
-                                  <div class="flex-shrink-0 me-5">
-                                    <span class="text-gray-400 fs-7 fw-bold me-2 d-block lh-1 pb-1">ویژه</span>
-                                    <span class="text-gray-800 fs-1 fw-bold">9درجه</span>
-                                  </div>
-                                  <!--end::Title-->
-                                  <span
-                                      class="badge badge-light-primary flex-shrink-0 align-self-center py-3 px-4 fs-7">در حال پردازش</span>
-                                </div>
-                                <!--end::Heading-->
-                                <!--begin::آیتمs-->
-                                <div class="d-flex align-items-center flex-wrap d-grid gap-2">
-                                  <!--begin::آیتم-->
-                                  <div class="d-flex align-items-center me-5 me-xl-13">
-                                    <!--begin::Symbol-->
-                                    <div class="symbol symbol-30px symbol-circle me-3">
-                                      <img src="assets/media/avatars/300-3.jpg" class="" alt=""/>
-                                    </div>
-                                    <!--end::Symbol-->
-                                    <!--begin::Info-->
-                                    <div class="m-0">
-                                      <span class="fw-semibold text-gray-400 d-block fs-8">مدیریت</span>
-                                      <a href="../../demo1/dist/pages/user-profile/overview.html"
-                                         class="fw-bold text-gray-800 text-hover-primary fs-7">رابرت فاکس</a>
-                                    </div>
-                                    <!--end::Info-->
-                                  </div>
-                                  <!--end::آیتم-->
-                                  <!--begin::آیتم-->
-                                  <div class="d-flex align-items-center">
-                                    <!--begin::Symbol-->
-                                    <div class="symbol symbol-30px symbol-circle me-3">
-																				<span class="symbol-label bg-success">
-																					<!--begin::Svg Icon | path: icons/duotune/abstract/abs042.svg-->
-																					<span class="svg-icon svg-icon-5 svg-icon-white">
-																						<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                                 xmlns="http://www.w3.org/2000/svg">
-																							<path
-                                                  d="M18 21.6C16.6 20.4 9.1 20.3 6.3 21.2C5.7 21.4 5.1 21.2 4.7 20.8L2 18C4.2 15.8 10.8 15.1 15.8 15.8C16.2 18.3 17 20.5 18 21.6ZM18.8 2.8C18.4 2.4 17.8 2.20001 17.2 2.40001C14.4 3.30001 6.9 3.2 5.5 2C6.8 3.3 7.4 5.5 7.7 7.7C9 7.9 10.3 8 11.7 8C15.8 8 19.8 7.2 21.5 5.5L18.8 2.8Z"
-                                                  fill="currentColor"/>
-																							<path opacity="0.3"
-                                                    d="M21.2 17.3C21.4 17.9 21.2 18.5 20.8 18.9L18 21.6C15.8 19.4 15.1 12.8 15.8 7.8C18.3 7.4 20.4 6.70001 21.5 5.60001C20.4 7.00001 20.2 14.5 21.2 17.3ZM8 11.7C8 9 7.7 4.2 5.5 2L2.8 4.8C2.4 5.2 2.2 5.80001 2.4 6.40001C2.7 7.40001 3.00001 9.2 3.10001 11.7C3.10001 15.5 2.40001 17.6 2.10001 18C3.20001 16.9 5.3 16.2 7.8 15.8C8 14.2 8 12.7 8 11.7Z"
-                                                    fill="currentColor"/>
-																						</svg>
-																					</span>
-                                          <!--end::Svg Icon-->
-																				</span>
-                                    </div>
-                                    <!--end::Symbol-->
-                                    <!--begin::Info-->
-                                    <div class="m-0">
-                                      <span class="fw-semibold text-gray-400 d-block fs-8">بودجه</span>
-                                      <span class="fw-bold text-gray-800 fs-7">$64.800</span>
-                                    </div>
-                                    <!--end::Info-->
-                                  </div>
-                                  <!--end::آیتم-->
-                                </div>
-                                <!--end::آیتمs-->
-                              </div>
-                              <!--end::Header-->
-                              <!--begin::Body-->
-                              <div class="mb-6">
-                                <!--begin::Text-->
-                                <span class="fw-semibold text-gray-600 fs-6 mb-8 d-block">تصاویر کارتونی مسطح با رنگ‌های واضح و ترکیب نشده و خانم موی زیبای بنفش نامتقارن</span>
-                                <!--end::Text-->
-                                <!--begin::Stats-->
-                                <div class="d-flex">
-                                  <!--begin::Stat-->
-                                  <div
-                                      class="border border-gray-300 border-dashed rounded min-w-100px w-100 py-2 px-4 me-6 mb-3">
-                                    <!--begin::تاریخ-->
-                                    <span class="fs-6 text-gray-700 fw-bold">بهمن 6, 2021</span>
-                                    <!--end::تاریخ-->
-                                    <!--begin::Tags-->
-                                    <div class="fw-semibold text-gray-400">سررسید</div>
-                                    <!--end::Tags-->
-                                  </div>
-                                  <!--end::Stat-->
-                                  <!--begin::Stat-->
-                                  <div
-                                      class="border border-gray-300 border-dashed rounded min-w-100px w-100 py-2 px-4 mb-3">
-                                    <!--begin::شماره کارت-->
-                                    <span class="fs-6 text-gray-700 fw-bold">$
-																			<span class="ms-n1" data-kt-countup="true"
-                                            data-kt-countup-value="284,900.00">0</span></span>
-                                    <!--end::شماره کارت-->
-                                    <!--begin::Tags-->
-                                    <div class="fw-semibold text-gray-400">بودجه</div>
-                                    <!--end::Tags-->
-                                  </div>
-                                  <!--end::Stat-->
-                                </div>
-                                <!--end::Stats-->
-                              </div>
-                              <!--end::Body-->
-                              <!--begin::Footer-->
-                              <div class="d-flex flex-stack mt-auto bd-highlight">
-                                <!--begin::کاربران group-->
-                                <div class="symbol-group symbol-hover flex-nowrap">
-                                  <div class="symbol symbol-35px symbol-circle" data-bs-toggle="tooltip"
-                                       title="میلاد مرادی">
-                                    <img alt="Pic" src="assets/media/avatars/300-2.jpg"/>
-                                  </div>
-                                  <div class="symbol symbol-35px symbol-circle" data-bs-toggle="tooltip"
-                                       title="میکائیل احمدی">
-                                    <img alt="Pic" src="assets/media/avatars/300-3.jpg"/>
-                                  </div>
-                                  <div class="symbol symbol-35px symbol-circle" data-bs-toggle="tooltip"
-                                       title="سوسن موسوی">
-                                    <span class="symbol-label bg-primary text-inverse-primary fw-bold">S</span>
-                                  </div>
-                                </div>
-                                <!--end::کاربران group-->
-                                <!--begin::Actions-->
-                                <a href="../../demo1/dist/apps/projects/project.html"
-                                   class="text-primary opacity-75-hover fs-6 fw-semibold">نمایش پروژه ها
-                                  <!--begin::Svg Icon | path: icons/duotune/arrows/arr095.svg-->
-                                  <span class="svg-icon svg-icon-4 svg-icon-gray-800 ms-1">
-																		<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                         xmlns="http://www.w3.org/2000/svg">
-																			<path opacity="0.3"
-                                            d="M4.7 17.3V7.7C4.7 6.59543 5.59543 5.7 6.7 5.7H9.8C10.2694 5.7 10.65 5.31944 10.65 4.85C10.65 4.38056 10.2694 4 9.8 4H5C3.89543 4 3 4.89543 3 6V19C3 20.1046 3.89543 21 5 21H18C19.1046 21 20 20.1046 20 19V14.2C20 13.7306 19.6194 13.35 19.15 13.35C18.6806 13.35 18.3 13.7306 18.3 14.2V17.3C18.3 18.4046 17.4046 19.3 16.3 19.3H6.7C5.59543 19.3 4.7 18.4046 4.7 17.3Z"
-                                            fill="currentColor"/>
-																			<rect x="21.9497" y="3.46448" width="13" height="2" rx="1"
-                                            transform="rotate(135 21.9497 3.46448)" fill="currentColor"/>
-																			<path
-                                          d="M19.8284 4.97161L19.8284 9.93937C19.8284 10.5252 20.3033 11 20.8891 11C21.4749 11 21.9497 10.5252 21.9497 9.93937L21.9497 3.05029C21.9497 2.498 21.502 2.05028 20.9497 2.05028L14.0607 2.05027C13.4749 2.05027 13 2.52514 13 3.11094C13 3.69673 13.4749 4.17161 14.0607 4.17161L19.0284 4.17161C19.4702 4.17161 19.8284 4.52978 19.8284 4.97161Z"
-                                          fill="currentColor"/>
-																		</svg>
-																	</span>
-                                  <!--end::Svg Icon--></a>
-                                <!--end::Actions-->
-                              </div>
-                              <!--end::Footer-->
-                            </div>
-                            <!--end::Wrapper-->
-                          </div>
-                          <!--end::Col-->
-                        </div>
-                        <!--end::Row-->
-                      </div>
-                      <!--end::Body-->
-                    </div>
-                    <!--end::کارت widget 18-->
-                  </div>
-                  <!--end::Col-->
-                  <!--begin::Col-->
-                  <div class="col-xl-6">
-                    <!--begin::Chart widget 36-->
-                    <div class="card card-flush overflow-hidden h-lg-100">
-                      <!--begin::Header-->
-                      <div class="card-header pt-5">
-                        <!--begin::Title-->
-                        <h3 class="card-title align-items-start flex-column">
-                          <span class="card-label fw-bold text-dark">کارایی</span>
-                          <span class="text-gray-400 mt-1 fw-semibold fs-6">1,046 ورودی تماس  امرز</span>
-                        </h3>
-                        <!--end::Title-->
-                        <!--begin::Toolbar-->
-                        <div class="card-toolbar">
-                          <!--begin::تاریخrangepicker(defined in src/js/layout/app.js)-->
-                          <div data-kt-daterangepicker="true" data-kt-daterangepicker-opens="left"
-                               data-kt-daterangepicker-range="today"
-                               class="btn btn-sm btn-light d-flex align-items-center px-4">
-                            <!--begin::Display range-->
-                            <div class="text-gray-600 fw-bold">در حال خواندن...</div>
-                            <!--end::Display range-->
-                            <!--begin::Svg Icon | path: icons/duotune/general/gen014.svg-->
-                            <span class="svg-icon svg-icon-1 ms-2 me-0">
-																<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                     xmlns="http://www.w3.org/2000/svg">
-																	<path opacity="0.3"
-                                        d="M21 22H3C2.4 22 2 21.6 2 21V5C2 4.4 2.4 4 3 4H21C21.6 4 22 4.4 22 5V21C22 21.6 21.6 22 21 22Z"
-                                        fill="currentColor"/>
-																	<path
-                                      d="M6 6C5.4 6 5 5.6 5 5V3C5 2.4 5.4 2 6 2C6.6 2 7 2.4 7 3V5C7 5.6 6.6 6 6 6ZM11 5V3C11 2.4 10.6 2 10 2C9.4 2 9 2.4 9 3V5C9 5.6 9.4 6 10 6C10.6 6 11 5.6 11 5ZM15 5V3C15 2.4 14.6 2 14 2C13.4 2 13 2.4 13 3V5C13 5.6 13.4 6 14 6C14.6 6 15 5.6 15 5ZM19 5V3C19 2.4 18.6 2 18 2C17.4 2 17 2.4 17 3V5C17 5.6 17.4 6 18 6C18.6 6 19 5.6 19 5Z"
-                                      fill="currentColor"/>
-																	<path
-                                      d="M8.8 13.1C9.2 13.1 9.5 13 9.7 12.8C9.9 12.6 10.1 12.3 10.1 11.9C10.1 11.6 10 11.3 9.8 11.1C9.6 10.9 9.3 10.8 9 10.8C8.8 10.8 8.59999 10.8 8.39999 10.9C8.19999 11 8.1 11.1 8 11.2C7.9 11.3 7.8 11.4 7.7 11.6C7.6 11.8 7.5 11.9 7.5 12.1C7.5 12.2 7.4 12.2 7.3 12.3C7.2 12.4 7.09999 12.4 6.89999 12.4C6.69999 12.4 6.6 12.3 6.5 12.2C6.4 12.1 6.3 11.9 6.3 11.7C6.3 11.5 6.4 11.3 6.5 11.1C6.6 10.9 6.8 10.7 7 10.5C7.2 10.3 7.49999 10.1 7.89999 10C8.29999 9.90003 8.60001 9.80003 9.10001 9.80003C9.50001 9.80003 9.80001 9.90003 10.1 10C10.4 10.1 10.7 10.3 10.9 10.4C11.1 10.5 11.3 10.8 11.4 11.1C11.5 11.4 11.6 11.6 11.6 11.9C11.6 12.3 11.5 12.6 11.3 12.9C11.1 13.2 10.9 13.5 10.6 13.7C10.9 13.9 11.2 14.1 11.4 14.3C11.6 14.5 11.8 14.7 11.9 15C12 15.3 12.1 15.5 12.1 15.8C12.1 16.2 12 16.5 11.9 16.8C11.8 17.1 11.5 17.4 11.3 17.7C11.1 18 10.7 18.2 10.3 18.3C9.9 18.4 9.5 18.5 9 18.5C8.5 18.5 8.1 18.4 7.7 18.2C7.3 18 7 17.8 6.8 17.6C6.6 17.4 6.4 17.1 6.3 16.8C6.2 16.5 6.10001 16.3 6.10001 16.1C6.10001 15.9 6.2 15.7 6.3 15.6C6.4 15.5 6.6 15.4 6.8 15.4C6.9 15.4 7.00001 15.4 7.10001 15.5C7.20001 15.6 7.3 15.6 7.3 15.7C7.5 16.2 7.7 16.6 8 16.9C8.3 17.2 8.6 17.3 9 17.3C9.2 17.3 9.5 17.2 9.7 17.1C9.9 17 10.1 16.8 10.3 16.6C10.5 16.4 10.5 16.1 10.5 15.8C10.5 15.3 10.4 15 10.1 14.7C9.80001 14.4 9.50001 14.3 9.10001 14.3C9.00001 14.3 8.9 14.3 8.7 14.3C8.5 14.3 8.39999 14.3 8.39999 14.3C8.19999 14.3 7.99999 14.2 7.89999 14.1C7.79999 14 7.7 13.8 7.7 13.7C7.7 13.5 7.79999 13.4 7.89999 13.2C7.99999 13 8.2 13 8.5 13H8.8V13.1ZM15.3 17.5V12.2C14.3 13 13.6 13.3 13.3 13.3C13.1 13.3 13 13.2 12.9 13.1C12.8 13 12.7 12.8 12.7 12.6C12.7 12.4 12.8 12.3 12.9 12.2C13 12.1 13.2 12 13.6 11.8C14.1 11.6 14.5 11.3 14.7 11.1C14.9 10.9 15.2 10.6 15.5 10.3C15.8 10 15.9 9.80003 15.9 9.70003C15.9 9.60003 16.1 9.60004 16.3 9.60004C16.5 9.60004 16.7 9.70003 16.8 9.80003C16.9 9.90003 17 10.2 17 10.5V17.2C17 18 16.7 18.4 16.2 18.4C16 18.4 15.8 18.3 15.6 18.2C15.4 18.1 15.3 17.8 15.3 17.5Z"
-                                      fill="currentColor"/>
-																</svg>
-															</span>
-                            <!--end::Svg Icon-->
-                          </div>
-                          <!--end::تاریخrangepicker-->
-                        </div>
-                        <!--end::Toolbar-->
-                      </div>
-                      <!--end::Header-->
-                      <!--begin::کارت body-->
-                      <div class="card-body d-flex align-items-end p-0">
-                        <!--begin::Chart-->
-                        <div id="kt_charts_widget_36" class="min-h-auto w-100 ps-4 pe-6" style="height: 300px"></div>
-                        <!--end::Chart-->
-                      </div>
-                      <!--end::کارت body-->
-                    </div>
-                    <!--end::Chart widget 36-->
-                  </div>
-                  <!--end::Col-->
-                </div>
-                <!--end::Row-->
-                <!--begin::Row-->
-                <div class="row g-5 g-xl-10 mb-5 mb-xl-10">
-                  <!--begin::Col-->
-                  <div class="col-xl-4">
-                    <!--begin::Chart Widget 35-->
-                    <div class="card card-flush h-md-100">
-                      <!--begin::Header-->
-                      <div class="card-header pt-5 mb-6">
-                        <!--begin::Title-->
-                        <h3 class="card-title align-items-start flex-column">
-                          <!--begin::امار-->
-                          <div class="d-flex align-items-center mb-2">
-                            <!--begin::واحد پول-->
-                            <span class="fs-3 fw-semibold text-gray-400 align-self-start me-1">$</span>
-                            <!--end::واحد پول-->
-                            <!--begin::Value-->
-                            <span class="fs-2hx fw-bold text-gray-800 me-2 lh-1 ls-n2">3,274.94</span>
-                            <!--end::Value-->
-                            <!--begin::Tags-->
-                            <span class="badge badge-light-success fs-base">
-															<!--begin::Svg Icon | path: icons/duotune/arrows/arr066.svg-->
-															<span class="svg-icon svg-icon-5 svg-icon-success ms-n1">
-																<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                     xmlns="http://www.w3.org/2000/svg">
-																	<rect opacity="0.5" x="13" y="6" width="13" height="2" rx="1"
-                                        transform="rotate(90 13 6)" fill="currentColor"/>
-																	<path
-                                      d="M12.5657 8.56569L16.75 12.75C17.1642 13.1642 17.8358 13.1642 18.25 12.75C18.6642 12.3358 18.6642 11.6642 18.25 11.25L12.7071 5.70711C12.3166 5.31658 11.6834 5.31658 11.2929 5.70711L5.75 11.25C5.33579 11.6642 5.33579 12.3358 5.75 12.75C6.16421 13.1642 6.83579 13.1642 7.25 12.75L11.4343 8.56569C11.7467 8.25327 12.2533 8.25327 12.5657 8.56569Z"
-                                      fill="currentColor"/>
-																</svg>
-															</span>
-                              <!--end::Svg Icon-->9.2%</span>
-                            <!--end::Tags-->
-                          </div>
-                          <!--end::امار-->
-                          <!--begin::توضیحات-->
-                          <span class="fs-6 fw-semibold text-gray-400">میانگین درآمد</span>
-                          <!--end::توضیحات-->
-                        </h3>
-                        <!--end::Title-->
-                        <!--begin::Toolbar-->
-                        <div class="card-toolbar">
-                          <!--begin::Menu-->
-                          <button class="btn btn-icon btn-color-gray-400 btn-active-color-primary justify-content-end"
-                                  data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end"
-                                  data-kt-menu-overflow="true">
-                            <!--begin::Svg Icon | path: icons/duotune/general/gen023.svg-->
-                            <span class="svg-icon svg-icon-1 svg-icon-gray-300 me-n1">
-																<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                     xmlns="http://www.w3.org/2000/svg">
-																	<rect opacity="0.3" x="2" y="2" width="20" height="20" rx="4" fill="currentColor"/>
-																	<rect x="11" y="11" width="2.6" height="2.6" rx="1.3" fill="currentColor"/>
-																	<rect x="15" y="11" width="2.6" height="2.6" rx="1.3" fill="currentColor"/>
-																	<rect x="7" y="11" width="2.6" height="2.6" rx="1.3" fill="currentColor"/>
-																</svg>
-															</span>
-                            <!--end::Svg Icon-->
-                          </button>
-                          <!--begin::Menu 2-->
-                          <div
-                              class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-800 menu-state-bg-light-primary fw-semibold w-200px"
-                              data-kt-menu="true">
-                            <!--begin::Menu item-->
-                            <div class="menu-item px-3">
-                              <div class="menu-content fs-6 text-dark fw-bold px-3 py-4">عملیات سریع</div>
-                            </div>
-                            <!--end::Menu item-->
-                            <!--begin::Menu separator-->
-                            <div class="separator mb-3 opacity-75"></div>
-                            <!--end::Menu separator-->
-                            <!--begin::Menu item-->
-                            <div class="menu-item px-3">
-                              <a href="#" class="menu-link px-3">تیکت جدید</a>
-                            </div>
-                            <!--end::Menu item-->
-                            <!--begin::Menu item-->
-                            <div class="menu-item px-3">
-                              <a href="#" class="menu-link px-3">جدید مشتری</a>
-                            </div>
-                            <!--end::Menu item-->
-                            <!--begin::Menu item-->
-                            <div class="menu-item px-3" data-kt-menu-trigger="hover"
-                                 data-kt-menu-placement="left-start">
-                              <!--begin::Menu item-->
-                              <a href="#" class="menu-link px-3">
-                                <span class="menu-title">گروه جدید</span>
-                                <span class="menu-arrow"></span>
-                              </a>
-                              <!--end::Menu item-->
-                              <!--begin::Menu sub-->
-                              <div class="menu-sub menu-sub-dropdown w-175px py-4">
-                                <!--begin::Menu item-->
-                                <div class="menu-item px-3">
-                                  <a href="#" class="menu-link px-3">گروه مدیر</a>
-                                </div>
-                                <!--end::Menu item-->
-                                <!--begin::Menu item-->
-                                <div class="menu-item px-3">
-                                  <a href="#" class="menu-link px-3">گروه کارکنان</a>
-                                </div>
-                                <!--end::Menu item-->
-                                <!--begin::Menu item-->
-                                <div class="menu-item px-3">
-                                  <a href="#" class="menu-link px-3">گروه عضوها</a>
-                                </div>
-                                <!--end::Menu item-->
-                              </div>
-                              <!--end::Menu sub-->
-                            </div>
-                            <!--end::Menu item-->
-                            <!--begin::Menu item-->
-                            <div class="menu-item px-3">
-                              <a href="#" class="menu-link px-3">مخاطبین جدید</a>
-                            </div>
-                            <!--end::Menu item-->
-                            <!--begin::Menu separator-->
-                            <div class="separator mt-3 opacity-75"></div>
-                            <!--end::Menu separator-->
-                            <!--begin::Menu item-->
-                            <div class="menu-item px-3">
-                              <div class="menu-content px-3 py-3">
-                                <a class="btn btn-primary btn-sm px-4" href="#">Generate گزارشات</a>
-                              </div>
-                            </div>
-                            <!--end::Menu item-->
-                          </div>
-                          <!--end::Menu 2-->
-                          <!--end::Menu-->
-                        </div>
-                        <!--end::Toolbar-->
-                      </div>
-                      <!--end::Header-->
-                      <!--begin::Body-->
-                      <div class="card-body py-0 px-0">
-                        <!--begin::Nav-->
-                        <ul class="nav d-flex justify-content-between mb-3 mx-9">
-                          <!--begin::آیتم-->
-                          <li class="nav-item mb-3">
-                            <!--begin::Link-->
-                            <a class="nav-link btn btn-flex flex-center btn-active-danger btn-color-gray-600 btn-active-color-white rounded-2 w-45px h-35px active"
-                               data-bs-toggle="tab" id="kt_charts_widget_35_tab_1"
-                               href="#kt_charts_widget_35_tab_content_1">1d</a>
-                            <!--end::Link-->
-                          </li>
-                          <!--end::آیتم-->
-                          <!--begin::آیتم-->
-                          <li class="nav-item mb-3">
-                            <!--begin::Link-->
-                            <a class="nav-link btn btn-flex flex-center btn-active-danger btn-color-gray-600 btn-active-color-white rounded-2 w-45px h-35px"
-                               data-bs-toggle="tab" id="kt_charts_widget_35_tab_2"
-                               href="#kt_charts_widget_35_tab_content_2">5d</a>
-                            <!--end::Link-->
-                          </li>
-                          <!--end::آیتم-->
-                          <!--begin::آیتم-->
-                          <li class="nav-item mb-3">
-                            <!--begin::Link-->
-                            <a class="nav-link btn btn-flex flex-center btn-active-danger btn-color-gray-600 btn-active-color-white rounded-2 w-45px h-35px"
-                               data-bs-toggle="tab" id="kt_charts_widget_35_tab_3"
-                               href="#kt_charts_widget_35_tab_content_3">1m</a>
-                            <!--end::Link-->
-                          </li>
-                          <!--end::آیتم-->
-                          <!--begin::آیتم-->
-                          <li class="nav-item mb-3">
-                            <!--begin::Link-->
-                            <a class="nav-link btn btn-flex flex-center btn-active-danger btn-color-gray-600 btn-active-color-white rounded-2 w-45px h-35px"
-                               data-bs-toggle="tab" id="kt_charts_widget_35_tab_4"
-                               href="#kt_charts_widget_35_tab_content_4">6m</a>
-                            <!--end::Link-->
-                          </li>
-                          <!--end::آیتم-->
-                          <!--begin::آیتم-->
-                          <li class="nav-item mb-3">
-                            <!--begin::Link-->
-                            <a class="nav-link btn btn-flex flex-center btn-active-danger btn-color-gray-600 btn-active-color-white rounded-2 w-45px h-35px"
-                               data-bs-toggle="tab" id="kt_charts_widget_35_tab_5"
-                               href="#kt_charts_widget_35_tab_content_5">1y</a>
-                            <!--end::Link-->
-                          </li>
-                          <!--end::آیتم-->
-                        </ul>
-                        <!--end::Nav-->
-                        <!--begin::Tab Content-->
-                        <div class="tab-content mt-n6">
-                          <!--begin::Tap pane-->
-                          <div class="tab-pane fade active show" id="kt_charts_widget_35_tab_content_1">
-                            <!--begin::Chart-->
-                            <div id="kt_charts_widget_35_chart_1" data-kt-chart-color="primary"
-                                 class="min-h-auto h-200px ps-3 pe-6"></div>
-                            <!--end::Chart-->
-                            <!--begin::Table container-->
-                            <div class="table-responsive mx-9 mt-n6">
-                              <!--begin::Table-->
-                              <table class="table align-middle gs-0 gy-4">
-                                <!--begin::Table head-->
-                                <thead>
-                                <tr>
-                                  <th class="min-w-100px"></th>
-                                  <th class="min-w-100px text-end pe-0"></th>
-                                  <th class="text-end min-w-50px"></th>
-                                </tr>
-                                </thead>
-                                <!--end::Table head-->
-                                <!--begin::Table body-->
-                                <tbody>
-                                <tr>
-                                  <td>
-                                    <a href="#" class="text-gray-600 fw-bold fs-6">2:30 PM</a>
-                                  </td>
-                                  <td class="pe-0 text-end">
-                                    <span class="text-gray-800 fw-bold fs-6 me-1">$2,756.26</span>
-                                  </td>
-                                  <td class="pe-0 text-end">
-                                    <span class="fw-bold fs-6 text-danger">-139.34</span>
-                                  </td>
-                                </tr>
-                                <tr>
-                                  <td>
-                                    <a href="#" class="text-gray-600 fw-bold fs-6">3:10 PM</a>
-                                  </td>
-                                  <td class="pe-0 text-end">
-                                    <span class="text-gray-800 fw-bold fs-6 me-1">$3,207.03</span>
-                                  </td>
-                                  <td class="pe-0 text-end">
-                                    <span class="fw-bold fs-6 text-success">+576.24</span>
-                                  </td>
-                                </tr>
-                                <tr>
-                                  <td>
-                                    <a href="#" class="text-gray-600 fw-bold fs-6">3:55 PM</a>
-                                  </td>
-                                  <td class="pe-0 text-end">
-                                    <span class="text-gray-800 fw-bold fs-6 me-1">$3,274.94</span>
-                                  </td>
-                                  <td class="pe-0 text-end">
-                                    <span class="fw-bold fs-6 text-success">+124.03</span>
-                                  </td>
-                                </tr>
-                                </tbody>
-                                <!--end::Table body-->
-                              </table>
-                              <!--end::Table-->
-                            </div>
-                            <!--end::Table container-->
-                          </div>
-                          <!--end::Tap pane-->
-                          <!--begin::Tap pane-->
-                          <div class="tab-pane fade" id="kt_charts_widget_35_tab_content_2">
-                            <!--begin::Chart-->
-                            <div id="kt_charts_widget_35_chart_2" data-kt-chart-color="primary"
-                                 class="min-h-auto h-200px ps-3 pe-6"></div>
-                            <!--end::Chart-->
-                            <!--begin::Table container-->
-                            <div class="table-responsive mx-9 mt-n6">
-                              <!--begin::Table-->
-                              <table class="table align-middle gs-0 gy-4">
-                                <!--begin::Table head-->
-                                <thead>
-                                <tr>
-                                  <th class="min-w-100px"></th>
-                                  <th class="min-w-100px text-end pe-0"></th>
-                                  <th class="text-end min-w-50px"></th>
-                                </tr>
-                                </thead>
-                                <!--end::Table head-->
-                                <!--begin::Table body-->
-                                <tbody>
-                                <tr>
-                                  <td>
-                                    <a href="#" class="text-gray-600 fw-bold fs-6">4:30 PM</a>
-                                  </td>
-                                  <td class="pe-0 text-end">
-                                    <span class="text-gray-800 fw-bold fs-6 me-1">$2,345.45</span>
-                                  </td>
-                                  <td class="pe-0 text-end">
-                                    <span class="fw-bold fs-6 text-success">+134.02</span>
-                                  </td>
-                                </tr>
-                                <tr>
-                                  <td>
-                                    <a href="#" class="text-gray-600 fw-bold fs-6">11:35 AM</a>
-                                  </td>
-                                  <td class="pe-0 text-end">
-                                    <span class="text-gray-800 fw-bold fs-6 me-1">$756.26</span>
-                                  </td>
-                                  <td class="pe-0 text-end">
-                                    <span class="fw-bold fs-6 text-primary">-124.03</span>
-                                  </td>
-                                </tr>
-                                <tr>
-                                  <td>
-                                    <a href="#" class="text-gray-600 fw-bold fs-6">3:30 PM</a>
-                                  </td>
-                                  <td class="pe-0 text-end">
-                                    <span class="text-gray-800 fw-bold fs-6 me-1">$1,756.26</span>
-                                  </td>
-                                  <td class="pe-0 text-end">
-                                    <span class="fw-bold fs-6 text-danger">+144.04</span>
-                                  </td>
-                                </tr>
-                                </tbody>
-                                <!--end::Table body-->
-                              </table>
-                              <!--end::Table-->
-                            </div>
-                            <!--end::Table container-->
-                          </div>
-                          <!--end::Tap pane-->
-                          <!--begin::Tap pane-->
-                          <div class="tab-pane fade" id="kt_charts_widget_35_tab_content_3">
-                            <!--begin::Chart-->
-                            <div id="kt_charts_widget_35_chart_3" data-kt-chart-color="primary"
-                                 class="min-h-auto h-200px ps-3 pe-6"></div>
-                            <!--end::Chart-->
-                            <!--begin::Table container-->
-                            <div class="table-responsive mx-9 mt-n6">
-                              <!--begin::Table-->
-                              <table class="table align-middle gs-0 gy-4">
-                                <!--begin::Table head-->
-                                <thead>
-                                <tr>
-                                  <th class="min-w-100px"></th>
-                                  <th class="min-w-100px text-end pe-0"></th>
-                                  <th class="text-end min-w-50px"></th>
-                                </tr>
-                                </thead>
-                                <!--end::Table head-->
-                                <!--begin::Table body-->
-                                <tbody>
-                                <tr>
-                                  <td>
-                                    <a href="#" class="text-gray-600 fw-bold fs-6">3:20 AM</a>
-                                  </td>
-                                  <td class="pe-0 text-end">
-                                    <span class="text-gray-800 fw-bold fs-6 me-1">$3,756.26</span>
-                                  </td>
-                                  <td class="pe-0 text-end">
-                                    <span class="fw-bold fs-6 text-primary">+185.03</span>
-                                  </td>
-                                </tr>
-                                <tr>
-                                  <td>
-                                    <a href="#" class="text-gray-600 fw-bold fs-6">12:30 AM</a>
-                                  </td>
-                                  <td class="pe-0 text-end">
-                                    <span class="text-gray-800 fw-bold fs-6 me-1">$2,756.26</span>
-                                  </td>
-                                  <td class="pe-0 text-end">
-                                    <span class="fw-bold fs-6 text-danger">+124.03</span>
-                                  </td>
-                                </tr>
-                                <tr>
-                                  <td>
-                                    <a href="#" class="text-gray-600 fw-bold fs-6">4:30 PM</a>
-                                  </td>
-                                  <td class="pe-0 text-end">
-                                    <span class="text-gray-800 fw-bold fs-6 me-1">$756.26</span>
-                                  </td>
-                                  <td class="pe-0 text-end">
-                                    <span class="fw-bold fs-6 text-success">-154.03</span>
-                                  </td>
-                                </tr>
-                                </tbody>
-                                <!--end::Table body-->
-                              </table>
-                              <!--end::Table-->
-                            </div>
-                            <!--end::Table container-->
-                          </div>
-                          <!--end::Tap pane-->
-                          <!--begin::Tap pane-->
-                          <div class="tab-pane fade" id="kt_charts_widget_35_tab_content_4">
-                            <!--begin::Chart-->
-                            <div id="kt_charts_widget_35_chart_4" data-kt-chart-color="primary"
-                                 class="min-h-auto h-200px ps-3 pe-6"></div>
-                            <!--end::Chart-->
-                            <!--begin::Table container-->
-                            <div class="table-responsive mx-9 mt-n6">
-                              <!--begin::Table-->
-                              <table class="table align-middle gs-0 gy-4">
-                                <!--begin::Table head-->
-                                <thead>
-                                <tr>
-                                  <th class="min-w-100px"></th>
-                                  <th class="min-w-100px text-end pe-0"></th>
-                                  <th class="text-end min-w-50px"></th>
-                                </tr>
-                                </thead>
-                                <!--end::Table head-->
-                                <!--begin::Table body-->
-                                <tbody>
-                                <tr>
-                                  <td>
-                                    <a href="#" class="text-gray-600 fw-bold fs-6">2:30 PM</a>
-                                  </td>
-                                  <td class="pe-0 text-end">
-                                    <span class="text-gray-800 fw-bold fs-6 me-1">$2,756.26</span>
-                                  </td>
-                                  <td class="pe-0 text-end">
-                                    <span class="fw-bold fs-6 text-warning">+124.03</span>
-                                  </td>
-                                </tr>
-                                <tr>
-                                  <td>
-                                    <a href="#" class="text-gray-600 fw-bold fs-6">5:30 AM</a>
-                                  </td>
-                                  <td class="pe-0 text-end">
-                                    <span class="text-gray-800 fw-bold fs-6 me-1">$1,756.26</span>
-                                  </td>
-                                  <td class="pe-0 text-end">
-                                    <span class="fw-bold fs-6 text-info">+144.65</span>
-                                  </td>
-                                </tr>
-                                <tr>
-                                  <td>
-                                    <a href="#" class="text-gray-600 fw-bold fs-6">4:30 PM</a>
-                                  </td>
-                                  <td class="pe-0 text-end">
-                                    <span class="text-gray-800 fw-bold fs-6 me-1">$2,085.25</span>
-                                  </td>
-                                  <td class="pe-0 text-end">
-                                    <span class="fw-bold fs-6 text-primary">+154.06</span>
-                                  </td>
-                                </tr>
-                                </tbody>
-                                <!--end::Table body-->
-                              </table>
-                              <!--end::Table-->
-                            </div>
-                            <!--end::Table container-->
-                          </div>
-                          <!--end::Tap pane-->
-                          <!--begin::Tap pane-->
-                          <div class="tab-pane fade" id="kt_charts_widget_35_tab_content_5">
-                            <!--begin::Chart-->
-                            <div id="kt_charts_widget_35_chart_5" data-kt-chart-color="primary"
-                                 class="min-h-auto h-200px ps-3 pe-6"></div>
-                            <!--end::Chart-->
-                            <!--begin::Table container-->
-                            <div class="table-responsive mx-9 mt-n6">
-                              <!--begin::Table-->
-                              <table class="table align-middle gs-0 gy-4">
-                                <!--begin::Table head-->
-                                <thead>
-                                <tr>
-                                  <th class="min-w-100px"></th>
-                                  <th class="min-w-100px text-end pe-0"></th>
-                                  <th class="text-end min-w-50px"></th>
-                                </tr>
-                                </thead>
-                                <!--end::Table head-->
-                                <!--begin::Table body-->
-                                <tbody>
-                                <tr>
-                                  <td>
-                                    <a href="#" class="text-gray-600 fw-bold fs-6">2:30 PM</a>
-                                  </td>
-                                  <td class="pe-0 text-end">
-                                    <span class="text-gray-800 fw-bold fs-6 me-1">$2,045.04</span>
-                                  </td>
-                                  <td class="pe-0 text-end">
-                                    <span class="fw-bold fs-6 text-warning">+114.03</span>
-                                  </td>
-                                </tr>
-                                <tr>
-                                  <td>
-                                    <a href="#" class="text-gray-600 fw-bold fs-6">3:30 AM</a>
-                                  </td>
-                                  <td class="pe-0 text-end">
-                                    <span class="text-gray-800 fw-bold fs-6 me-1">$756.26</span>
-                                  </td>
-                                  <td class="pe-0 text-end">
-                                    <span class="fw-bold fs-6 text-primary">-124.03</span>
-                                  </td>
-                                </tr>
-                                <tr>
-                                  <td>
-                                    <a href="#" class="text-gray-600 fw-bold fs-6">10:30 PM</a>
-                                  </td>
-                                  <td class="pe-0 text-end">
-                                    <span class="text-gray-800 fw-bold fs-6 me-1">$1.756.26</span>
-                                  </td>
-                                  <td class="pe-0 text-end">
-                                    <span class="fw-bold fs-6 text-info">+165.86</span>
-                                  </td>
-                                </tr>
-                                </tbody>
-                                <!--end::Table body-->
-                              </table>
-                              <!--end::Table-->
-                            </div>
-                            <!--end::Table container-->
-                          </div>
-                          <!--end::Tap pane-->
-                        </div>
-                        <!--end::Tab Content-->
-                      </div>
-                      <!--end::Body-->
-                    </div>
-                    <!--end::Chart Widget 35-->
-                  </div>
-                  <!--end::Col-->
-                  <!--begin::Col-->
-                  <div class="col-xl-8">
-                    <!--begin::Table widget 14-->
-                    <div class="card card-flush h-md-100">
-                      <!--begin::Header-->
-                      <div class="card-header pt-7">
-                        <!--begin::Title-->
-                        <h3 class="card-title align-items-start flex-column">
-                          <span class="card-label fw-bold text-gray-800">وضعیت پروژه ها</span>
-                          <span class="text-gray-400 mt-1 fw-semibold fs-6">37 دقیقه قبل اخرین بروزرسانی</span>
-                        </h3>
-                        <!--end::Title-->
-                        <!--begin::Toolbar-->
-                        <div class="card-toolbar">
-                          <a href="../../demo1/dist/apps/ecommerce/catalog/add-product.html"
-                             class="btn btn-sm btn-light">تاریخچه</a>
-                        </div>
-                        <!--end::Toolbar-->
-                      </div>
-                      <!--end::Header-->
-                      <!--begin::Body-->
-                      <div class="card-body pt-6">
-                        <!--begin::Table container-->
-                        <div class="table-responsive">
-                          <!--begin::Table-->
-                          <table class="table table-row-dashed align-middle gs-0 gy-3 my-0">
-                            <!--begin::Table head-->
-                            <thead>
-                            <tr class="fs-7 fw-bold text-gray-400 border-bottom-0">
-                              <th class="p-0 pb-3 min-w-175px text-start">مورد</th>
-                              <th class="p-0 pb-3 min-w-100px text-end">بودجه</th>
-                              <th class="p-0 pb-3 min-w-100px text-end">پیشرفت</th>
-                              <th class="p-0 pb-3 min-w-175px text-end pe-12">وضعیت</th>
-                              <th class="p-0 pb-3 w-125px text-end pe-7">چارت</th>
-                              <th class="p-0 pb-3 w-50px text-end">نمایش</th>
-                            </tr>
-                            </thead>
-                            <!--end::Table head-->
-                            <!--begin::Table body-->
-                            <tbody>
-                            <tr>
-                              <td>
-                                <div class="d-flex align-items-center">
-                                  <div class="symbol symbol-50px me-3">
-                                    <img src="assets/media/stock/600x600/img-49.jpg" class="" alt=""/>
-                                  </div>
-                                  <div class="d-flex justify-content-start flex-column">
-                                    <a href="#" class="text-gray-800 fw-bold text-hover-primary mb-1 fs-6">اپلیکیشن</a>
-                                    <span class="text-gray-400 fw-semibold d-block fs-7">هنری</span>
-                                  </div>
-                                </div>
-                              </td>
-                              <td class="text-end pe-0">
-                                <span class="text-gray-600 fw-bold fs-6">$32,400</span>
-                              </td>
-                              <td class="text-end pe-0">
-                                <!--begin::Tags-->
-                                <span class="badge badge-light-success fs-base">
-																		<!--begin::Svg Icon | path: icons/duotune/arrows/arr066.svg-->
-																		<span class="svg-icon svg-icon-5 svg-icon-success ms-n1">
-																			<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                           xmlns="http://www.w3.org/2000/svg">
-																				<rect opacity="0.5" x="13" y="6" width="13" height="2" rx="1"
-                                              transform="rotate(90 13 6)" fill="currentColor"/>
-																				<path
-                                            d="M12.5657 8.56569L16.75 12.75C17.1642 13.1642 17.8358 13.1642 18.25 12.75C18.6642 12.3358 18.6642 11.6642 18.25 11.25L12.7071 5.70711C12.3166 5.31658 11.6834 5.31658 11.2929 5.70711L5.75 11.25C5.33579 11.6642 5.33579 12.3358 5.75 12.75C6.16421 13.1642 6.83579 13.1642 7.25 12.75L11.4343 8.56569C11.7467 8.25327 12.2533 8.25327 12.5657 8.56569Z"
-                                            fill="currentColor"/>
-																			</svg>
-																		</span>
-                                  <!--end::Svg Icon-->9.2%</span>
-                                <!--end::Tags-->
-                              </td>
-                              <td class="text-end pe-12">
-                                <span class="badge py-3 px-4 fs-7 badge-light-primary">در حال پردازش</span>
-                              </td>
-                              <td class="text-end pe-0">
-                                <div id="kt_table_widget_14_chart_1" class="h-50px mt-n8 pe-7"
-                                     data-kt-chart-color="success"></div>
-                              </td>
-                              <td class="text-end">
-                                <a href="#"
-                                   class="btn btn-sm btn-icon btn-bg-light btn-active-color-primary w-30px h-30px">
-                                  <!--begin::Svg Icon | path: icons/duotune/arrows/arr001.svg-->
-                                  <span class="svg-icon svg-icon-5 svg-icon-gray-700">
-																				<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                             xmlns="http://www.w3.org/2000/svg">
-																					<path d="M14.4 11H3C2.4 11 2 11.4 2 12C2 12.6 2.4 13 3 13H14.4V11Z"
-                                                fill="currentColor"/>
-																					<path opacity="0.3"
-                                                d="M14.4 20V4L21.7 11.3C22.1 11.7 22.1 12.3 21.7 12.7L14.4 20Z"
-                                                fill="currentColor"/>
-																				</svg>
+                  <div class="col-4">
+                    <!--begin::آیتمs-->
+                    <div class="bg-gray-100 bg-primary bg-opacity-70 rounded-2 px-6 py-5">
+                      <!--begin::Symbol-->
+                      <div class="symbol symbol-30px me-5 mb-8">
+																		<span class="symbol-label">
+																			<!--begin::Svg Icon | path: icons/duotune/medicine/med005.svg-->
+																			<span class="svg-icon svg-icon-1 svg-icon-primary">
+																			<svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="#000000"><g
+                                          id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier"
+                                                                                         stroke-linecap="round"
+                                                                                         stroke-linejoin="round"></g><g
+                                          id="SVGRepo_iconCarrier"> <path class="success"
+                                                                          d="m 5 7 v 6 h 3 v -1 c 0 -0.53125 0.210938 -1.039062 0.585938 -1.414062 l 2.414062 -2.414063 v -1.171875 z m 0 0"
+                                                                          fill="#acddf9"></path> <path
+                                          d="m 7 0 c -1 0 -1 1 -1 1 v 1 h -1 s -0.707031 -0.015625 -1.445312 0.355469 c -0.742188 0.371093 -1.554688 1.3125 -1.554688 2.644531 v 8 s -0.015625 0.707031 0.355469 1.449219 c 0.371093 0.738281 1.3125 1.550781 2.644531 1.550781 h 5 v -2 h -5 c -0.554688 0 -1 -0.445312 -1 -1 v -8 c 0 -0.554688 0.445312 -1 1 -1 h 6 c 0.554688 0 1 0.445312 1 1 v 2 h 2 v -2 c 0 -1.332031 -0.8125 -2.273438 -1.550781 -2.644531 c -0.742188 -0.371094 -1.449219 -0.355469 -1.449219 -0.355469 h -1 v -1 c 0 -1 -1 -1 -1 -1 z m 6 8 v 0.007812 c -0.265625 -0.003906 -0.519531 0.101563 -0.707031 0.285157 l -3 3 c -0.1875 0.1875 -0.292969 0.441406 -0.292969 0.707031 v 1 h 3.132812 l -0.964843 1.445312 c -0.105469 0.164063 -0.164063 0.359376 -0.160157 0.554688 h -0.007812 v 1 h 1 v -0.003906 c 0.265625 0 0.519531 -0.101563 0.707031 -0.289063 l 3 -3 c 0.1875 -0.1875 0.289063 -0.441406 0.289063 -0.707031 h 0.003906 v -1 h -3.128906 l 0.960937 -1.445312 c 0.109375 -0.164063 0.167969 -0.359376 0.167969 -0.554688 v -1 z m 0 0"
+                                          fill="#009ef7"></path> </g></svg>
 																			</span>
-                                  <!--end::Svg Icon-->
-                                </a>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <div class="d-flex align-items-center">
-                                  <div class="symbol symbol-50px me-3">
-                                    <img src="assets/media/stock/600x600/img-40.jpg" class="" alt=""/>
-                                  </div>
-                                  <div class="d-flex justify-content-start flex-column">
-                                    <a href="#" class="text-gray-800 fw-bold text-hover-primary mb-1 fs-6">رنگارنگ</a>
-                                    <span class="text-gray-400 fw-semibold d-block fs-7">استر هوارد</span>
-                                  </div>
-                                </div>
-                              </td>
-                              <td class="text-end pe-0">
-                                <span class="text-gray-600 fw-bold fs-6">$256,910</span>
-                              </td>
-                              <td class="text-end pe-0">
-                                <!--begin::Tags-->
-                                <span class="badge badge-light-danger fs-base">
-																		<!--begin::Svg Icon | path: icons/duotune/arrows/arr065.svg-->
-																		<span class="svg-icon svg-icon-5 svg-icon-danger ms-n1">
-																			<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                           xmlns="http://www.w3.org/2000/svg">
-																				<rect opacity="0.5" x="11" y="18" width="13" height="2" rx="1"
-                                              transform="rotate(-90 11 18)" fill="currentColor"/>
-																				<path
-                                            d="M11.4343 15.4343L7.25 11.25C6.83579 10.8358 6.16421 10.8358 5.75 11.25C5.33579 11.6642 5.33579 12.3358 5.75 12.75L11.2929 18.2929C11.6834 18.6834 12.3166 18.6834 12.7071 18.2929L18.25 12.75C18.6642 12.3358 18.6642 11.6642 18.25 11.25C17.8358 10.8358 17.1642 10.8358 16.75 11.25L12.5657 15.4343C12.2533 15.7467 11.7467 15.7467 11.4343 15.4343Z"
-                                            fill="currentColor"/>
-																			</svg>
+                                      <!--end::Svg Icon-->
 																		</span>
-                                  <!--end::Svg Icon-->0.4%</span>
-                                <!--end::Tags-->
-                              </td>
-                              <td class="text-end pe-12">
-                                <span class="badge py-3 px-4 fs-7 badge-light-warning">در انتظار</span>
-                              </td>
-                              <td class="text-end pe-0">
-                                <div id="kt_table_widget_14_chart_2" class="h-50px mt-n8 pe-7"
-                                     data-kt-chart-color="danger"></div>
-                              </td>
-                              <td class="text-end">
-                                <a href="#"
-                                   class="btn btn-sm btn-icon btn-bg-light btn-active-color-primary w-30px h-30px">
-                                  <!--begin::Svg Icon | path: icons/duotune/arrows/arr001.svg-->
-                                  <span class="svg-icon svg-icon-5 svg-icon-gray-700">
-																				<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                             xmlns="http://www.w3.org/2000/svg">
-																					<path d="M14.4 11H3C2.4 11 2 11.4 2 12C2 12.6 2.4 13 3 13H14.4V11Z"
-                                                fill="currentColor"/>
-																					<path opacity="0.3"
-                                                d="M14.4 20V4L21.7 11.3C22.1 11.7 22.1 12.3 21.7 12.7L14.4 20Z"
-                                                fill="currentColor"/>
-																				</svg>
-																			</span>
-                                  <!--end::Svg Icon-->
-                                </a>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <div class="d-flex align-items-center">
-                                  <div class="symbol symbol-50px me-3">
-                                    <img src="assets/media/stock/600x600/img-39.jpg" class="" alt=""/>
-                                  </div>
-                                  <div class="d-flex justify-content-start flex-column">
-                                    <a href="#" class="text-gray-800 fw-bold text-hover-primary mb-1 fs-6">مدیریت
-                                      محتوا</a>
-                                    <span class="text-gray-400 fw-semibold d-block fs-7">ویلسون</span>
-                                  </div>
-                                </div>
-                              </td>
-                              <td class="text-end pe-0">
-                                <span class="text-gray-600 fw-bold fs-6">$8,220</span>
-                              </td>
-                              <td class="text-end pe-0">
-                                <!--begin::Tags-->
-                                <span class="badge badge-light-success fs-base">
-																		<!--begin::Svg Icon | path: icons/duotune/arrows/arr066.svg-->
-																		<span class="svg-icon svg-icon-5 svg-icon-success ms-n1">
-																			<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                           xmlns="http://www.w3.org/2000/svg">
-																				<rect opacity="0.5" x="13" y="6" width="13" height="2" rx="1"
-                                              transform="rotate(90 13 6)" fill="currentColor"/>
-																				<path
-                                            d="M12.5657 8.56569L16.75 12.75C17.1642 13.1642 17.8358 13.1642 18.25 12.75C18.6642 12.3358 18.6642 11.6642 18.25 11.25L12.7071 5.70711C12.3166 5.31658 11.6834 5.31658 11.2929 5.70711L5.75 11.25C5.33579 11.6642 5.33579 12.3358 5.75 12.75C6.16421 13.1642 6.83579 13.1642 7.25 12.75L11.4343 8.56569C11.7467 8.25327 12.2533 8.25327 12.5657 8.56569Z"
-                                            fill="currentColor"/>
-																			</svg>
-																		</span>
-                                  <!--end::Svg Icon-->9.2%</span>
-                                <!--end::Tags-->
-                              </td>
-                              <td class="text-end pe-12">
-                                <span class="badge py-3 px-4 fs-7 badge-light-primary">در حال پردازش</span>
-                              </td>
-                              <td class="text-end pe-0">
-                                <div id="kt_table_widget_14_chart_3" class="h-50px mt-n8 pe-7"
-                                     data-kt-chart-color="success"></div>
-                              </td>
-                              <td class="text-end">
-                                <a href="#"
-                                   class="btn btn-sm btn-icon btn-bg-light btn-active-color-primary w-30px h-30px">
-                                  <!--begin::Svg Icon | path: icons/duotune/arrows/arr001.svg-->
-                                  <span class="svg-icon svg-icon-5 svg-icon-gray-700">
-																				<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                             xmlns="http://www.w3.org/2000/svg">
-																					<path d="M14.4 11H3C2.4 11 2 11.4 2 12C2 12.6 2.4 13 3 13H14.4V11Z"
-                                                fill="currentColor"/>
-																					<path opacity="0.3"
-                                                d="M14.4 20V4L21.7 11.3C22.1 11.7 22.1 12.3 21.7 12.7L14.4 20Z"
-                                                fill="currentColor"/>
-																				</svg>
-																			</span>
-                                  <!--end::Svg Icon-->
-                                </a>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <div class="d-flex align-items-center">
-                                  <div class="symbol symbol-50px me-3">
-                                    <img src="assets/media/stock/600x600/img-47.jpg" class="" alt=""/>
-                                  </div>
-                                  <div class="d-flex justify-content-start flex-column">
-                                    <a href="#" class="text-gray-800 fw-bold text-hover-primary mb-1 fs-6">قدرت </a>
-                                    <span class="text-gray-400 fw-semibold d-block fs-7">کامران</span>
-                                  </div>
-                                </div>
-                              </td>
-                              <td class="text-end pe-0">
-                                <span class="text-gray-600 fw-bold fs-6">$74,000</span>
-                              </td>
-                              <td class="text-end pe-0">
-                                <!--begin::Tags-->
-                                <span class="badge badge-light-success fs-base">
-																		<!--begin::Svg Icon | path: icons/duotune/arrows/arr066.svg-->
-																		<span class="svg-icon svg-icon-5 svg-icon-success ms-n1">
-																			<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                           xmlns="http://www.w3.org/2000/svg">
-																				<rect opacity="0.5" x="13" y="6" width="13" height="2" rx="1"
-                                              transform="rotate(90 13 6)" fill="currentColor"/>
-																				<path
-                                            d="M12.5657 8.56569L16.75 12.75C17.1642 13.1642 17.8358 13.1642 18.25 12.75C18.6642 12.3358 18.6642 11.6642 18.25 11.25L12.7071 5.70711C12.3166 5.31658 11.6834 5.31658 11.2929 5.70711L5.75 11.25C5.33579 11.6642 5.33579 12.3358 5.75 12.75C6.16421 13.1642 6.83579 13.1642 7.25 12.75L11.4343 8.56569C11.7467 8.25327 12.2533 8.25327 12.5657 8.56569Z"
-                                            fill="currentColor"/>
-																			</svg>
-																		</span>
-                                  <!--end::Svg Icon-->9.2%</span>
-                                <!--end::Tags-->
-                              </td>
-                              <td class="text-end pe-12">
-                                <span class="badge py-3 px-4 fs-7 badge-light-success">تکمیل شده</span>
-                              </td>
-                              <td class="text-end pe-0">
-                                <div id="kt_table_widget_14_chart_4" class="h-50px mt-n8 pe-7"
-                                     data-kt-chart-color="success"></div>
-                              </td>
-                              <td class="text-end">
-                                <a href="#"
-                                   class="btn btn-sm btn-icon btn-bg-light btn-active-color-primary w-30px h-30px">
-                                  <!--begin::Svg Icon | path: icons/duotune/arrows/arr001.svg-->
-                                  <span class="svg-icon svg-icon-5 svg-icon-gray-700">
-																				<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                             xmlns="http://www.w3.org/2000/svg">
-																					<path d="M14.4 11H3C2.4 11 2 11.4 2 12C2 12.6 2.4 13 3 13H14.4V11Z"
-                                                fill="currentColor"/>
-																					<path opacity="0.3"
-                                                d="M14.4 20V4L21.7 11.3C22.1 11.7 22.1 12.3 21.7 12.7L14.4 20Z"
-                                                fill="currentColor"/>
-																				</svg>
-																			</span>
-                                  <!--end::Svg Icon-->
-                                </a>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <div class="d-flex align-items-center">
-                                  <div class="symbol symbol-50px me-3">
-                                    <img src="assets/media/stock/600x600/img-48.jpg" class="" alt=""/>
-                                  </div>
-                                  <div class="d-flex justify-content-start flex-column">
-                                    <a href="#" class="text-gray-800 fw-bold text-hover-primary mb-1 fs-6">9درجه</a>
-                                    <span class="text-gray-400 fw-semibold d-block fs-7">سامان</span>
-                                  </div>
-                                </div>
-                              </td>
-                              <td class="text-end pe-0">
-                                <span class="text-gray-600 fw-bold fs-6">$183,300</span>
-                              </td>
-                              <td class="text-end pe-0">
-                                <!--begin::Tags-->
-                                <span class="badge badge-light-danger fs-base">
-																		<!--begin::Svg Icon | path: icons/duotune/arrows/arr065.svg-->
-																		<span class="svg-icon svg-icon-5 svg-icon-danger ms-n1">
-																			<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                           xmlns="http://www.w3.org/2000/svg">
-																				<rect opacity="0.5" x="11" y="18" width="13" height="2" rx="1"
-                                              transform="rotate(-90 11 18)" fill="currentColor"/>
-																				<path
-                                            d="M11.4343 15.4343L7.25 11.25C6.83579 10.8358 6.16421 10.8358 5.75 11.25C5.33579 11.6642 5.33579 12.3358 5.75 12.75L11.2929 18.2929C11.6834 18.6834 12.3166 18.6834 12.7071 18.2929L18.25 12.75C18.6642 12.3358 18.6642 11.6642 18.25 11.25C17.8358 10.8358 17.1642 10.8358 16.75 11.25L12.5657 15.4343C12.2533 15.7467 11.7467 15.7467 11.4343 15.4343Z"
-                                            fill="currentColor"/>
-																			</svg>
-																		</span>
-                                  <!--end::Svg Icon-->0.4%</span>
-                                <!--end::Tags-->
-                              </td>
-                              <td class="text-end pe-12">
-                                <span class="badge py-3 px-4 fs-7 badge-light-primary">در حال پردازش</span>
-                              </td>
-                              <td class="text-end pe-0">
-                                <div id="kt_table_widget_14_chart_5" class="h-50px mt-n8 pe-7"
-                                     data-kt-chart-color="danger"></div>
-                              </td>
-                              <td class="text-end">
-                                <a href="#"
-                                   class="btn btn-sm btn-icon btn-bg-light btn-active-color-primary w-30px h-30px">
-                                  <!--begin::Svg Icon | path: icons/duotune/arrows/arr001.svg-->
-                                  <span class="svg-icon svg-icon-5 svg-icon-gray-700">
-																				<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                             xmlns="http://www.w3.org/2000/svg">
-																					<path d="M14.4 11H3C2.4 11 2 11.4 2 12C2 12.6 2.4 13 3 13H14.4V11Z"
-                                                fill="currentColor"/>
-																					<path opacity="0.3"
-                                                d="M14.4 20V4L21.7 11.3C22.1 11.7 22.1 12.3 21.7 12.7L14.4 20Z"
-                                                fill="currentColor"/>
-																				</svg>
-																			</span>
-                                  <!--end::Svg Icon-->
-                                </a>
-                              </td>
-                            </tr>
-                            </tbody>
-                            <!--end::Table body-->
-                          </table>
-                        </div>
-                        <!--end::Table-->
                       </div>
-                      <!--end: کارت Body-->
+                      <!--end::Symbol-->
+                      <!--begin::Stats-->
+                      <div class="m-0">
+                        <!--begin::شماره کارت-->
+                        <span class="text-gray-700 fw-bolder d-block fs-2qx lh-1 ls-n1 mb-1">37</span>
+                        <!--end::شماره کارت-->
+                        <!--begin::Desc-->
+                        <span class="text-white fw-semibold fs-6">ولتاژ</span>
+                        <!--end::Desc-->
+                      </div>
+                      <!--end::Stats-->
                     </div>
-                    <!--end::Table widget 14-->
+                    <!--end::آیتمs-->
                   </div>
-                  <!--end::Col-->
-                </div>
-                <!--end::Row-->
-                <!--begin::Row-->
-                <div class="row gx-5 gx-xl-10">
-                  <!--begin::Col-->
-                  <div class="col-xl-4">
-                    <!--begin::Chart widget 31-->
-                    <div class="card card-flush h-xl-100">
-                      <!--begin::Header-->
-                      <div class="card-header pt-7 mb-7">
-                        <!--begin::Title-->
-                        <h3 class="card-title align-items-start flex-column">
-                          <span class="card-label fw-bold text-gray-800">آمار</span>
-                          <span class="text-gray-400 mt-1 fw-semibold fs-6">8k بازدید کننده اجتماعی</span>
-                        </h3>
-                        <!--end::Title-->
-                        <!--begin::Toolbar-->
-                        <div class="card-toolbar">
-                          <a href="../../demo1/dist/apps/ecommerce/catalog/add-product.html"
-                             class="btn btn-sm btn-light">گزارش</a>
-                        </div>
-                        <!--end::Toolbar-->
+                  <div class="col-4">
+                    <!--begin::آیتمs-->
+                    <div class="bg-gray-100 bg-primary bg-opacity-70 rounded-2 px-6 py-5">
+                      <!--begin::Symbol-->
+                      <div class="symbol symbol-30px me-5 mb-8">
+																		<span class="symbol-label">
+																			<!--begin::Svg Icon | path: icons/duotune/medicine/med005.svg-->
+																			<span class="svg-icon svg-icon-1 svg-icon-primary">
+																			<svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="#000000"><g
+                                          id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier"
+                                                                                         stroke-linecap="round"
+                                                                                         stroke-linejoin="round"></g><g
+                                          id="SVGRepo_iconCarrier"> <path class="success"
+                                                                          d="m 5 7 v 6 h 3 v -1 c 0 -0.53125 0.210938 -1.039062 0.585938 -1.414062 l 2.414062 -2.414063 v -1.171875 z m 0 0"
+                                                                          fill="#acddf9"></path> <path
+                                          d="m 7 0 c -1 0 -1 1 -1 1 v 1 h -1 s -0.707031 -0.015625 -1.445312 0.355469 c -0.742188 0.371093 -1.554688 1.3125 -1.554688 2.644531 v 8 s -0.015625 0.707031 0.355469 1.449219 c 0.371093 0.738281 1.3125 1.550781 2.644531 1.550781 h 5 v -2 h -5 c -0.554688 0 -1 -0.445312 -1 -1 v -8 c 0 -0.554688 0.445312 -1 1 -1 h 6 c 0.554688 0 1 0.445312 1 1 v 2 h 2 v -2 c 0 -1.332031 -0.8125 -2.273438 -1.550781 -2.644531 c -0.742188 -0.371094 -1.449219 -0.355469 -1.449219 -0.355469 h -1 v -1 c 0 -1 -1 -1 -1 -1 z m 6 8 v 0.007812 c -0.265625 -0.003906 -0.519531 0.101563 -0.707031 0.285157 l -3 3 c -0.1875 0.1875 -0.292969 0.441406 -0.292969 0.707031 v 1 h 3.132812 l -0.964843 1.445312 c -0.105469 0.164063 -0.164063 0.359376 -0.160157 0.554688 h -0.007812 v 1 h 1 v -0.003906 c 0.265625 0 0.519531 -0.101563 0.707031 -0.289063 l 3 -3 c 0.1875 -0.1875 0.289063 -0.441406 0.289063 -0.707031 h 0.003906 v -1 h -3.128906 l 0.960937 -1.445312 c 0.109375 -0.164063 0.167969 -0.359376 0.167969 -0.554688 v -1 z m 0 0"
+                                          fill="#009ef7"></path> </g></svg>
+																			</span>
+                                      <!--end::Svg Icon-->
+																		</span>
                       </div>
-                      <!--end::Header-->
-                      <!--begin::Body-->
-                      <div class="card-body d-flex align-items-end pt-0">
-                        <!--begin::Chart-->
-                        <div id="kt_charts_widget_31_chart" class="w-100 h-300px"></div>
-                        <!--end::Chart-->
+                      <!--end::Symbol-->
+                      <!--begin::Stats-->
+                      <div class="m-0">
+                        <!--begin::شماره کارت-->
+                        <span class="text-gray-700 fw-bolder d-block fs-2qx lh-1 ls-n1 mb-1">37</span>
+                        <!--end::شماره کارت-->
+                        <!--begin::Desc-->
+                        <span class="text-white fw-semibold fs-6">ولتاژ</span>
+                        <!--end::Desc-->
                       </div>
-                      <!--end::Body-->
+                      <!--end::Stats-->
                     </div>
-                    <!--end::Chart widget 31-->
+                    <!--end::آیتمs-->
+                  </div>
+                  <div class="col-4">
+                    <!--begin::آیتمs-->
+                    <div class="bg-gray-100 bg-primary bg-opacity-70 rounded-2 px-6 py-5">
+                      <!--begin::Symbol-->
+                      <div class="symbol symbol-30px me-5 mb-8">
+																		<span class="symbol-label">
+																			<!--begin::Svg Icon | path: icons/duotune/medicine/med005.svg-->
+																			<span class="svg-icon svg-icon-1 svg-icon-primary">
+																			<svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="#000000"><g
+                                          id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier"
+                                                                                         stroke-linecap="round"
+                                                                                         stroke-linejoin="round"></g><g
+                                          id="SVGRepo_iconCarrier"> <path class="success"
+                                                                          d="m 5 7 v 6 h 3 v -1 c 0 -0.53125 0.210938 -1.039062 0.585938 -1.414062 l 2.414062 -2.414063 v -1.171875 z m 0 0"
+                                                                          fill="#acddf9"></path> <path
+                                          d="m 7 0 c -1 0 -1 1 -1 1 v 1 h -1 s -0.707031 -0.015625 -1.445312 0.355469 c -0.742188 0.371093 -1.554688 1.3125 -1.554688 2.644531 v 8 s -0.015625 0.707031 0.355469 1.449219 c 0.371093 0.738281 1.3125 1.550781 2.644531 1.550781 h 5 v -2 h -5 c -0.554688 0 -1 -0.445312 -1 -1 v -8 c 0 -0.554688 0.445312 -1 1 -1 h 6 c 0.554688 0 1 0.445312 1 1 v 2 h 2 v -2 c 0 -1.332031 -0.8125 -2.273438 -1.550781 -2.644531 c -0.742188 -0.371094 -1.449219 -0.355469 -1.449219 -0.355469 h -1 v -1 c 0 -1 -1 -1 -1 -1 z m 6 8 v 0.007812 c -0.265625 -0.003906 -0.519531 0.101563 -0.707031 0.285157 l -3 3 c -0.1875 0.1875 -0.292969 0.441406 -0.292969 0.707031 v 1 h 3.132812 l -0.964843 1.445312 c -0.105469 0.164063 -0.164063 0.359376 -0.160157 0.554688 h -0.007812 v 1 h 1 v -0.003906 c 0.265625 0 0.519531 -0.101563 0.707031 -0.289063 l 3 -3 c 0.1875 -0.1875 0.289063 -0.441406 0.289063 -0.707031 h 0.003906 v -1 h -3.128906 l 0.960937 -1.445312 c 0.109375 -0.164063 0.167969 -0.359376 0.167969 -0.554688 v -1 z m 0 0"
+                                          fill="#009ef7"></path> </g></svg>
+																			</span>
+                                      <!--end::Svg Icon-->
+																		</span>
+                      </div>
+                      <!--end::Symbol-->
+                      <!--begin::Stats-->
+                      <div class="m-0">
+                        <!--begin::شماره کارت-->
+                        <span class="text-gray-700 fw-bolder d-block fs-2qx lh-1 ls-n1 mb-1">37</span>
+                        <!--end::شماره کارت-->
+                        <!--begin::Desc-->
+                        <span class="text-white fw-semibold fs-6">ولتاژ</span>
+                        <!--end::Desc-->
+                      </div>
+                      <!--end::Stats-->
+                    </div>
+                    <!--end::آیتمs-->
+                  </div>
+                  <div class="col-4">
+                    <!--begin::آیتمs-->
+                    <div class="bg-gray-100 bg-primary bg-opacity-70 rounded-2 px-6 py-5">
+                      <!--begin::Symbol-->
+                      <div class="symbol symbol-30px me-5 mb-8">
+																		<span class="symbol-label">
+																			<!--begin::Svg Icon | path: icons/duotune/medicine/med005.svg-->
+																			<span class="svg-icon svg-icon-1 svg-icon-primary">
+																			<svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="#000000"><g
+                                          id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier"
+                                                                                         stroke-linecap="round"
+                                                                                         stroke-linejoin="round"></g><g
+                                          id="SVGRepo_iconCarrier"> <path class="success"
+                                                                          d="m 5 7 v 6 h 3 v -1 c 0 -0.53125 0.210938 -1.039062 0.585938 -1.414062 l 2.414062 -2.414063 v -1.171875 z m 0 0"
+                                                                          fill="#acddf9"></path> <path
+                                          d="m 7 0 c -1 0 -1 1 -1 1 v 1 h -1 s -0.707031 -0.015625 -1.445312 0.355469 c -0.742188 0.371093 -1.554688 1.3125 -1.554688 2.644531 v 8 s -0.015625 0.707031 0.355469 1.449219 c 0.371093 0.738281 1.3125 1.550781 2.644531 1.550781 h 5 v -2 h -5 c -0.554688 0 -1 -0.445312 -1 -1 v -8 c 0 -0.554688 0.445312 -1 1 -1 h 6 c 0.554688 0 1 0.445312 1 1 v 2 h 2 v -2 c 0 -1.332031 -0.8125 -2.273438 -1.550781 -2.644531 c -0.742188 -0.371094 -1.449219 -0.355469 -1.449219 -0.355469 h -1 v -1 c 0 -1 -1 -1 -1 -1 z m 6 8 v 0.007812 c -0.265625 -0.003906 -0.519531 0.101563 -0.707031 0.285157 l -3 3 c -0.1875 0.1875 -0.292969 0.441406 -0.292969 0.707031 v 1 h 3.132812 l -0.964843 1.445312 c -0.105469 0.164063 -0.164063 0.359376 -0.160157 0.554688 h -0.007812 v 1 h 1 v -0.003906 c 0.265625 0 0.519531 -0.101563 0.707031 -0.289063 l 3 -3 c 0.1875 -0.1875 0.289063 -0.441406 0.289063 -0.707031 h 0.003906 v -1 h -3.128906 l 0.960937 -1.445312 c 0.109375 -0.164063 0.167969 -0.359376 0.167969 -0.554688 v -1 z m 0 0"
+                                          fill="#009ef7"></path> </g></svg>
+																			</span>
+                                      <!--end::Svg Icon-->
+																		</span>
+                      </div>
+                      <!--end::Symbol-->
+                      <!--begin::Stats-->
+                      <div class="m-0">
+                        <!--begin::شماره کارت-->
+                        <span class="text-gray-700 fw-bolder d-block fs-2qx lh-1 ls-n1 mb-1">37</span>
+                        <!--end::شماره کارت-->
+                        <!--begin::Desc-->
+                        <span class="text-white fw-semibold fs-6">ولتاژ</span>
+                        <!--end::Desc-->
+                      </div>
+                      <!--end::Stats-->
+                    </div>
+                    <!--end::آیتمs-->
+                  </div>
+                  <div class="col-4">
+                    <!--begin::آیتمs-->
+                    <div class="bg-gray-100 bg-primary bg-opacity-70 rounded-2 px-6 py-5">
+                      <!--begin::Symbol-->
+                      <div class="symbol symbol-30px me-5 mb-8">
+																		<span class="symbol-label">
+																			<!--begin::Svg Icon | path: icons/duotune/medicine/med005.svg-->
+																			<span class="svg-icon svg-icon-1 svg-icon-primary">
+																			<svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="#000000"><g
+                                          id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier"
+                                                                                         stroke-linecap="round"
+                                                                                         stroke-linejoin="round"></g><g
+                                          id="SVGRepo_iconCarrier"> <path class="success"
+                                                                          d="m 5 7 v 6 h 3 v -1 c 0 -0.53125 0.210938 -1.039062 0.585938 -1.414062 l 2.414062 -2.414063 v -1.171875 z m 0 0"
+                                                                          fill="#acddf9"></path> <path
+                                          d="m 7 0 c -1 0 -1 1 -1 1 v 1 h -1 s -0.707031 -0.015625 -1.445312 0.355469 c -0.742188 0.371093 -1.554688 1.3125 -1.554688 2.644531 v 8 s -0.015625 0.707031 0.355469 1.449219 c 0.371093 0.738281 1.3125 1.550781 2.644531 1.550781 h 5 v -2 h -5 c -0.554688 0 -1 -0.445312 -1 -1 v -8 c 0 -0.554688 0.445312 -1 1 -1 h 6 c 0.554688 0 1 0.445312 1 1 v 2 h 2 v -2 c 0 -1.332031 -0.8125 -2.273438 -1.550781 -2.644531 c -0.742188 -0.371094 -1.449219 -0.355469 -1.449219 -0.355469 h -1 v -1 c 0 -1 -1 -1 -1 -1 z m 6 8 v 0.007812 c -0.265625 -0.003906 -0.519531 0.101563 -0.707031 0.285157 l -3 3 c -0.1875 0.1875 -0.292969 0.441406 -0.292969 0.707031 v 1 h 3.132812 l -0.964843 1.445312 c -0.105469 0.164063 -0.164063 0.359376 -0.160157 0.554688 h -0.007812 v 1 h 1 v -0.003906 c 0.265625 0 0.519531 -0.101563 0.707031 -0.289063 l 3 -3 c 0.1875 -0.1875 0.289063 -0.441406 0.289063 -0.707031 h 0.003906 v -1 h -3.128906 l 0.960937 -1.445312 c 0.109375 -0.164063 0.167969 -0.359376 0.167969 -0.554688 v -1 z m 0 0"
+                                          fill="#009ef7"></path> </g></svg>
+																			</span>
+																		</span>
+                      </div>
+                      <!--end::Symbol-->
+                      <!--begin::Stats-->
+                      <div class="m-0">
+                        <!--begin::شماره کارت-->
+                        <span class="text-gray-700 fw-bolder d-block fs-2qx lh-1 ls-n1 mb-1">37</span>
+                        <!--end::شماره کارت-->
+                        <!--begin::Desc-->
+                        <span class="text-white fw-semibold fs-6">ولتاژ</span>
+                        <!--end::Desc-->
+                      </div>
+                      <!--end::Stats-->
+                    </div>
+                    <!--end::آیتمs-->
+                  </div>
+                  <div class="col-4">
+                    <!--begin::آیتمs-->
+                    <div class="bg-gray-100 bg-primary bg-opacity-70 rounded-2 px-6 py-5">
+                      <!--begin::Symbol-->
+                      <div class="symbol symbol-30px me-5 mb-8">
+																		<span class="symbol-label">
+																			<!--begin::Svg Icon | path: icons/duotune/medicine/med005.svg-->
+																			<span class="svg-icon svg-icon-1 svg-icon-primary">
+																			<svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="#000000"><g
+                                          id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier"
+                                                                                         stroke-linecap="round"
+                                                                                         stroke-linejoin="round"></g><g
+                                          id="SVGRepo_iconCarrier"> <path class="success"
+                                                                          d="m 5 7 v 6 h 3 v -1 c 0 -0.53125 0.210938 -1.039062 0.585938 -1.414062 l 2.414062 -2.414063 v -1.171875 z m 0 0"
+                                                                          fill="#acddf9"></path> <path
+                                          d="m 7 0 c -1 0 -1 1 -1 1 v 1 h -1 s -0.707031 -0.015625 -1.445312 0.355469 c -0.742188 0.371093 -1.554688 1.3125 -1.554688 2.644531 v 8 s -0.015625 0.707031 0.355469 1.449219 c 0.371093 0.738281 1.3125 1.550781 2.644531 1.550781 h 5 v -2 h -5 c -0.554688 0 -1 -0.445312 -1 -1 v -8 c 0 -0.554688 0.445312 -1 1 -1 h 6 c 0.554688 0 1 0.445312 1 1 v 2 h 2 v -2 c 0 -1.332031 -0.8125 -2.273438 -1.550781 -2.644531 c -0.742188 -0.371094 -1.449219 -0.355469 -1.449219 -0.355469 h -1 v -1 c 0 -1 -1 -1 -1 -1 z m 6 8 v 0.007812 c -0.265625 -0.003906 -0.519531 0.101563 -0.707031 0.285157 l -3 3 c -0.1875 0.1875 -0.292969 0.441406 -0.292969 0.707031 v 1 h 3.132812 l -0.964843 1.445312 c -0.105469 0.164063 -0.164063 0.359376 -0.160157 0.554688 h -0.007812 v 1 h 1 v -0.003906 c 0.265625 0 0.519531 -0.101563 0.707031 -0.289063 l 3 -3 c 0.1875 -0.1875 0.289063 -0.441406 0.289063 -0.707031 h 0.003906 v -1 h -3.128906 l 0.960937 -1.445312 c 0.109375 -0.164063 0.167969 -0.359376 0.167969 -0.554688 v -1 z m 0 0"
+                                          fill="#009ef7"></path> </g></svg>
+																			</span>
+                                      <!--end::Svg Icon-->
+																		</span>
+                      </div>
+                      <!--end::Symbol-->
+                      <!--begin::Stats-->
+                      <div class="m-0">
+                        <!--begin::شماره کارت-->
+                        <span class="text-gray-700 fw-bolder d-block fs-2qx lh-1 ls-n1 mb-1">37</span>
+                        <!--end::شماره کارت-->
+                        <!--begin::Desc-->
+                        <span class="text-white fw-semibold fs-6">ولتاژ</span>
+                        <!--end::Desc-->
+                      </div>
+                      <!--end::Stats-->
+                    </div>
+                    <!--end::آیتمs-->
+                  </div>
+                  <div class="col-4">
+                    <!--begin::آیتمs-->
+                    <div class="bg-gray-100 bg-primary bg-opacity-70 rounded-2 px-6 py-5">
+                      <!--begin::Symbol-->
+                      <div class="symbol symbol-30px me-5 mb-8">
+																		<span class="symbol-label">
+																			<!--begin::Svg Icon | path: icons/duotune/medicine/med005.svg-->
+																			<span class="svg-icon svg-icon-1 svg-icon-primary">
+																			<svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="#000000"><g
+                                          id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier"
+                                                                                         stroke-linecap="round"
+                                                                                         stroke-linejoin="round"></g><g
+                                          id="SVGRepo_iconCarrier"> <path class="success"
+                                                                          d="m 5 7 v 6 h 3 v -1 c 0 -0.53125 0.210938 -1.039062 0.585938 -1.414062 l 2.414062 -2.414063 v -1.171875 z m 0 0"
+                                                                          fill="#acddf9"></path> <path
+                                          d="m 7 0 c -1 0 -1 1 -1 1 v 1 h -1 s -0.707031 -0.015625 -1.445312 0.355469 c -0.742188 0.371093 -1.554688 1.3125 -1.554688 2.644531 v 8 s -0.015625 0.707031 0.355469 1.449219 c 0.371093 0.738281 1.3125 1.550781 2.644531 1.550781 h 5 v -2 h -5 c -0.554688 0 -1 -0.445312 -1 -1 v -8 c 0 -0.554688 0.445312 -1 1 -1 h 6 c 0.554688 0 1 0.445312 1 1 v 2 h 2 v -2 c 0 -1.332031 -0.8125 -2.273438 -1.550781 -2.644531 c -0.742188 -0.371094 -1.449219 -0.355469 -1.449219 -0.355469 h -1 v -1 c 0 -1 -1 -1 -1 -1 z m 6 8 v 0.007812 c -0.265625 -0.003906 -0.519531 0.101563 -0.707031 0.285157 l -3 3 c -0.1875 0.1875 -0.292969 0.441406 -0.292969 0.707031 v 1 h 3.132812 l -0.964843 1.445312 c -0.105469 0.164063 -0.164063 0.359376 -0.160157 0.554688 h -0.007812 v 1 h 1 v -0.003906 c 0.265625 0 0.519531 -0.101563 0.707031 -0.289063 l 3 -3 c 0.1875 -0.1875 0.289063 -0.441406 0.289063 -0.707031 h 0.003906 v -1 h -3.128906 l 0.960937 -1.445312 c 0.109375 -0.164063 0.167969 -0.359376 0.167969 -0.554688 v -1 z m 0 0"
+                                          fill="#009ef7"></path> </g></svg>
+																			</span>
+                                      <!--end::Svg Icon-->
+																		</span>
+                      </div>
+                      <!--end::Symbol-->
+                      <!--begin::Stats-->
+                      <div class="m-0">
+                        <!--begin::شماره کارت-->
+                        <span class="text-gray-700 fw-bolder d-block fs-2qx lh-1 ls-n1 mb-1">37</span>
+                        <!--end::شماره کارت-->
+                        <!--begin::Desc-->
+                        <span class="text-white fw-semibold fs-6">ولتاژ</span>
+                        <!--end::Desc-->
+                      </div>
+                      <!--end::Stats-->
+                    </div>
+                    <!--end::آیتمs-->
+                  </div>
+                  <div class="col-4">
+                    <!--begin::آیتمs-->
+                    <div class="bg-gray-100 bg-primary bg-opacity-70 rounded-2 px-6 py-5">
+                      <!--begin::Symbol-->
+                      <div class="symbol symbol-30px me-5 mb-8">
+																		<span class="symbol-label">
+																			<!--begin::Svg Icon | path: icons/duotune/medicine/med005.svg-->
+																			<span class="svg-icon svg-icon-1 svg-icon-primary">
+																			<svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="#000000"><g
+                                          id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier"
+                                                                                         stroke-linecap="round"
+                                                                                         stroke-linejoin="round"></g><g
+                                          id="SVGRepo_iconCarrier"> <path class="success"
+                                                                          d="m 5 7 v 6 h 3 v -1 c 0 -0.53125 0.210938 -1.039062 0.585938 -1.414062 l 2.414062 -2.414063 v -1.171875 z m 0 0"
+                                                                          fill="#acddf9"></path> <path
+                                          d="m 7 0 c -1 0 -1 1 -1 1 v 1 h -1 s -0.707031 -0.015625 -1.445312 0.355469 c -0.742188 0.371093 -1.554688 1.3125 -1.554688 2.644531 v 8 s -0.015625 0.707031 0.355469 1.449219 c 0.371093 0.738281 1.3125 1.550781 2.644531 1.550781 h 5 v -2 h -5 c -0.554688 0 -1 -0.445312 -1 -1 v -8 c 0 -0.554688 0.445312 -1 1 -1 h 6 c 0.554688 0 1 0.445312 1 1 v 2 h 2 v -2 c 0 -1.332031 -0.8125 -2.273438 -1.550781 -2.644531 c -0.742188 -0.371094 -1.449219 -0.355469 -1.449219 -0.355469 h -1 v -1 c 0 -1 -1 -1 -1 -1 z m 6 8 v 0.007812 c -0.265625 -0.003906 -0.519531 0.101563 -0.707031 0.285157 l -3 3 c -0.1875 0.1875 -0.292969 0.441406 -0.292969 0.707031 v 1 h 3.132812 l -0.964843 1.445312 c -0.105469 0.164063 -0.164063 0.359376 -0.160157 0.554688 h -0.007812 v 1 h 1 v -0.003906 c 0.265625 0 0.519531 -0.101563 0.707031 -0.289063 l 3 -3 c 0.1875 -0.1875 0.289063 -0.441406 0.289063 -0.707031 h 0.003906 v -1 h -3.128906 l 0.960937 -1.445312 c 0.109375 -0.164063 0.167969 -0.359376 0.167969 -0.554688 v -1 z m 0 0"
+                                          fill="#009ef7"></path> </g></svg>
+																			</span>
+                                      <!--end::Svg Icon-->
+																		</span>
+                      </div>
+                      <!--end::Symbol-->
+                      <!--begin::Stats-->
+                      <div class="m-0">
+                        <!--begin::شماره کارت-->
+                        <span class="text-gray-700 fw-bolder d-block fs-2qx lh-1 ls-n1 mb-1">37</span>
+                        <!--end::شماره کارت-->
+                        <!--begin::Desc-->
+                        <span class="text-white fw-semibold fs-6">ولتاژ</span>
+                        <!--end::Desc-->
+                      </div>
+                      <!--end::Stats-->
+                    </div>
+                    <!--end::آیتمs-->
                   </div>
                   <!--end::Col-->
                   <!--begin::Col-->
-                  <div class="col-xl-8">
-                    <!--begin::Chart widget 24-->
-                    <div class="card card-flush overflow-hidden h-xl-100">
-                      <!--begin::Header-->
-                      <div class="card-header py-5">
-                        <!--begin::Title-->
-                        <h3 class="card-title align-items-start flex-column">
-                          <span class="card-label fw-bold text-dark">منابع</span>
-                          <span class="text-gray-400 mt-1 fw-semibold fs-6">گزارشات </span>
-                        </h3>
-                        <!--end::Title-->
-                        <!--begin::Toolbar-->
-                        <div class="card-toolbar">
-                          <!--begin::Menu-->
-                          <button class="btn btn-icon btn-color-gray-400 btn-active-color-primary justify-content-end"
-                                  data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end"
-                                  data-kt-menu-overflow="true">
-                            <!--begin::Svg Icon | path: icons/duotune/general/gen023.svg-->
-                            <span class="svg-icon svg-icon-1">
-																<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                     xmlns="http://www.w3.org/2000/svg">
-																	<rect opacity="0.3" x="2" y="2" width="20" height="20" rx="4" fill="currentColor"/>
-																	<rect x="11" y="11" width="2.6" height="2.6" rx="1.3" fill="currentColor"/>
-																	<rect x="15" y="11" width="2.6" height="2.6" rx="1.3" fill="currentColor"/>
-																	<rect x="7" y="11" width="2.6" height="2.6" rx="1.3" fill="currentColor"/>
-																</svg>
-															</span>
-                            <!--end::Svg Icon-->
-                          </button>
-                          <!--begin::Menu 2-->
-                          <div
-                              class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-800 menu-state-bg-light-primary fw-semibold w-200px"
-                              data-kt-menu="true">
-                            <!--begin::Menu item-->
-                            <div class="menu-item px-3">
-                              <div class="menu-content fs-6 text-dark fw-bold px-3 py-4">عملیات سریع</div>
-                            </div>
-                            <!--end::Menu item-->
-                            <!--begin::Menu separator-->
-                            <div class="separator mb-3 opacity-75"></div>
-                            <!--end::Menu separator-->
-                            <!--begin::Menu item-->
-                            <div class="menu-item px-3">
-                              <a href="#" class="menu-link px-3">تیکت جدید</a>
-                            </div>
-                            <!--end::Menu item-->
-                            <!--begin::Menu item-->
-                            <div class="menu-item px-3">
-                              <a href="#" class="menu-link px-3">جدید مشتری</a>
-                            </div>
-                            <!--end::Menu item-->
-                            <!--begin::Menu item-->
-                            <div class="menu-item px-3" data-kt-menu-trigger="hover"
-                                 data-kt-menu-placement="left-start">
-                              <!--begin::Menu item-->
-                              <a href="#" class="menu-link px-3">
-                                <span class="menu-title">گروه جدید</span>
-                                <span class="menu-arrow"></span>
-                              </a>
-                              <!--end::Menu item-->
-                              <!--begin::Menu sub-->
-                              <div class="menu-sub menu-sub-dropdown w-175px py-4">
-                                <!--begin::Menu item-->
-                                <div class="menu-item px-3">
-                                  <a href="#" class="menu-link px-3">گروه مدیر</a>
-                                </div>
-                                <!--end::Menu item-->
-                                <!--begin::Menu item-->
-                                <div class="menu-item px-3">
-                                  <a href="#" class="menu-link px-3">گروه کارکنان</a>
-                                </div>
-                                <!--end::Menu item-->
-                                <!--begin::Menu item-->
-                                <div class="menu-item px-3">
-                                  <a href="#" class="menu-link px-3">گروه عضوها</a>
-                                </div>
-                                <!--end::Menu item-->
-                              </div>
-                              <!--end::Menu sub-->
-                            </div>
-                            <!--end::Menu item-->
-                            <!--begin::Menu item-->
-                            <div class="menu-item px-3">
-                              <a href="#" class="menu-link px-3">مخاطبین جدید</a>
-                            </div>
-                            <!--end::Menu item-->
-                            <!--begin::Menu separator-->
-                            <div class="separator mt-3 opacity-75"></div>
-                            <!--end::Menu separator-->
-                            <!--begin::Menu item-->
-                            <div class="menu-item px-3">
-                              <div class="menu-content px-3 py-3">
-                                <a class="btn btn-primary btn-sm px-4" href="#">Generate گزارشات</a>
-                              </div>
-                            </div>
-                            <!--end::Menu item-->
-                          </div>
-                          <!--end::Menu 2-->
-                          <!--end::Menu-->
-                        </div>
-                        <!--end::Toolbar-->
+                  <div class="col-6">
+                    <!--begin::آیتمs-->
+                    <div class="bg-gray-100 bg-danger bg-opacity-70 rounded-2 px-6 py-5">
+                      <!--begin::Symbol-->
+                      <div class="symbol symbol-30px me-5 mb-8">
+																		<span class="symbol-label">
+																			<!--begin::Svg Icon | path: icons/duotune/finance/fin001.svg-->
+																			<span class="svg-icon svg-icon-1 svg-icon-primary">
+																				<svg fill="#009ef7" height="200px" width="200px" version="1.1" id="Layer_1"
+                                             xmlns="http://www.w3.org/2000/svg"
+                                             xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512.001 512.001"
+                                             xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g
+                                            id="SVGRepo_tracerCarrier" stroke-linecap="round"
+                                            stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <g> <path
+                                            d="M281.12,353.354V42.221C281.12,18.941,262.18,0,238.899,0c-23.282,0-42.221,18.941-42.221,42.221v311.133 c-26.391,15.093-42.646,42.761-42.756,73.36c-0.078,21.959,8.481,42.96,24.097,59.132c15.624,16.179,36.315,25.453,58.26,26.115 c0.886,0.026,1.767,0.04,2.649,0.04c22.227-0.001,43.14-8.461,59.142-23.987c16.642-16.149,25.806-37.809,25.806-60.992 C323.875,396.291,307.619,368.505,281.12,353.354z M286.905,476.506c-13.496,13.095-31.316,20.003-50.142,19.427 c-17.741-0.534-34.507-8.072-47.21-21.226c-12.701-13.152-19.661-30.176-19.597-47.937c0.093-26.181,14.773-49.723,38.31-61.438 c2.724-1.355,4.444-4.136,4.444-7.177V42.221c0-14.44,11.748-26.188,26.188-26.188c14.44,0,26.188,11.748,26.188,26.188v315.935 c0,3.042,1.721,5.821,4.444,7.177c23.632,11.762,38.311,35.4,38.311,61.689C307.842,445.831,300.407,463.405,286.905,476.506z"></path> </g> </g> <g> <g> <path
+                                            d="M246.915,376.889V93.528c0-4.427-3.589-8.017-8.017-8.017c-4.427,0-8.017,3.589-8.017,8.017v283.361 c-24.2,3.855-42.756,24.866-42.756,50.133c0,27.995,22.777,50.772,50.772,50.772c27.995,0,50.772-22.777,50.772-50.772 C289.671,401.755,271.115,380.744,246.915,376.889z M238.899,461.761c-19.155,0-34.739-15.584-34.739-34.739 c0-19.155,15.584-34.739,34.739-34.739s34.739,15.584,34.739,34.739C273.638,446.177,258.054,461.761,238.899,461.761z"></path> </g> </g> <g> <g> <path
+                                            d="M350.063,256.534h-42.756c-4.427,0-8.017,3.589-8.017,8.017s3.589,8.017,8.017,8.017h42.756 c4.427,0,8.017-3.589,8.017-8.017S354.492,256.534,350.063,256.534z"></path> </g> </g> <g> <g> <path
+                                            d="M332.961,213.778h-25.653c-4.427,0-8.017,3.589-8.017,8.017c0,4.427,3.589,8.017,8.017,8.017h25.653 c4.427,0,8.017-3.589,8.017-8.017C340.978,217.368,337.388,213.778,332.961,213.778z"></path> </g> </g> <g> <g> <path
+                                            d="M350.063,171.023h-42.756c-4.427,0-8.017,3.589-8.017,8.017c0,4.427,3.589,8.017,8.017,8.017h42.756 c4.427,0,8.017-3.589,8.017-8.017C358.08,174.612,354.492,171.023,350.063,171.023z"></path> </g> </g> <g> <g> <path
+                                            d="M332.961,128.267h-25.653c-4.427,0-8.017,3.589-8.017,8.017c0,4.427,3.589,8.017,8.017,8.017h25.653 c4.427,0,8.017-3.589,8.017-8.017C340.978,131.856,337.388,128.267,332.961,128.267z"></path> </g> </g> <g> <g> <path
+                                            d="M350.063,85.511h-42.756c-4.427,0-8.017,3.589-8.017,8.017c0,4.427,3.589,8.017,8.017,8.017h42.756 c4.427,0,8.017-3.589,8.017-8.017C358.08,89.101,354.491,85.511,350.063,85.511z"></path> </g> </g> </g></svg>
+																			</span>
+                                      <!--end::Svg Icon-->
+																		</span>
                       </div>
-                      <!--end::Header-->
-                      <!--begin::کارت body-->
-                      <div class="card-body pt-0">
-                        <!--begin::Chart-->
-                        <div id="kt_charts_widget_24" class="min-h-auto" style="height: 300px"></div>
-                        <!--end::Chart-->
+                      <!--end::Symbol-->
+                      <!--begin::Stats-->
+                      <div class="m-0">
+                        <!--begin::شماره کارت-->
+                        <span class="text-gray-700 fw-bolder d-block fs-2qx lh-1 ls-n1 mb-1">6</span>
+                        <!--end::شماره کارت-->
+                        <!--begin::Desc-->
+                        <span class="text-white fw-semibold fs-6">دما</span>
+                        <!--end::Desc-->
                       </div>
-                      <!--end::کارت body-->
+                      <!--end::Stats-->
                     </div>
-                    <!--end::Chart widget 24-->
+                    <!--end::آیتمs-->
+                  </div>
+                  <!--end::Col-->
+                  <!--begin::Col-->
+                  <div class="col-6">
+                    <!--begin::آیتمs-->
+                    <div class="bg-gray-100 bg-warning  bg-opacity-70 rounded-2 px-6 py-5">
+                      <!--begin::Symbol-->
+                      <div class="symbol symbol-30px me-5 mb-8">
+																		<span class="symbol-label">
+																			<!--begin::Svg Icon | path: icons/duotune/general/gen020.svg-->
+																			<span class="svg-icon svg-icon-1 svg-icon-primary">
+																			<svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><g
+                                          id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier"
+                                                                                         stroke-linecap="round"
+                                                                                         stroke-linejoin="round"></g><g
+                                          id="SVGRepo_iconCarrier"> <rect x="6" y="6" width="36" height="36" rx="3"
+                                                                          fill="#acddf9" stroke="#009ef7"
+                                                                          stroke-width="4" stroke-linecap="round"
+                                                                          stroke-linejoin="round"></rect> <path
+                                          d="M12 25H15L19 14L22 36L27 23L31 29L34 25H37" stroke="white" stroke-width="4"
+                                          stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+																			</span>
+                                      <!--end::Svg Icon-->
+																		</span>
+                      </div>
+                      <!--end::Symbol-->
+                      <!--begin::Stats-->
+                      <div class="m-0">
+                        <!--begin::شماره کارت-->
+                        <span class="text-gray-700 fw-bolder d-block fs-2qx lh-1 ls-n1 mb-1">4,7</span>
+                        <!--end::شماره کارت-->
+                        <!--begin::Desc-->
+                        <span class="text-gray-500 fw-semibold fs-6">جریان</span>
+                        <!--end::Desc-->
+                      </div>
+                      <!--end::Stats-->
+                    </div>
+                    <!--end::آیتمs-->
+                  </div>
+                  <!--end::Col-->
+                  <!--begin::Col-->
+                  <div class="col-6">
+                    <!--begin::آیتمs-->
+                    <div class="bg-gray-100 bg-opacity-70 rounded-2 px-6 py-5">
+                      <!--begin::Symbol-->
+                      <div class="symbol symbol-30px me-5 mb-8">
+																		<span class="symbol-label">
+																			<!--begin::Svg Icon | path: icons/duotune/general/gen013.svg-->
+																			<span class="svg-icon svg-icon-1 svg-icon-primary">
+																				<svg viewBox="0 0 1024 1024" class="icon" version="1.1"
+                                             xmlns="http://www.w3.org/2000/svg" fill="#000000" stroke="#000000"><g
+                                            id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier"
+                                                                                           stroke-linecap="round"
+                                                                                           stroke-linejoin="round"></g><g
+                                            id="SVGRepo_iconCarrier"><path
+                                            d="M339.7 882.5C196.6 882.5 80.2 766.1 80.2 623c0-133.2 204.8-395.1 228.2-424.5 5.8-7.3 14.5-11.6 23.8-11.7 9.4-0.1 18.1 3.9 24.1 11 1.5 1.8 37.7 44.8 82.2 105.2 10.1 13.8 7.2 33.2-6.6 43.3-13.8 10.1-33.2 7.2-43.3-6.6-21.3-29-40.9-54-55.3-72.1-69.2 92-191.2 271.5-191.2 355.4 0 108.9 88.6 197.6 197.6 197.6S537.3 731.9 537.3 623c0-17.1 13.9-31 31-31s31 13.9 31 31c-0.1 143.1-116.5 259.5-259.6 259.5z"
+                                            fill="#009ef7"></path><path
+                                            d="M363.7 468.8c-27.9 59.7-46.8 115.7-46.8 158.4 0 164.6 133.4 298 298 298s298-133.4 298-298c0-12.8-1.9-26.9-5.5-41.9-327.2 33.9-284.9-194.9-543.7-116.5z"
+                                            fill="#acddf9"></path><path
+                                            d="M333.6 567.6c-38.2 239.9 123 357.7 287.3 357.7 92.8 0 144.9-12.1 199.6-78.6-261.5 20.7-428.7-99.2-486.9-279.1z"
+                                            fill="#acddf9"></path><path
+                                            d="M614.9 956.1C433.5 956.1 286 808.5 286 627.2c0-173.4 283.4-532.4 295.5-547.6 5.8-7.3 14.5-11.6 23.8-11.7 9.3-0.1 18.1 3.9 24.1 11 2 2.3 49 58.2 106.8 136.6 10.1 13.8 7.2 33.2-6.6 43.3-13.8 10.1-33.2 7.2-43.3-6.6-31.8-43.2-60.6-79.8-79.9-103.7C517 266.1 347.9 512.3 347.9 627.2c0 147.2 119.8 267 267 267s267-119.8 267-267c0-29.7-13.2-87.9-76.4-196.2-8.6-14.8-3.6-33.7 11.2-42.3 14.8-8.6 33.7-3.6 42.3 11.2 57.1 97.9 84.8 172.2 84.8 227.4 0 181.3-147.6 328.8-328.9 328.8z"
+                                            fill="#009ef7"></path></g></svg>
+																			</span>
+                                      <!--end::Svg Icon-->
+																		</span>
+                      </div>
+                      <!--end::Symbol-->
+                      <!--begin::Stats-->
+                      <div class="m-0">
+                        <!--begin::شماره کارت-->
+                        <span class="text-gray-700 fw-bolder d-block fs-2qx lh-1 ls-n1 mb-1">822</span>
+                        <!--end::شماره کارت-->
+                        <!--begin::Desc-->
+                        <span class="text-gray-500 fw-semibold fs-6">رطوبت</span>
+                        <!--end::Desc-->
+                      </div>
+                      <!--end::Stats-->
+                    </div>
+                    <!--end::آیتمs-->
                   </div>
                   <!--end::Col-->
                 </div>
                 <!--end::Row-->
               </div>
-              <!--end::Content container-->
+              <!--end::Stats-->
             </div>
-            <!--end::Content-->
+            <!--end::Body-->
           </div>
+          <!--end::لیست ها Widget 19-->
+        </div>
+        <!--end::Col-->
+        <!--begin::Col-->
+
+        <!--end::Col-->
+      </div>
+
+    </div>
+  </div>
 </template>
 
 <script>
+// import {io} from 'socket.io-client';
+
 export default {
-  name: "dashboard-page"
+  name: "dashboard-page", created() {
+
+
+    this.GetMyDevices();
+
+
+  }, data() {
+    return {
+      deviceInfo: []
+    }
+  },
+  mounted() {
+    this.GetDataFromSocket()
+
+  },
+  computed: {
+
+
+    GetDeviceList() {
+      return this.$store.getters.GetDevices
+
+    }
+  }, methods: {
+    GetMyDevices() {
+
+      this.$store.dispatch('GetAllDevice');
+      // return "alireza";
+    },
+
+    GetDataFromSocket() {
+      // const socket = io('http://localhost:8080');
+      //
+      //
+      // socket.on('connect_error', () => {
+      //   console.log("connect_error")
+      // });
+      // socket.on('connect', () => {
+      //   console.log("connect")
+      // });
+      //
+      // socket.on('connection', (data) => {
+      //   console.log(data)
+      //   console.log("data")
+      // });
+      // socket.on('data', (data) => {
+      //   this.deviceInfo = data
+      // });
+    }
+
+
+  }
+
 }
 </script>
 

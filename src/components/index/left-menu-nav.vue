@@ -207,7 +207,7 @@
             <!--end::Avatar-->
             <!--begin::کاربرname-->
             <div class="d-flex flex-column">
-              <div class="fw-bold d-flex align-items-center fs-5">جلالی
+              <div class="fw-bold d-flex align-items-center fs-5">{{GetFullName}}
                 <span class="badge badge-light-success fw-bold fs-8 px-2 py-1 ms-2">حرفه ای</span></div>
               <a href="#" class="fw-semibold text-muted text-hover-primary fs-7">max@kt.com</a>
             </div>
@@ -390,6 +390,15 @@
 
 export default {
   name: "left-menu-nav",
+  computed: {
+    GetFullName() {
+      const fullName= this.$store.getters.GetUserFullName
+      return fullName
+
+    },
+
+
+  },
   mounted() {
     var defaultThemeMode = "light";
     var themeMode;

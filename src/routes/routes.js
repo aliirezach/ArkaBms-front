@@ -3,6 +3,7 @@ import {defineAsyncComponent} from 'vue'
 const IndexComponent = defineAsyncComponent((() => import("../components/index/index-page")));
 const LoginComponent = defineAsyncComponent((() => import("../components/index/login-page")));
 const DashboardComponent = defineAsyncComponent((() => import("../components/pages/dashboard-page")));
+const DeviceDetail = defineAsyncComponent((() => import("../components/device/detail-page")));
 export const Route = [
 
 
@@ -21,6 +22,12 @@ export const Route = [
                 path: '/',
                 component: DashboardComponent,
                 name: "dashboard"
+
+            },
+            {
+                path: '/Device/Detail/:id/:name',
+                component: DeviceDetail,
+                name: "DeviceDetail"
 
             }
 
